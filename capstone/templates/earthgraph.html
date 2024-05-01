@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    
+<style>
+  body {
+    
+    line-height: 1.8;
+    color:black;
+    background-color: #f5f6fa;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 25px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: yellow; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #576574; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 0px;
+    padding-bottom: 3px;
+  }
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .navbar-nav  li a:hover {
+    color: white !important;
+  }
+
+  .navbar-default .navbar-nav>li>a{
+    
+    color: #7eb415;
+  }
+  </style>
+</head>
+<body>
+        <nav class="navbar navbar-default" style="background-color: #222f3e">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">Natural Disaster Predictor</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+							<li><a href="{{ url_for('index') }}">Home</a></li>
+							<li><a href="{{ url_for('earthquake') }}">Earthquake Prediction</a></li>
+							<li><a href="{{ url_for('flood') }}">Flood Prediction</a></li>
+							<li><a href="{{ url_for('weather') }}">Weather Prediction</a></li>
+              <li style="display: none"><a href="{{ url_for('cyclone') }}">Cyclone Prediction</a></li>
+              <li style="display: none"><a href="{{ url_for('hailstorm') }}">Hailstorm Prediction</a></li>
+              <li ><a href="{{ url_for('sent') }}">Sentimental Analysis</a></li>
+							<li><a href="{{ url_for('hurricane') }}">Hurricane Prediction</a></li>
+              <li><a href="{{ url_for('tsunami') }}">Tsunami Prediction</a></li>
+              <li><a href="{{ url_for('comp') }}">Comparison Analytics</a></li>
+            <li style="color: red;"><a href="{{ url_for('covid') }}" style="color: red;">COVID-19</a></li>
+                         
+                      
+                    </ul>
+                  </div>
+                </div>
+                
+              </nav>
+              <div>
+                 
+                  
+              </div>
+             
+              
+
+<div style="margin:auto">
+        <img src={{url_for('static',filename="earth/e1.jpg")}}>
+    
+</div>
+<div style="margin:auto">
+        <img src={{url_for('static',filename="earth/e2.jpg")}}>
+    
+</div>
+<div style="margin:auto">
+        <img src={{url_for('static',filename="earth/e3.jpg")}}>
+    
+</div>
+<div style="margin:auto">
+        <img src={{url_for('static',filename="earth/e5.jpg")}}>
+    
+</div>
+
+              </body>
+              </html>

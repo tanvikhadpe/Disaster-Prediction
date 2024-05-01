@@ -1,0 +1,309 @@
+
+  
+<html>
+
+<head>
+    
+  </head>
+  <style>
+      /* original code: https://doctorcodetutorial.blogspot.com/2020/03/create-coronavirus-tracker-in.html */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1e88e5;
+  counter-reset: raw;
+}
+
+.wrapper {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.statistic {
+  width: 100%;
+}
+
+.total_case_box {
+  background-color: #fafafa;
+  box-shadow: 2px 2px 8px rgba(30,30,30,.2);
+  margin: 10px 15px;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.total_case_box p {
+  font-size: 3rem;
+}
+
+.wrapper .box_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.box_wrapper .box {
+  background-color: #fafafa;
+  box-shadow: 2px 2px 8px rgba(30,30,30,.2);
+  margin: 10px 15px;
+  width:25%;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.box_wrapper .box p {
+  font-size: 2.5rem;
+}
+
+/*Styiling the table*/
+table {
+  width: 100%;
+  padding: 15px 10px;
+  margin: 10px 0;
+  text-align: center;
+  border-spacing: 0;
+}
+
+tr:first-child {
+  background-color: #37474f;
+  color: #fafafa;
+  text-transform: uppercase;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th {
+  padding: 15px 0;
+  border: none;
+  border-spacing: 0;
+  cursor: default;
+}
+
+th:not(:first-child) {
+  cursor: n-resize;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:nth-child(odd) {
+  background-color: #424242;
+  color: #fafafa;
+}
+
+tr td {
+  padding: 15px 0;
+}
+
+tr td:first-of-type {
+  position: relative;
+}
+
+tr td:first-of-type::before {
+  counter-increment: raw;
+  content: counter(raw);
+  position: absolute;
+  left: 4px;
+  opacity: .5;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 0.6rem;
+  }
+  th {
+    font-size: 0.6rem;
+  }
+  td {
+    font-size: 0.8rem;
+  }
+  .total_case_box p {
+    font-size: 1.5rem;
+  }
+  .box_wrapper .box p {
+    font-size: 1rem;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  .total_case_box {
+    box-shadow: 2px 2px 8px rgba(30,30,30,.2);
+    margin: 0;
+    padding: 15px 0;
+  }
+  .box_wrapper .box {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 7px 0;
+  }
+  table {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+  </style>
+  <body>
+    <div class="wrapper">
+        <div class="statistic">
+          <div class="total_case_box">
+            Loading Data ...
+          </div>
+        </div>
+        <script>
+            /**
+       * WARNING: the API is *very* unstable so that data might be not
+       * presented in the correct way. However, I'm tired of fixing this
+       * so I hope they'll become stable, one day, and I can show data
+       * properly once for all.
+       */
+      
+      /**
+       * original code:
+       * https://doctorcodetutorial.blogspot.com/2020/03/create-coronavirus-tracker-in.html
+       */
+      
+      const {render, html} = uhtml;
+      
+      const API_BASE = 'https://coronavirus-monitor.p.rapidapi.com/coronavirus';
+      
+      // fetcher
+      const json = res => res.json();
+      const details = {
+        headers: {
+          'x-rapidapi-host': 'coronavirus-monitor.p.rapidapi.com',
+          // sign up in https://rapidapi.com/ to obtain yours
+            'x-rapidapi-key': '32e514149emsh2463c22b995ef96p19431ajsnf68d9fe53b5c'
+        }
+      };
+      const grabJSON = (url, details) => fetch(url, details).then(json);
+      
+      // cache buster & data
+      const grabData = () => [
+        grabJSON(`${API_BASE}/worldstat.php`, details),
+        grabJSON(`${API_BASE}/cases_by_country.php`, details)
+      ];
+      
+      // the API is showing badly counted numbers
+      // make this an empty string once numbers are back
+      const placeHolder = "";
+      
+      // box wrapper
+      const boxWrapper = ({
+        total_deaths,
+        total_recovered,
+        new_cases,
+        new_deaths
+      }) => html`
+        <div class="box_wrapper">
+          <div class="box">
+            <h2>Deaths</h2>
+            <p>${placeHolder || total_deaths}</p>
+          </div>
+          <div class="box">
+            <h2>Recovered</h2>
+            <p>${placeHolder || total_recovered}</p>
+          </div>
+          <div class="box">
+            <h2>New cases</h2>
+            <p>${placeHolder || new_cases}</p>
+          </div>
+          <div class="box">
+            <h2>New Deaths</h2>
+            <p>${placeHolder || new_deaths}</p>
+          </div>
+        </div> 
+      `;
+      
+      // country details
+      const sortKey = 'uhtml-covid-19-sort-name';
+      let sortName = localStorage.getItem(sortKey) || 'cases';
+      const sort = (event) => {
+        event.preventDefault();
+        const {currentTarget, target} = event;
+        const {name} = target.dataset;
+        if (!name) return;
+        sortName = name;
+        localStorage.setItem(sortKey, name);
+        visualize(currentTarget.stats);
+      };
+      
+      const sortByName = (stats, name) => stats.sort((a, b) => (
+        parseInt(b[name].replace(/\D+/g, ''), 10) -
+        parseInt(a[name].replace(/\D+/g, ''), 10)
+      ));
+      
+      const countryTable = (world, {countries_stat}) => html`
+        <table>
+          <tr onclick=${sort} .stats=${[world, {countries_stat}]}>
+            <th>Country</th>
+            <th data-name="cases">Cases</th>
+            <th data-name="deaths">Deaths</th>
+            <th data-name="serious_critical">critical</th>
+            <th data-name="total_recovered">recovered</th>
+          </tr>
+          ${sortByName(countries_stat, sortName).map(({
+            country_name,
+            cases,
+            deaths,
+            serious_critical,
+            total_recovered
+          }) => html`
+            <tr>
+              <td>${country_name}</td>
+              <td>${cases}</td>
+              <td>${deaths}</td>
+              <td>${serious_critical}</td>
+              <td>${total_recovered}</td>
+            </tr>
+          `)}
+        </table>
+      `;
+      
+      // body view
+      const visualize = ([world, countries]) => {
+        render(document.body, html`
+          <div class="wrapper">
+            <div class="statistic">
+              <div class="total_case_box">
+                <h2>Total Cases</h2>
+                <p>${placeHolder || world.total_cases}</p>
+              </div>
+              ${boxWrapper(world)}
+              ${countryTable(world, countries)}
+            </div>
+          </div>
+        `);
+        // update in 10 minutes
+        setTimeout(update, 1000 * 60);
+      };
+      
+      // updater
+      const update = () => Promise.all(grabData())
+                                  .then(visualize, console.error);
+      
+      // bootstrap
+      addEventListener('DOMContentLoaded', update, {once: true});
+      
+        </script>
+      </div>
+      
+
+
+  </body>
+  </html>
+  

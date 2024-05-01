@@ -1,0 +1,3588 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1eb1cb45236d40b09ce639c29f46ba69 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1eb1cb45236d40b09ce639c29f46ba69" ></div>
+        
+</body>
+<script>    
+    
+            var map_1eb1cb45236d40b09ce639c29f46ba69 = L.map(
+                "map_1eb1cb45236d40b09ce639c29f46ba69",
+                {
+                    center: [19.0, 78.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3fc6b86ed60047b5b501e00331bc944f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var marker_5694ce688a36493f81342afa46b8aaea = L.marker(
+                [19.0, 78.0],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f46623502964412e84e918ed7c05889e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5694ce688a36493f81342afa46b8aaea.setIcon(icon_f46623502964412e84e918ed7c05889e);
+        
+    
+        var popup_e31d14d5e80345fb9008f1da84f75308 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ff6a94cc669443193b274eab2e24186 = $(`<div id="html_6ff6a94cc669443193b274eab2e24186" style="width: 100.0%; height: 100.0%;">Your Loaction</div>`)[0];
+            popup_e31d14d5e80345fb9008f1da84f75308.setContent(html_6ff6a94cc669443193b274eab2e24186);
+        
+
+        marker_5694ce688a36493f81342afa46b8aaea.bindPopup(popup_e31d14d5e80345fb9008f1da84f75308)
+        ;
+
+        
+    
+    
+            var marker_968db557a1594f898dcc7a5639a12c4d = L.marker(
+                [11.66667, 92.75],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_a5608941e20e4ee793e3af2accf7d661 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_968db557a1594f898dcc7a5639a12c4d.setIcon(icon_a5608941e20e4ee793e3af2accf7d661);
+        
+    
+        var popup_0303f7cbfa014313a7cd4b0d1a7d279d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1066756f489a43bfbd1c752a0804c304 = $(`<div id="html_1066756f489a43bfbd1c752a0804c304" style="width: 100.0%; height: 100.0%;">Regional Medical Research Centre (ICMR), Port Blair </div>`)[0];
+            popup_0303f7cbfa014313a7cd4b0d1a7d279d.setContent(html_1066756f489a43bfbd1c752a0804c304);
+        
+
+        marker_968db557a1594f898dcc7a5639a12c4d.bindPopup(popup_0303f7cbfa014313a7cd4b0d1a7d279d)
+        ;
+
+        
+    
+    
+            var marker_af3bf6348421491585319ffd49bf7213 = L.marker(
+                [17.83333, 79.08333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_8fe82e8206da441087e29715f026d5a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_af3bf6348421491585319ffd49bf7213.setIcon(icon_8fe82e8206da441087e29715f026d5a2);
+        
+    
+        var popup_e6654ae5af30413cbedbd34c54c1f470 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f17b830844c943d2a424383bab63dda8 = $(`<div id="html_f17b830844c943d2a424383bab63dda8" style="width: 100.0%; height: 100.0%;">Sri Venkateswara Institute of Medical Sciences, Tirupati</div>`)[0];
+            popup_e6654ae5af30413cbedbd34c54c1f470.setContent(html_f17b830844c943d2a424383bab63dda8);
+        
+
+        marker_af3bf6348421491585319ffd49bf7213.bindPopup(popup_e6654ae5af30413cbedbd34c54c1f470)
+        ;
+
+        
+    
+    
+            var marker_3975aadaab08437cbafe24b27c90f253 = L.marker(
+                [15.833329999999998, 79.75],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3dc17d8fb9b04c818185f3f28dbcf502 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3975aadaab08437cbafe24b27c90f253.setIcon(icon_3dc17d8fb9b04c818185f3f28dbcf502);
+        
+    
+        var popup_cc401366d3ef47ae8521dc72da03d41b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37c520ed69ba4cd78a7f023e45e9400f = $(`<div id="html_37c520ed69ba4cd78a7f023e45e9400f" style="width: 100.0%; height: 100.0%;">Sidhartha Medical College, Vijayawada</div>`)[0];
+            popup_cc401366d3ef47ae8521dc72da03d41b.setContent(html_37c520ed69ba4cd78a7f023e45e9400f);
+        
+
+        marker_3975aadaab08437cbafe24b27c90f253.bindPopup(popup_cc401366d3ef47ae8521dc72da03d41b)
+        ;
+
+        
+    
+    
+            var marker_e248b0a5de6f4a338087471a332b1d58 = L.marker(
+                [14.6794, 77.5988],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_691f969d01d047ffa3ed96b350f46214 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e248b0a5de6f4a338087471a332b1d58.setIcon(icon_691f969d01d047ffa3ed96b350f46214);
+        
+    
+        var popup_515882ee8a8446bcbdb4532a7515ad73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cb18d7da3a64c15ac332291c302f427 = $(`<div id="html_8cb18d7da3a64c15ac332291c302f427" style="width: 100.0%; height: 100.0%;">Government Medical College, Anantapur</div>`)[0];
+            popup_515882ee8a8446bcbdb4532a7515ad73.setContent(html_8cb18d7da3a64c15ac332291c302f427);
+        
+
+        marker_e248b0a5de6f4a338087471a332b1d58.bindPopup(popup_515882ee8a8446bcbdb4532a7515ad73)
+        ;
+
+        
+    
+    
+            var marker_ff1e9164f549433ca20478a0f787f040 = L.marker(
+                [16.9604, 82.2381],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_0585e06ba92d45549b6a6a6324fe0caf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff1e9164f549433ca20478a0f787f040.setIcon(icon_0585e06ba92d45549b6a6a6324fe0caf);
+        
+    
+        var popup_f3118e9b55dd491fb3f745dd12eb05d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a96a82659852466f95d4fbb05d2b74f8 = $(`<div id="html_a96a82659852466f95d4fbb05d2b74f8" style="width: 100.0%; height: 100.0%;">Rangaraya Medical College, Kakinada</div>`)[0];
+            popup_f3118e9b55dd491fb3f745dd12eb05d7.setContent(html_a96a82659852466f95d4fbb05d2b74f8);
+        
+
+        marker_ff1e9164f549433ca20478a0f787f040.bindPopup(popup_f3118e9b55dd491fb3f745dd12eb05d7)
+        ;
+
+        
+    
+    
+            var marker_6339bd69af2a4603bc4212d6bd92a79e = L.marker(
+                [27.47989, 94.90836999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_370ae9ba94954829ba2730b84fee78bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6339bd69af2a4603bc4212d6bd92a79e.setIcon(icon_370ae9ba94954829ba2730b84fee78bb);
+        
+    
+        var popup_b50d01cdcbca431f8074f1fae30554d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa091efea7fe46069597a62cc8b160d4 = $(`<div id="html_fa091efea7fe46069597a62cc8b160d4" style="width: 100.0%; height: 100.0%;">ICMR-Regional Medical Research Centre, NE Region, Dibrugarh</div>`)[0];
+            popup_b50d01cdcbca431f8074f1fae30554d1.setContent(html_fa091efea7fe46069597a62cc8b160d4);
+        
+
+        marker_6339bd69af2a4603bc4212d6bd92a79e.bindPopup(popup_b50d01cdcbca431f8074f1fae30554d1)
+        ;
+
+        
+    
+    
+            var marker_f2714f982f0344009738c20ad00cab61 = L.marker(
+                [26.4709, 89.8994],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_113f433edced48d79a18d1b0628a99db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f2714f982f0344009738c20ad00cab61.setIcon(icon_113f433edced48d79a18d1b0628a99db);
+        
+    
+        var popup_479690a0acca434eac4ad6b87ebbe598 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00c0de9d8417401db61cd0eccdfb219c = $(`<div id="html_00c0de9d8417401db61cd0eccdfb219c" style="width: 100.0%; height: 100.0%;">Gauhati Medical College, Guwahati </div>`)[0];
+            popup_479690a0acca434eac4ad6b87ebbe598.setContent(html_00c0de9d8417401db61cd0eccdfb219c);
+        
+
+        marker_f2714f982f0344009738c20ad00cab61.bindPopup(popup_479690a0acca434eac4ad6b87ebbe598)
+        ;
+
+        
+    
+    
+            var marker_a3a9fe21e5e64fdd9f9012276f280739 = L.marker(
+                [24.82733, 92.79786999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b5567218a6c8491cb7159809765ff754 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a3a9fe21e5e64fdd9f9012276f280739.setIcon(icon_b5567218a6c8491cb7159809765ff754);
+        
+    
+        var popup_869428f53fb94b7b838fa5c0cf28a748 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed9b5e20eb5b4efba6075f0b17b9b39b = $(`<div id="html_ed9b5e20eb5b4efba6075f0b17b9b39b" style="width: 100.0%; height: 100.0%;">Silchar Medical College, Silchar</div>`)[0];
+            popup_869428f53fb94b7b838fa5c0cf28a748.setContent(html_ed9b5e20eb5b4efba6075f0b17b9b39b);
+        
+
+        marker_a3a9fe21e5e64fdd9f9012276f280739.bindPopup(popup_869428f53fb94b7b838fa5c0cf28a748)
+        ;
+
+        
+    
+    
+            var marker_5138b04cc63643aaa7fe87ea2639aa75 = L.marker(
+                [26.7575, 94.2031],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_181a8d37ee004a77b0e1b07e3fe4ad3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5138b04cc63643aaa7fe87ea2639aa75.setIcon(icon_181a8d37ee004a77b0e1b07e3fe4ad3c);
+        
+    
+        var popup_40e0c7d17d3e4170baa5ce680a73c7a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2eaf5366c9ba4dc7bae6d378c030d1d1 = $(`<div id="html_2eaf5366c9ba4dc7bae6d378c030d1d1" style="width: 100.0%; height: 100.0%;">Jorhat Medical College, Jorhat</div>`)[0];
+            popup_40e0c7d17d3e4170baa5ce680a73c7a4.setContent(html_2eaf5366c9ba4dc7bae6d378c030d1d1);
+        
+
+        marker_5138b04cc63643aaa7fe87ea2639aa75.bindPopup(popup_40e0c7d17d3e4170baa5ce680a73c7a4)
+        ;
+
+        
+    
+    
+            var marker_86ee94fc246a4e948cacda5497a4d4b3 = L.marker(
+                [26.3229, 91.0063],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_41ac8eaa4d2f4312882a606e043df756 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_86ee94fc246a4e948cacda5497a4d4b3.setIcon(icon_41ac8eaa4d2f4312882a606e043df756);
+        
+    
+        var popup_0ceca7a63d0a4e31a141c57a1a682a77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27054446b47f4c2eaf8f1f07f8cb925c = $(`<div id="html_27054446b47f4c2eaf8f1f07f8cb925c" style="width: 100.0%; height: 100.0%;">Fakhruddin Medical College, Barpeta</div>`)[0];
+            popup_0ceca7a63d0a4e31a141c57a1a682a77.setContent(html_27054446b47f4c2eaf8f1f07f8cb925c);
+        
+
+        marker_86ee94fc246a4e948cacda5497a4d4b3.bindPopup(popup_0ceca7a63d0a4e31a141c57a1a682a77)
+        ;
+
+        
+    
+    
+            var marker_f1f6747978024bb68db2bfa48e8bd2d6 = L.marker(
+                [25.602220000000003, 85.11936],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5b521188e9e044bca26adde4a53488e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f1f6747978024bb68db2bfa48e8bd2d6.setIcon(icon_5b521188e9e044bca26adde4a53488e8);
+        
+    
+        var popup_20aef96fd6554c2ba6f5c68946547ff6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac0b334e175c435bb4184846d693d383 = $(`<div id="html_ac0b334e175c435bb4184846d693d383" style="width: 100.0%; height: 100.0%;">Patna Medical College, Patna</div>`)[0];
+            popup_20aef96fd6554c2ba6f5c68946547ff6.setContent(html_ac0b334e175c435bb4184846d693d383);
+        
+
+        marker_f1f6747978024bb68db2bfa48e8bd2d6.bindPopup(popup_20aef96fd6554c2ba6f5c68946547ff6)
+        ;
+
+        
+    
+    
+            var marker_498c5ca2055b4ce59f0d769ebd7a46f1 = L.marker(
+                [28.5583, 74.2372],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_49f9cab75d994af4873ea24ad05267e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_498c5ca2055b4ce59f0d769ebd7a46f1.setIcon(icon_49f9cab75d994af4873ea24ad05267e5);
+        
+    
+        var popup_d02c9108e91e4b2f93b94123a140c15e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63a548ceea2d47109144d166fb7fd3cd = $(`<div id="html_63a548ceea2d47109144d166fb7fd3cd" style="width: 100.0%; height: 100.0%;">Darbhanga Medical College, Darbhanga</div>`)[0];
+            popup_d02c9108e91e4b2f93b94123a140c15e.setContent(html_63a548ceea2d47109144d166fb7fd3cd);
+        
+
+        marker_498c5ca2055b4ce59f0d769ebd7a46f1.bindPopup(popup_d02c9108e91e4b2f93b94123a140c15e)
+        ;
+
+        
+    
+    
+            var marker_d00ffac7bb834b8a98f1073aada5fff9 = L.marker(
+                [23.8095, 83.7987],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ce63b19ad9ae43769ceaedec07e85bef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d00ffac7bb834b8a98f1073aada5fff9.setIcon(icon_ce63b19ad9ae43769ceaedec07e85bef);
+        
+    
+        var popup_d9c93fcdefa940839c0487f514283e80 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_875f3a842fad445e8deec10f0db036cd = $(`<div id="html_875f3a842fad445e8deec10f0db036cd" style="width: 100.0%; height: 100.0%;">ICMR-Rajendra  Memorial  Research  Institute  of  Medical  Sciences, Patna</div>`)[0];
+            popup_d9c93fcdefa940839c0487f514283e80.setContent(html_875f3a842fad445e8deec10f0db036cd);
+        
+
+        marker_d00ffac7bb834b8a98f1073aada5fff9.bindPopup(popup_d9c93fcdefa940839c0487f514283e80)
+        ;
+
+        
+    
+    
+            var marker_441fa754a92748fa8d05aedec4b2d356 = L.marker(
+                [22.56263, 88.36304],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ccb1688fb08048e4a727c188f55153f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_441fa754a92748fa8d05aedec4b2d356.setIcon(icon_ccb1688fb08048e4a727c188f55153f0);
+        
+    
+        var popup_2b7d8556952e486aa723ab08433d345f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_997b15cc028740beb6ad1e23f2b7a5ae = $(`<div id="html_997b15cc028740beb6ad1e23f2b7a5ae" style="width: 100.0%; height: 100.0%;">Institute of Post Graduate Medical Education and Research (IPGMER), Kolkata</div>`)[0];
+            popup_2b7d8556952e486aa723ab08433d345f.setContent(html_997b15cc028740beb6ad1e23f2b7a5ae);
+        
+
+        marker_441fa754a92748fa8d05aedec4b2d356.bindPopup(popup_2b7d8556952e486aa723ab08433d345f)
+        ;
+
+        
+    
+    
+            var marker_d968621bad2c4fd5bb4974971e45c33c = L.marker(
+                [22.42114, 87.32257],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_c3e74e1cd4a84b8d81668c1d8761b0b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d968621bad2c4fd5bb4974971e45c33c.setIcon(icon_c3e74e1cd4a84b8d81668c1d8761b0b3);
+        
+    
+        var popup_35852e5a2f224cf38cf4b7401d276f1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d185f2dd4971437f92de3d50d7ffe87a = $(`<div id="html_d185f2dd4971437f92de3d50d7ffe87a" style="width: 100.0%; height: 100.0%;">Midnapore Medical College, Midnapore</div>`)[0];
+            popup_35852e5a2f224cf38cf4b7401d276f1d.setContent(html_d185f2dd4971437f92de3d50d7ffe87a);
+        
+
+        marker_d968621bad2c4fd5bb4974971e45c33c.bindPopup(popup_35852e5a2f224cf38cf4b7401d276f1d)
+        ;
+
+        
+    
+    
+            var marker_df0a88f71cf141d0845af701d857c4ef = L.marker(
+                [26.7111, 88.3462],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3576cfe9d31b4d3c8a69ceaee5ea541a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_df0a88f71cf141d0845af701d857c4ef.setIcon(icon_3576cfe9d31b4d3c8a69ceaee5ea541a);
+        
+    
+        var popup_6bc246150d394e3196af2158fa869fa8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfa39ee3aa514a11b20a2666d18e2500 = $(`<div id="html_dfa39ee3aa514a11b20a2666d18e2500" style="width: 100.0%; height: 100.0%;">North Bengal Medical College, Siliguri</div>`)[0];
+            popup_6bc246150d394e3196af2158fa869fa8.setContent(html_dfa39ee3aa514a11b20a2666d18e2500);
+        
+
+        marker_df0a88f71cf141d0845af701d857c4ef.bindPopup(popup_6bc246150d394e3196af2158fa869fa8)
+        ;
+
+        
+    
+    
+            var marker_709109cb82af44cd99e944ad9b1d9b67 = L.marker(
+                [31.2453, 76.6554],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_cfe7ccb53c544b988074ad18b01cf9f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_709109cb82af44cd99e944ad9b1d9b67.setIcon(icon_cfe7ccb53c544b988074ad18b01cf9f0);
+        
+    
+        var popup_57d31faf49334a3f937bb4081bfb21b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb3121cc947044888e71c5c968d25e3f = $(`<div id="html_eb3121cc947044888e71c5c968d25e3f" style="width: 100.0%; height: 100.0%;">Government Medical College and Hospital, Chandigarh</div>`)[0];
+            popup_57d31faf49334a3f937bb4081bfb21b4.setContent(html_eb3121cc947044888e71c5c968d25e3f);
+        
+
+        marker_709109cb82af44cd99e944ad9b1d9b67.bindPopup(popup_57d31faf49334a3f937bb4081bfb21b4)
+        ;
+
+        
+    
+    
+            var marker_2e38753e56e449d793db9c4d6a01e019 = L.marker(
+                [20.173, 80.1206],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_af2b0e987aec46baaecc26409e63e807 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2e38753e56e449d793db9c4d6a01e019.setIcon(icon_af2b0e987aec46baaecc26409e63e807);
+        
+    
+        var popup_b2f2874b06b0483590d9511d290dbc61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c40ff4e1d0924422b4bb41911c0c00ad = $(`<div id="html_c40ff4e1d0924422b4bb41911c0c00ad" style="width: 100.0%; height: 100.0%;">Late Baliram Kashyap Memorial Government Medical College, Jagdalpur</div>`)[0];
+            popup_b2f2874b06b0483590d9511d290dbc61.setContent(html_c40ff4e1d0924422b4bb41911c0c00ad);
+        
+
+        marker_2e38753e56e449d793db9c4d6a01e019.bindPopup(popup_b2f2874b06b0483590d9511d290dbc61)
+        ;
+
+        
+    
+    
+            var marker_5b9193066e284691ab5846b116bb2fc3 = L.marker(
+                [27.42397, 77.09921999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b1a0f4100bde4e5aa88ef0493784556c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5b9193066e284691ab5846b116bb2fc3.setIcon(icon_b1a0f4100bde4e5aa88ef0493784556c);
+        
+    
+        var popup_d8720725ec17411eaa0a854f72517bf2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eade73dc218f4943b0591e7db7bedd22 = $(`<div id="html_eade73dc218f4943b0591e7db7bedd22" style="width: 100.0%; height: 100.0%;">All India Institute of Medical Sciences (AIIMS), New Delhi</div>`)[0];
+            popup_d8720725ec17411eaa0a854f72517bf2.setContent(html_eade73dc218f4943b0591e7db7bedd22);
+        
+
+        marker_5b9193066e284691ab5846b116bb2fc3.bindPopup(popup_d8720725ec17411eaa0a854f72517bf2)
+        ;
+
+        
+    
+    
+            var marker_758dcc951a7545e9963e38176cb83ca2 = L.marker(
+                [29.222540000000002, 79.5286],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_68b246eacae54abd9a56a814eaed4623 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_758dcc951a7545e9963e38176cb83ca2.setIcon(icon_68b246eacae54abd9a56a814eaed4623);
+        
+    
+        var popup_81221d07f0e344e6b21f62652e20f04b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4dec3b7ffb041e1a1936d791d9ad980 = $(`<div id="html_d4dec3b7ffb041e1a1936d791d9ad980" style="width: 100.0%; height: 100.0%;">Government Medical College, Haldwani</div>`)[0];
+            popup_81221d07f0e344e6b21f62652e20f04b.setContent(html_d4dec3b7ffb041e1a1936d791d9ad980);
+        
+
+        marker_758dcc951a7545e9963e38176cb83ca2.bindPopup(popup_81221d07f0e344e6b21f62652e20f04b)
+        ;
+
+        
+    
+    
+            var marker_65c157a136924ea3915119eea60e3929 = L.marker(
+                [26.8662778, 80.9188984],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_2a09f5dd922a402ab9542547262c77d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_65c157a136924ea3915119eea60e3929.setIcon(icon_2a09f5dd922a402ab9542547262c77d0);
+        
+    
+        var popup_99eace260f42407c8cf4e5a90c7c47cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6d5e87c1a7e4d8e86ce46fb932fe064 = $(`<div id="html_f6d5e87c1a7e4d8e86ce46fb932fe064" style="width: 100.0%; height: 100.0%;">King George's Medical University, Lucknow</div>`)[0];
+            popup_99eace260f42407c8cf4e5a90c7c47cb.setContent(html_f6d5e87c1a7e4d8e86ce46fb932fe064);
+        
+
+        marker_65c157a136924ea3915119eea60e3929.bindPopup(popup_99eace260f42407c8cf4e5a90c7c47cb)
+        ;
+
+        
+    
+    
+            var marker_7a89ec0cf06746e5991e8ef3244fada2 = L.marker(
+                [27.2339, 79.2728],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_66a225c95cce4b58af5f5fccd5aacd82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7a89ec0cf06746e5991e8ef3244fada2.setIcon(icon_66a225c95cce4b58af5f5fccd5aacd82);
+        
+    
+        var popup_e82ad48ab8064dcb8c5502e6f0c47b32 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3466ad438cd473fa9d706e3be09aff7 = $(`<div id="html_b3466ad438cd473fa9d706e3be09aff7" style="width: 100.0%; height: 100.0%;">Jawaharlal Nehru Medical College, Aligarh</div>`)[0];
+            popup_e82ad48ab8064dcb8c5502e6f0c47b32.setContent(html_b3466ad438cd473fa9d706e3be09aff7);
+        
+
+        marker_7a89ec0cf06746e5991e8ef3244fada2.bindPopup(popup_e82ad48ab8064dcb8c5502e6f0c47b32)
+        ;
+
+        
+    
+    
+            var marker_6fca1098fc4b466b9e4bcaf4b967dbff = L.marker(
+                [28.6328, 77.2198],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9caa21ade8654ea3a26e4987a3bb3ba1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6fca1098fc4b466b9e4bcaf4b967dbff.setIcon(icon_9caa21ade8654ea3a26e4987a3bb3ba1);
+        
+    
+        var popup_04339856048c4b8caca06c80a9d7bca6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5dd97ec3d85416b97b847e582794589 = $(`<div id="html_b5dd97ec3d85416b97b847e582794589" style="width: 100.0%; height: 100.0%;">Lady Hardinge Medical College, New Delhi</div>`)[0];
+            popup_04339856048c4b8caca06c80a9d7bca6.setContent(html_b5dd97ec3d85416b97b847e582794589);
+        
+
+        marker_6fca1098fc4b466b9e4bcaf4b967dbff.bindPopup(popup_04339856048c4b8caca06c80a9d7bca6)
+        ;
+
+        
+    
+    
+            var marker_9a51c57d69604d7a9d1be155c770c1d2 = L.marker(
+                [26.9344, 79.1593],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_0a73617a96f94f818ea35300bb016ce6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9a51c57d69604d7a9d1be155c770c1d2.setIcon(icon_0a73617a96f94f818ea35300bb016ce6);
+        
+    
+        var popup_b56cc32ee7eb4f5190193885b78297d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2449358d388e4bcb8e806330590a81a4 = $(`<div id="html_2449358d388e4bcb8e806330590a81a4" style="width: 100.0%; height: 100.0%;">Uttar Pradesh University of Medical Sciences, Saifai</div>`)[0];
+            popup_b56cc32ee7eb4f5190193885b78297d9.setContent(html_2449358d388e4bcb8e806330590a81a4);
+        
+
+        marker_9a51c57d69604d7a9d1be155c770c1d2.bindPopup(popup_b56cc32ee7eb4f5190193885b78297d9)
+        ;
+
+        
+    
+    
+            var marker_7f094fd7b7974e39adb06c378d827275 = L.marker(
+                [24.959, 83.6061],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_4e8ae2989c1440f985333b046ec181b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7f094fd7b7974e39adb06c378d827275.setIcon(icon_4e8ae2989c1440f985333b046ec181b9);
+        
+    
+        var popup_c122371b1c1b48fcbd97d7bbfa56d067 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aca24d0fcedd41aabb197e1e78033c55 = $(`<div id="html_aca24d0fcedd41aabb197e1e78033c55" style="width: 100.0%; height: 100.0%;">Institute of Medical Sciences, BHU, Varanasi</div>`)[0];
+            popup_c122371b1c1b48fcbd97d7bbfa56d067.setContent(html_aca24d0fcedd41aabb197e1e78033c55);
+        
+
+        marker_7f094fd7b7974e39adb06c378d827275.bindPopup(popup_c122371b1c1b48fcbd97d7bbfa56d067)
+        ;
+
+        
+    
+    
+            var marker_613bf0f793c44b62ad7dca07c5e6b0f2 = L.marker(
+                [9.9173, 78.1196],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_e337137fa8ac4cce87880debfd9b3a86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_613bf0f793c44b62ad7dca07c5e6b0f2.setIcon(icon_e337137fa8ac4cce87880debfd9b3a86);
+        
+    
+        var popup_aeaeb2e994d4426fbe75503d31d6807c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db6b80c7ba544a2e90437824f1571d73 = $(`<div id="html_db6b80c7ba544a2e90437824f1571d73" style="width: 100.0%; height: 100.0%;">BJ Medical College, Ahmedabad </div>`)[0];
+            popup_aeaeb2e994d4426fbe75503d31d6807c.setContent(html_db6b80c7ba544a2e90437824f1571d73);
+        
+
+        marker_613bf0f793c44b62ad7dca07c5e6b0f2.bindPopup(popup_aeaeb2e994d4426fbe75503d31d6807c)
+        ;
+
+        
+    
+    
+            var marker_a50137759bf0489ab98f2a9a2e474580 = L.marker(
+                [23.3915, 73.5082],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9df1b4a14ace476088484e6094452d26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a50137759bf0489ab98f2a9a2e474580.setIcon(icon_9df1b4a14ace476088484e6094452d26);
+        
+    
+        var popup_58da7956b0cc49b183bd98a87671cefe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a343144b1130425cb60461d622d8242b = $(`<div id="html_a343144b1130425cb60461d622d8242b" style="width: 100.0%; height: 100.0%;">M.P. Shah Govt Medical College, Jamnagar</div>`)[0];
+            popup_58da7956b0cc49b183bd98a87671cefe.setContent(html_a343144b1130425cb60461d622d8242b);
+        
+
+        marker_a50137759bf0489ab98f2a9a2e474580.bindPopup(popup_58da7956b0cc49b183bd98a87671cefe)
+        ;
+
+        
+    
+    
+            var marker_5d72e455c8d5451fbad2ff6462eee2cc = L.marker(
+                [22.29941, 73.20812],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_0dbb64d9dbd6413db77103a7f3bead84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5d72e455c8d5451fbad2ff6462eee2cc.setIcon(icon_0dbb64d9dbd6413db77103a7f3bead84);
+        
+    
+        var popup_ed7fb1a88a3f4fbca0f5ac57d2659201 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe7c24aeb7e245abaf898a1c27816981 = $(`<div id="html_fe7c24aeb7e245abaf898a1c27816981" style="width: 100.0%; height: 100.0%;">Government Medical College, Vadodara</div>`)[0];
+            popup_ed7fb1a88a3f4fbca0f5ac57d2659201.setContent(html_fe7c24aeb7e245abaf898a1c27816981);
+        
+
+        marker_5d72e455c8d5451fbad2ff6462eee2cc.bindPopup(popup_ed7fb1a88a3f4fbca0f5ac57d2659201)
+        ;
+
+        
+    
+    
+            var marker_1b17ba5688ba4b0dbd30cb466fd0751d = L.marker(
+                [24.0735, 74.5841],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f346b11178d24a32be9e05e240615cfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1b17ba5688ba4b0dbd30cb466fd0751d.setIcon(icon_f346b11178d24a32be9e05e240615cfd);
+        
+    
+        var popup_2aabc5fd17e44408b297b2556b7d04cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fcc5e3ea5e04d4b97288ec66802dbab = $(`<div id="html_5fcc5e3ea5e04d4b97288ec66802dbab" style="width: 100.0%; height: 100.0%;">Government Medical College, Surat</div>`)[0];
+            popup_2aabc5fd17e44408b297b2556b7d04cb.setContent(html_5fcc5e3ea5e04d4b97288ec66802dbab);
+        
+
+        marker_1b17ba5688ba4b0dbd30cb466fd0751d.bindPopup(popup_2aabc5fd17e44408b297b2556b7d04cb)
+        ;
+
+        
+    
+    
+            var marker_1c1ba0e849d14aa3ada45f3dc2a05cab = L.marker(
+                [22.291610000000002, 70.79321999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ba4b66edbf4549c3bcae2b7d84c31893 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c1ba0e849d14aa3ada45f3dc2a05cab.setIcon(icon_ba4b66edbf4549c3bcae2b7d84c31893);
+        
+    
+        var popup_33f9c6d210624748819521810e59551e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9457709d2fb4ef396c5af1cd9ccdec0 = $(`<div id="html_e9457709d2fb4ef396c5af1cd9ccdec0" style="width: 100.0%; height: 100.0%;">Government Medical College, Rajkot</div>`)[0];
+            popup_33f9c6d210624748819521810e59551e.setContent(html_e9457709d2fb4ef396c5af1cd9ccdec0);
+        
+
+        marker_1c1ba0e849d14aa3ada45f3dc2a05cab.bindPopup(popup_33f9c6d210624748819521810e59551e)
+        ;
+
+        
+    
+    
+            var marker_cfccbd62390e4aa4a8af3c2f4e1be656 = L.marker(
+                [32.4999, 74.9071],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_aec5d530df1d49079727d9f4b6628316 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cfccbd62390e4aa4a8af3c2f4e1be656.setIcon(icon_aec5d530df1d49079727d9f4b6628316);
+        
+    
+        var popup_13e8af3c3653400189ce918c2375f467 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb47625c739247ba8e8558f77a889013 = $(`<div id="html_bb47625c739247ba8e8558f77a889013" style="width: 100.0%; height: 100.0%;">Indira Gandhi Medical College, Shimla</div>`)[0];
+            popup_13e8af3c3653400189ce918c2375f467.setContent(html_bb47625c739247ba8e8558f77a889013);
+        
+
+        marker_cfccbd62390e4aa4a8af3c2f4e1be656.bindPopup(popup_13e8af3c3653400189ce918c2375f467)
+        ;
+
+        
+    
+    
+            var marker_b21fa00c7d114bf19cda077a4a1dd946 = L.marker(
+                [29.273000000000003, 77.1457],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_30574ca3095c4ca38b94274d15430c5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b21fa00c7d114bf19cda077a4a1dd946.setIcon(icon_30574ca3095c4ca38b94274d15430c5a);
+        
+    
+        var popup_52d4a3717e704a8f932aaaebc80d105c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a0ee8ad868d4c10ae3ab9bff2e79557 = $(`<div id="html_2a0ee8ad868d4c10ae3ab9bff2e79557" style="width: 100.0%; height: 100.0%;">Dr. Rajendra Prasad  Government Medical College, Kangra</div>`)[0];
+            popup_52d4a3717e704a8f932aaaebc80d105c.setContent(html_2a0ee8ad868d4c10ae3ab9bff2e79557);
+        
+
+        marker_b21fa00c7d114bf19cda077a4a1dd946.bindPopup(popup_52d4a3717e704a8f932aaaebc80d105c)
+        ;
+
+        
+    
+    
+            var marker_968209d61cf648b99137ef955a1e1b6b = L.marker(
+                [34.1417, 74.7972],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7059aba9ae3b41e9bcb67012c36f5551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_968209d61cf648b99137ef955a1e1b6b.setIcon(icon_7059aba9ae3b41e9bcb67012c36f5551);
+        
+    
+        var popup_0ffa3f1346784994b43d40d5a16e43db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c70092d488c4a768b9d9d11e11be273 = $(`<div id="html_7c70092d488c4a768b9d9d11e11be273" style="width: 100.0%; height: 100.0%;">Sher - i -Kashmir Institute of Medical Sciences, Srinagar</div>`)[0];
+            popup_0ffa3f1346784994b43d40d5a16e43db.setContent(html_7c70092d488c4a768b9d9d11e11be273);
+        
+
+        marker_968209d61cf648b99137ef955a1e1b6b.bindPopup(popup_0ffa3f1346784994b43d40d5a16e43db)
+        ;
+
+        
+    
+    
+            var marker_78561067ccdc4ab2a0a413e0fd854b3a = L.marker(
+                [32.7357, 74.8691],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_79a723bd7dd24157957e156d6ab11d4f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_78561067ccdc4ab2a0a413e0fd854b3a.setIcon(icon_79a723bd7dd24157957e156d6ab11d4f);
+        
+    
+        var popup_584770b028ef4073ba8720e61e0a9364 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4c1676b9b2b493c9cc7e3a7aad7fa59 = $(`<div id="html_c4c1676b9b2b493c9cc7e3a7aad7fa59" style="width: 100.0%; height: 100.0%;">Government Medical College, Jammu</div>`)[0];
+            popup_584770b028ef4073ba8720e61e0a9364.setContent(html_c4c1676b9b2b493c9cc7e3a7aad7fa59);
+        
+
+        marker_78561067ccdc4ab2a0a413e0fd854b3a.bindPopup(popup_584770b028ef4073ba8720e61e0a9364)
+        ;
+
+        
+    
+    
+            var marker_c1cadc2492184723a5b1b696f5566d6b = L.marker(
+                [34.1417, 74.7972],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7a1484bb04e24808a96e59c27052d879 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c1cadc2492184723a5b1b696f5566d6b.setIcon(icon_7a1484bb04e24808a96e59c27052d879);
+        
+    
+        var popup_7fe38bd7a0f0434b90d365011688fb09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6a1c2c7c8af4ffab50c0c0d752a055b = $(`<div id="html_f6a1c2c7c8af4ffab50c0c0d752a055b" style="width: 100.0%; height: 100.0%;">Government Medical College, Srinagar</div>`)[0];
+            popup_7fe38bd7a0f0434b90d365011688fb09.setContent(html_f6a1c2c7c8af4ffab50c0c0d752a055b);
+        
+
+        marker_c1cadc2492184723a5b1b696f5566d6b.bindPopup(popup_7fe38bd7a0f0434b90d365011688fb09)
+        ;
+
+        
+    
+    
+            var marker_9c8f37fce51b42c2a69d4b97bfae61d2 = L.marker(
+                [24.213, 87.3066],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_abb55b1422304017a244faa70b82c3a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9c8f37fce51b42c2a69d4b97bfae61d2.setIcon(icon_abb55b1422304017a244faa70b82c3a9);
+        
+    
+        var popup_c430871bca4c402eb19e93df165f4e60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea536113aaed4b39946f70dfdee33ccb = $(`<div id="html_ea536113aaed4b39946f70dfdee33ccb" style="width: 100.0%; height: 100.0%;">Rajendra Institute of Medical Sciences, Ranchi</div>`)[0];
+            popup_c430871bca4c402eb19e93df165f4e60.setContent(html_ea536113aaed4b39946f70dfdee33ccb);
+        
+
+        marker_9c8f37fce51b42c2a69d4b97bfae61d2.bindPopup(popup_c430871bca4c402eb19e93df165f4e60)
+        ;
+
+        
+    
+    
+            var marker_6f38d2f8c57d402880128b44801b37ca = L.marker(
+                [23.2131, 81.2026],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_d7d7a69a966647108f3758730b33ee1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6f38d2f8c57d402880128b44801b37ca.setIcon(icon_d7d7a69a966647108f3758730b33ee1b);
+        
+    
+        var popup_836109c9efed40aeb29e921bd1131a56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_330866e01eff4c2a8e99cde53bf32324 = $(`<div id="html_330866e01eff4c2a8e99cde53bf32324" style="width: 100.0%; height: 100.0%;">MGM Medical College, Jamshedpur </div>`)[0];
+            popup_836109c9efed40aeb29e921bd1131a56.setContent(html_330866e01eff4c2a8e99cde53bf32324);
+        
+
+        marker_6f38d2f8c57d402880128b44801b37ca.bindPopup(popup_836109c9efed40aeb29e921bd1131a56)
+        ;
+
+        
+    
+    
+            var marker_338420ccc79c4355a813afebea4b19e0 = L.marker(
+                [12.958610400000001, 77.574717],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_2ace0bfd20994ab9a85b58d95a19cda9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_338420ccc79c4355a813afebea4b19e0.setIcon(icon_2ace0bfd20994ab9a85b58d95a19cda9);
+        
+    
+        var popup_f229a9cc32754f02ab1e6bbed5f577cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_858b4651bbcb454c9657bfb1d1a87caf = $(`<div id="html_858b4651bbcb454c9657bfb1d1a87caf" style="width: 100.0%; height: 100.0%;">Bangalore Medical College & Research Institute, Bangaluru</div>`)[0];
+            popup_f229a9cc32754f02ab1e6bbed5f577cc.setContent(html_858b4651bbcb454c9657bfb1d1a87caf);
+        
+
+        marker_338420ccc79c4355a813afebea4b19e0.bindPopup(popup_f229a9cc32754f02ab1e6bbed5f577cc)
+        ;
+
+        
+    
+    
+            var marker_81dd6bdc1c2a47cb88290d68f84dd6b4 = L.marker(
+                [12.2979, 76.6393],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_841ceb7b56424f9ea80b2ea5c85f2d87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81dd6bdc1c2a47cb88290d68f84dd6b4.setIcon(icon_841ceb7b56424f9ea80b2ea5c85f2d87);
+        
+    
+        var popup_55c2665af4764b839926af0ec1234d94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66bb0238fe874a6abeedcb4290aca11c = $(`<div id="html_66bb0238fe874a6abeedcb4290aca11c" style="width: 100.0%; height: 100.0%;">Mysore Medical College and Research Institute, Mysore</div>`)[0];
+            popup_55c2665af4764b839926af0ec1234d94.setContent(html_66bb0238fe874a6abeedcb4290aca11c);
+        
+
+        marker_81dd6bdc1c2a47cb88290d68f84dd6b4.bindPopup(popup_55c2665af4764b839926af0ec1234d94)
+        ;
+
+        
+    
+    
+            var marker_ecca7c6f40b9452ca0718107f885002c = L.marker(
+                [13.00715, 76.0962],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_81862c9e6a5d4cf6907071b326f9c9b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ecca7c6f40b9452ca0718107f885002c.setIcon(icon_81862c9e6a5d4cf6907071b326f9c9b8);
+        
+    
+        var popup_f4032a886d11433fb56596b5b67f793b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e136e7fe9184ccfa8dc14d9228de6f6 = $(`<div id="html_9e136e7fe9184ccfa8dc14d9228de6f6" style="width: 100.0%; height: 100.0%;">Hassan Institute of Medical Sciences, Hassan</div>`)[0];
+            popup_f4032a886d11433fb56596b5b67f793b.setContent(html_9e136e7fe9184ccfa8dc14d9228de6f6);
+        
+
+        marker_ecca7c6f40b9452ca0718107f885002c.bindPopup(popup_f4032a886d11433fb56596b5b67f793b)
+        ;
+
+        
+    
+    
+            var marker_47e02b99a9da47e28bdb60a4e6bb3859 = L.marker(
+                [13.9316, 75.5679],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_668aa401dd124cbb89bc47e220e82ca5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_47e02b99a9da47e28bdb60a4e6bb3859.setIcon(icon_668aa401dd124cbb89bc47e220e82ca5);
+        
+    
+        var popup_1c12ea6e66214446aabdb7740e6d93f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d2d2aeea90f443ba56b8f8dcb262a48 = $(`<div id="html_3d2d2aeea90f443ba56b8f8dcb262a48" style="width: 100.0%; height: 100.0%;">Shimoga Institute of Medical Sciences, Shivamogga</div>`)[0];
+            popup_1c12ea6e66214446aabdb7740e6d93f0.setContent(html_3d2d2aeea90f443ba56b8f8dcb262a48);
+        
+
+        marker_47e02b99a9da47e28bdb60a4e6bb3859.bindPopup(popup_1c12ea6e66214446aabdb7740e6d93f0)
+        ;
+
+        
+    
+    
+            var marker_fa341b85336f41689e17e32bb3138383 = L.marker(
+                [17.3376, 76.8379],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_df7ef576d0544546ab7167f7197a1f99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fa341b85336f41689e17e32bb3138383.setIcon(icon_df7ef576d0544546ab7167f7197a1f99);
+        
+    
+        var popup_41fa7e18a7c441308c0cd539c0ff1457 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72f023307e34471587f6df7cc2160645 = $(`<div id="html_72f023307e34471587f6df7cc2160645" style="width: 100.0%; height: 100.0%;">Gulbarga Institute Of Medical Sciences, Gulbarga</div>`)[0];
+            popup_41fa7e18a7c441308c0cd539c0ff1457.setContent(html_72f023307e34471587f6df7cc2160645);
+        
+
+        marker_fa341b85336f41689e17e32bb3138383.bindPopup(popup_41fa7e18a7c441308c0cd539c0ff1457)
+        ;
+
+        
+    
+    
+            var marker_7b6525c2ac6b40269500d29fe6edcea3 = L.marker(
+                [11.0072, 76.967],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_8e970a58935e4fa9bb71ef4051cd5893 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7b6525c2ac6b40269500d29fe6edcea3.setIcon(icon_8e970a58935e4fa9bb71ef4051cd5893);
+        
+    
+        var popup_5d235c58181b4eb9937a89aa8429bbc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8c1ced7d9484ceca422bcf5d1c65a73 = $(`<div id="html_e8c1ced7d9484ceca422bcf5d1c65a73" style="width: 100.0%; height: 100.0%;">Government Medical College, Thrissur</div>`)[0];
+            popup_5d235c58181b4eb9937a89aa8429bbc0.setContent(html_e8c1ced7d9484ceca422bcf5d1c65a73);
+        
+
+        marker_7b6525c2ac6b40269500d29fe6edcea3.bindPopup(popup_5d235c58181b4eb9937a89aa8429bbc0)
+        ;
+
+        
+    
+    
+            var marker_cdb88a0f7c0e409caf2d1c1159537e39 = L.marker(
+                [9.41667, 76.5],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9860a18304d840b880d38f592366596d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cdb88a0f7c0e409caf2d1c1159537e39.setIcon(icon_9860a18304d840b880d38f592366596d);
+        
+    
+        var popup_fccec87dc1074985a5c0808822ff969e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1775f6fb27bb40aea59ac6e6c8e69cb8 = $(`<div id="html_1775f6fb27bb40aea59ac6e6c8e69cb8" style="width: 100.0%; height: 100.0%;">ICMR-National Institute of Virology Field Unit, Allapuzzha</div>`)[0];
+            popup_fccec87dc1074985a5c0808822ff969e.setContent(html_1775f6fb27bb40aea59ac6e6c8e69cb8);
+        
+
+        marker_cdb88a0f7c0e409caf2d1c1159537e39.bindPopup(popup_fccec87dc1074985a5c0808822ff969e)
+        ;
+
+        
+    
+    
+            var marker_b776b23d73c54253b2f39f5d8d34a562 = L.marker(
+                [23.25469, 77.40289],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7d533accb5d64a5e8f6e9f1629e63373 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b776b23d73c54253b2f39f5d8d34a562.setIcon(icon_7d533accb5d64a5e8f6e9f1629e63373);
+        
+    
+        var popup_669963b49ec940f89c1cca06ecf75f8c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b7ab07a888b4673bfa965e0401977f7 = $(`<div id="html_2b7ab07a888b4673bfa965e0401977f7" style="width: 100.0%; height: 100.0%;"> All India Institute of Medical Sciences (AIIMS), Bhopal</div>`)[0];
+            popup_669963b49ec940f89c1cca06ecf75f8c.setContent(html_2b7ab07a888b4673bfa965e0401977f7);
+        
+
+        marker_b776b23d73c54253b2f39f5d8d34a562.bindPopup(popup_669963b49ec940f89c1cca06ecf75f8c)
+        ;
+
+        
+    
+    
+            var marker_ef5d0929fd144fbba7dec47b979e5c59 = L.marker(
+                [22.714297, 75.8829715],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_e3028f484b3843939cf2fa113b0c66d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ef5d0929fd144fbba7dec47b979e5c59.setIcon(icon_e3028f484b3843939cf2fa113b0c66d5);
+        
+    
+        var popup_c30d8a24fc8142889a1000b61b74582f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92628d7523a24ba8bac323a2ef3d9710 = $(`<div id="html_92628d7523a24ba8bac323a2ef3d9710" style="width: 100.0%; height: 100.0%;">MGM Medical College, Indore</div>`)[0];
+            popup_c30d8a24fc8142889a1000b61b74582f.setContent(html_92628d7523a24ba8bac323a2ef3d9710);
+        
+
+        marker_ef5d0929fd144fbba7dec47b979e5c59.bindPopup(popup_c30d8a24fc8142889a1000b61b74582f)
+        ;
+
+        
+    
+    
+            var marker_ce7018a272434a7097ab16256bb7add2 = L.marker(
+                [23.162129999999998, 79.89939],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f23791be5a7a40e397763c29340a1928 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ce7018a272434a7097ab16256bb7add2.setIcon(icon_f23791be5a7a40e397763c29340a1928);
+        
+    
+        var popup_e8dc05dfec4e4c659f54729d28462160 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6603b6f5337248dbbfe3c43fcfa7b500 = $(`<div id="html_6603b6f5337248dbbfe3c43fcfa7b500" style="width: 100.0%; height: 100.0%;">ICMR-National Institute for Research in Tribal Health, Jabalpur</div>`)[0];
+            popup_e8dc05dfec4e4c659f54729d28462160.setContent(html_6603b6f5337248dbbfe3c43fcfa7b500);
+        
+
+        marker_ce7018a272434a7097ab16256bb7add2.bindPopup(popup_e8dc05dfec4e4c659f54729d28462160)
+        ;
+
+        
+    
+    
+            var marker_45a91bdf03c74a94bb8879de4280bb6a = L.marker(
+                [21.1346, 79.0812],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_d4927fa3f3464b8a9beb2c7723be4eac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_45a91bdf03c74a94bb8879de4280bb6a.setIcon(icon_d4927fa3f3464b8a9beb2c7723be4eac);
+        
+    
+        var popup_a77c6f2f94044854a5b6f01fc385a351 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e639245e1b5f49aa88fea443fe0723dd = $(`<div id="html_e639245e1b5f49aa88fea443fe0723dd" style="width: 100.0%; height: 100.0%;">Indira Gandhi Government Medical College & Hospital</div>`)[0];
+            popup_a77c6f2f94044854a5b6f01fc385a351.setContent(html_e639245e1b5f49aa88fea443fe0723dd);
+        
+
+        marker_45a91bdf03c74a94bb8879de4280bb6a.bindPopup(popup_a77c6f2f94044854a5b6f01fc385a351)
+        ;
+
+        
+    
+    
+            var marker_f3cd9f25b45240849e99e29aeffefcc1 = L.marker(
+                [16.8382671, 74.6485504],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_4f207e0dd7ec42a3823969ddf52ae188 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f3cd9f25b45240849e99e29aeffefcc1.setIcon(icon_4f207e0dd7ec42a3823969ddf52ae188);
+        
+    
+        var popup_c58d44112abc43e4bbdb4aae1f9168af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5a4ce8e70914ddebf3797c37ca2d6ac = $(`<div id="html_d5a4ce8e70914ddebf3797c37ca2d6ac" style="width: 100.0%; height: 100.0%;">Government Medical College And Hospital, Miraj</div>`)[0];
+            popup_c58d44112abc43e4bbdb4aae1f9168af.setContent(html_d5a4ce8e70914ddebf3797c37ca2d6ac);
+        
+
+        marker_f3cd9f25b45240849e99e29aeffefcc1.bindPopup(popup_c58d44112abc43e4bbdb4aae1f9168af)
+        ;
+
+        
+    
+    
+            var marker_044dac93c35542899e2650e54f25434c = L.marker(
+                [19.0052672, 72.8397502],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f6c5b1a4be9844ceb434b35983001c54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_044dac93c35542899e2650e54f25434c.setIcon(icon_f6c5b1a4be9844ceb434b35983001c54);
+        
+    
+        var popup_ecfabde3b20843e6b05a9a76ef28aba3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_323d256b30ac49e992a8f296057ab0d7 = $(`<div id="html_323d256b30ac49e992a8f296057ab0d7" style="width: 100.0%; height: 100.0%;">Seth GS Medical College & KEM Hospital, Mumbai</div>`)[0];
+            popup_ecfabde3b20843e6b05a9a76ef28aba3.setContent(html_323d256b30ac49e992a8f296057ab0d7);
+        
+
+        marker_044dac93c35542899e2650e54f25434c.bindPopup(popup_ecfabde3b20843e6b05a9a76ef28aba3)
+        ;
+
+        
+    
+    
+            var marker_b9eb17a011564305aa4844e14c822bbe = L.marker(
+                [20.3402, 84.8472],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_78da494b55ac4b5297421b5cbd7e8d4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b9eb17a011564305aa4844e14c822bbe.setIcon(icon_78da494b55ac4b5297421b5cbd7e8d4c);
+        
+    
+        var popup_73efa45aaca544c195e7e913ccf2b73a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_955c3662dc6b412382cb1da08e4f3f36 = $(`<div id="html_955c3662dc6b412382cb1da08e4f3f36" style="width: 100.0%; height: 100.0%;">Government Medical College, Agartala</div>`)[0];
+            popup_73efa45aaca544c195e7e913ccf2b73a.setContent(html_955c3662dc6b412382cb1da08e4f3f36);
+        
+
+        marker_b9eb17a011564305aa4844e14c822bbe.bindPopup(popup_73efa45aaca544c195e7e913ccf2b73a)
+        ;
+
+        
+    
+    
+            var marker_a380d7131e7b48b8b477d47d5d2ebf9c = L.marker(
+                [20.2798, 75.6408],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_04875a24c8624e5d9525c9b0771f4349 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a380d7131e7b48b8b477d47d5d2ebf9c.setIcon(icon_04875a24c8624e5d9525c9b0771f4349);
+        
+    
+        var popup_d805c2b3fb2e417db3b629e2236c0bff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f3341edabf54d558f8585abacfbb6b2 = $(`<div id="html_8f3341edabf54d558f8585abacfbb6b2" style="width: 100.0%; height: 100.0%;">Govt Medical College & Hospital Aurangabad</div>`)[0];
+            popup_d805c2b3fb2e417db3b629e2236c0bff.setContent(html_8f3341edabf54d558f8585abacfbb6b2);
+        
+
+        marker_a380d7131e7b48b8b477d47d5d2ebf9c.bindPopup(popup_d805c2b3fb2e417db3b629e2236c0bff)
+        ;
+
+        
+    
+    
+            var marker_c9941d48992846cf80cb9d0f999da765 = L.marker(
+                [24.9335, 93.9337],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3317c55b21694bf5aa42436724601bf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c9941d48992846cf80cb9d0f999da765.setIcon(icon_3317c55b21694bf5aa42436724601bf6);
+        
+    
+        var popup_ffb702de50e94f7dbcc4354516d4b265 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e77150eab68541b6a8c9d4e3083bcf84 = $(`<div id="html_e77150eab68541b6a8c9d4e3083bcf84" style="width: 100.0%; height: 100.0%;">Regional Institute of Medical Sciences, Imphal</div>`)[0];
+            popup_ffb702de50e94f7dbcc4354516d4b265.setContent(html_e77150eab68541b6a8c9d4e3083bcf84);
+        
+
+        marker_c9941d48992846cf80cb9d0f999da765.bindPopup(popup_ffb702de50e94f7dbcc4354516d4b265)
+        ;
+
+        
+    
+    
+            var marker_2fdb94fd263145cebee611deba51cfc7 = L.marker(
+                [24.8133864, 93.9722298],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f6f648f36b244213be255fc17b03423f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2fdb94fd263145cebee611deba51cfc7.setIcon(icon_f6f648f36b244213be255fc17b03423f);
+        
+    
+        var popup_cbc49bfc288546ceb276b1be76571270 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c147d6e133b246469a1e0a6be0416e88 = $(`<div id="html_c147d6e133b246469a1e0a6be0416e88" style="width: 100.0%; height: 100.0%;">Jawaharlal Nehru Institute of Medical Sciences, Imphal</div>`)[0];
+            popup_cbc49bfc288546ceb276b1be76571270.setContent(html_c147d6e133b246469a1e0a6be0416e88);
+        
+
+        marker_2fdb94fd263145cebee611deba51cfc7.bindPopup(popup_cbc49bfc288546ceb276b1be76571270)
+        ;
+
+        
+    
+    
+            var marker_99fcaa1105064b89b4e3c88e9b3d346a = L.marker(
+                [25.5, 91.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5823b02b84d94956b6dd646d9da50d6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_99fcaa1105064b89b4e3c88e9b3d346a.setIcon(icon_5823b02b84d94956b6dd646d9da50d6f);
+        
+    
+        var popup_90b09fccf3864843841fd209b630ee77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_204a5c8d9956418eb39d31b8b91b4da7 = $(`<div id="html_204a5c8d9956418eb39d31b8b91b4da7" style="width: 100.0%; height: 100.0%;">North Eastern Indira Gandhi Regional Institute of Health and Medical Sciences (NEIGRIHMS), Shillong</div>`)[0];
+            popup_90b09fccf3864843841fd209b630ee77.setContent(html_204a5c8d9956418eb39d31b8b91b4da7);
+        
+
+        marker_99fcaa1105064b89b4e3c88e9b3d346a.bindPopup(popup_90b09fccf3864843841fd209b630ee77)
+        ;
+
+        
+    
+    
+            var marker_46775547ec98421bb42207f32e20c05d = L.marker(
+                [20.27241, 85.83385],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_2dffaca002d34f908dee821b9f9b4998 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_46775547ec98421bb42207f32e20c05d.setIcon(icon_2dffaca002d34f908dee821b9f9b4998);
+        
+    
+        var popup_068f66e1004c4e91b10bbc4433f3e9e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2b8dfdc26d44996bd3ad644a5f7f44e = $(`<div id="html_b2b8dfdc26d44996bd3ad644a5f7f44e" style="width: 100.0%; height: 100.0%;">ICMR-Regional Medical Research Centre (RMRC), Bhubaneswar</div>`)[0];
+            popup_068f66e1004c4e91b10bbc4433f3e9e6.setContent(html_b2b8dfdc26d44996bd3ad644a5f7f44e);
+        
+
+        marker_46775547ec98421bb42207f32e20c05d.bindPopup(popup_068f66e1004c4e91b10bbc4433f3e9e6)
+        ;
+
+        
+    
+    
+            var marker_baa13938ca9c404e8cac009245cdb109 = L.marker(
+                [21.0295, 86.2171],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_1a77c972d502434889cd86b46a80069f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_baa13938ca9c404e8cac009245cdb109.setIcon(icon_1a77c972d502434889cd86b46a80069f);
+        
+    
+        var popup_7fee3075624c4ebd94f1102990adc35d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a454877fbe645d6baf621e38d490eb5 = $(`<div id="html_9a454877fbe645d6baf621e38d490eb5" style="width: 100.0%; height: 100.0%;">SCB Medical College Hospital, Cuttack</div>`)[0];
+            popup_7fee3075624c4ebd94f1102990adc35d.setContent(html_9a454877fbe645d6baf621e38d490eb5);
+        
+
+        marker_baa13938ca9c404e8cac009245cdb109.bindPopup(popup_7fee3075624c4ebd94f1102990adc35d)
+        ;
+
+        
+    
+    
+            var marker_b751fb14d98d4e668ed468b446ac2042 = L.marker(
+                [12.5159, 80.061],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_1ba07d6452a64535a5e768c39edb7351 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b751fb14d98d4e668ed468b446ac2042.setIcon(icon_1ba07d6452a64535a5e768c39edb7351);
+        
+    
+        var popup_b185a988cf5d494aa8af76eae04ec8a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33e5f7d218a24961aff65f7d291d6777 = $(`<div id="html_33e5f7d218a24961aff65f7d291d6777" style="width: 100.0%; height: 100.0%;">Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry</div>`)[0];
+            popup_b185a988cf5d494aa8af76eae04ec8a5.setContent(html_33e5f7d218a24961aff65f7d291d6777);
+        
+
+        marker_b751fb14d98d4e668ed468b446ac2042.bindPopup(popup_b185a988cf5d494aa8af76eae04ec8a5)
+        ;
+
+        
+    
+    
+            var marker_bbbd6e308c204d738c27527acddbf696 = L.marker(
+                [11.9421, 79.7703],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_79276064a111459ea6a5837858b85253 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bbbd6e308c204d738c27527acddbf696.setIcon(icon_79276064a111459ea6a5837858b85253);
+        
+    
+        var popup_28ae3e47781b44a79355b789826e6481 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5614e5368884ef6be7f981bbf9f5ed7 = $(`<div id="html_b5614e5368884ef6be7f981bbf9f5ed7" style="width: 100.0%; height: 100.0%;">Madurai Medical College, Madurai</div>`)[0];
+            popup_28ae3e47781b44a79355b789826e6481.setContent(html_b5614e5368884ef6be7f981bbf9f5ed7);
+        
+
+        marker_bbbd6e308c204d738c27527acddbf696.bindPopup(popup_28ae3e47781b44a79355b789826e6481)
+        ;
+
+        
+    
+    
+            var marker_30defa6cf78a4c7a9142af2feaaff4f0 = L.marker(
+                [13.1995, 78.5157],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3fc844834fb8461893f7ec43ba1b323c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_30defa6cf78a4c7a9142af2feaaff4f0.setIcon(icon_3fc844834fb8461893f7ec43ba1b323c);
+        
+    
+        var popup_4223851f505345caae8e4215b5112f90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0129e8f66e9d4711ad15e19197daa74b = $(`<div id="html_0129e8f66e9d4711ad15e19197daa74b" style="width: 100.0%; height: 100.0%;">Government Medical College, Amritsar</div>`)[0];
+            popup_4223851f505345caae8e4215b5112f90.setContent(html_0129e8f66e9d4711ad15e19197daa74b);
+        
+
+        marker_30defa6cf78a4c7a9142af2feaaff4f0.bindPopup(popup_4223851f505345caae8e4215b5112f90)
+        ;
+
+        
+    
+    
+            var marker_0f942d6bbf11452ca0188dfb21404b65 = L.marker(
+                [30.3271, 76.4027],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_eb3ea25461a746f387675783cb5aee44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0f942d6bbf11452ca0188dfb21404b65.setIcon(icon_eb3ea25461a746f387675783cb5aee44);
+        
+    
+        var popup_59eaf56f59a5480486fab2489c3912c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22b0cd9579a94014a9842fb81186d0be = $(`<div id="html_22b0cd9579a94014a9842fb81186d0be" style="width: 100.0%; height: 100.0%;">Government Medical College, Patiala</div>`)[0];
+            popup_59eaf56f59a5480486fab2489c3912c6.setContent(html_22b0cd9579a94014a9842fb81186d0be);
+        
+
+        marker_0f942d6bbf11452ca0188dfb21404b65.bindPopup(popup_59eaf56f59a5480486fab2489c3912c6)
+        ;
+
+        
+    
+    
+            var marker_5cbd75be54eb45e3a01928b633a1c6fd = L.marker(
+                [11.3498, 76.7937],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ad3053b8ac7d4f8fb1869e049240afa9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5cbd75be54eb45e3a01928b633a1c6fd.setIcon(icon_ad3053b8ac7d4f8fb1869e049240afa9);
+        
+    
+        var popup_e72c83a7cb5b4d51ab069fc1a3ab0572 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_403e04a769ac43479f4c1a50c7679a44 = $(`<div id="html_403e04a769ac43479f4c1a50c7679a44" style="width: 100.0%; height: 100.0%;">Government Theni  Medical College, Theni</div>`)[0];
+            popup_e72c83a7cb5b4d51ab069fc1a3ab0572.setContent(html_403e04a769ac43479f4c1a50c7679a44);
+        
+
+        marker_5cbd75be54eb45e3a01928b633a1c6fd.bindPopup(popup_e72c83a7cb5b4d51ab069fc1a3ab0572)
+        ;
+
+        
+    
+    
+            var marker_aef42f1ede9040be9649f942a2033b90 = L.marker(
+                [8.72518, 77.68451999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_727e6582b7394d068d0ffe9865af7a3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_aef42f1ede9040be9649f942a2033b90.setIcon(icon_727e6582b7394d068d0ffe9865af7a3f);
+        
+    
+        var popup_317bebc6ad914fa08fa5dd9642453d52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93f6f59cba894821ba4888cbd5d38fd2 = $(`<div id="html_93f6f59cba894821ba4888cbd5d38fd2" style="width: 100.0%; height: 100.0%;"> Tirunelveli Medical College, Tirunelveli</div>`)[0];
+            popup_317bebc6ad914fa08fa5dd9642453d52.setContent(html_93f6f59cba894821ba4888cbd5d38fd2);
+        
+
+        marker_aef42f1ede9040be9649f942a2033b90.bindPopup(popup_317bebc6ad914fa08fa5dd9642453d52)
+        ;
+
+        
+    
+    
+            var marker_82b6161df0114978823629cc053130e6 = L.marker(
+                [9.8532, 78.1553],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_d6a57ad7455b46d3aa895a2d1838b77e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_82b6161df0114978823629cc053130e6.setIcon(icon_d6a57ad7455b46d3aa895a2d1838b77e);
+        
+    
+        var popup_d961d3d4f23b429c95f54091fa988af4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3663541f3f7849c58428daaf8ffa3ce9 = $(`<div id="html_3663541f3f7849c58428daaf8ffa3ce9" style="width: 100.0%; height: 100.0%;">Coimbatore Medical College, Coimbatore</div>`)[0];
+            popup_d961d3d4f23b429c95f54091fa988af4.setContent(html_3663541f3f7849c58428daaf8ffa3ce9);
+        
+
+        marker_82b6161df0114978823629cc053130e6.bindPopup(popup_d961d3d4f23b429c95f54091fa988af4)
+        ;
+
+        
+    
+    
+            var marker_12b6b98c5aeb4755ad015591caaf96ac = L.marker(
+                [13.0645, 80.2385],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_98ebc9dc5c3b429c98b3944059f11014 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_12b6b98c5aeb4755ad015591caaf96ac.setIcon(icon_98ebc9dc5c3b429c98b3944059f11014);
+        
+    
+        var popup_a4351e9187124fbfb3ba135cb23d6d7d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_895f09372d67423d9a4dbd35f49b62be = $(`<div id="html_895f09372d67423d9a4dbd35f49b62be" style="width: 100.0%; height: 100.0%;">King Institute of Preventive Medicine and Research, Chennai</div>`)[0];
+            popup_a4351e9187124fbfb3ba135cb23d6d7d.setContent(html_895f09372d67423d9a4dbd35f49b62be);
+        
+
+        marker_12b6b98c5aeb4755ad015591caaf96ac.bindPopup(popup_a4351e9187124fbfb3ba135cb23d6d7d)
+        ;
+
+        
+    
+    
+            var marker_4f44ee4b2ca04c209299bc876838896f = L.marker(
+                [26.9196, 75.7878],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5f294ecbc4234323885966a69e6bad0b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4f44ee4b2ca04c209299bc876838896f.setIcon(icon_5f294ecbc4234323885966a69e6bad0b);
+        
+    
+        var popup_7d30870d982f431191066c77ebe8d5af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fcced3334afb4e7bbf1775467da6989a = $(`<div id="html_fcced3334afb4e7bbf1775467da6989a" style="width: 100.0%; height: 100.0%;">Sawai Man Singh (SMS) Medical College, Jaipur</div>`)[0];
+            popup_7d30870d982f431191066c77ebe8d5af.setContent(html_fcced3334afb4e7bbf1775467da6989a);
+        
+
+        marker_4f44ee4b2ca04c209299bc876838896f.bindPopup(popup_7d30870d982f431191066c77ebe8d5af)
+        ;
+
+        
+    
+    
+            var marker_858f6e1ec36c4a25be68cd04dfb65ede = L.marker(
+                [11.9967, 79.5159],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_6e2dd5d8dc434ceda6dff9bf22bc7f85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_858f6e1ec36c4a25be68cd04dfb65ede.setIcon(icon_6e2dd5d8dc434ceda6dff9bf22bc7f85);
+        
+    
+        var popup_5c242bbbc61e4b6788ee51dacd46c277 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0285d5a8c23f46c891d41046478db346 = $(`<div id="html_0285d5a8c23f46c891d41046478db346" style="width: 100.0%; height: 100.0%;">Government Villupuram Medical College, Villupuram</div>`)[0];
+            popup_5c242bbbc61e4b6788ee51dacd46c277.setContent(html_0285d5a8c23f46c891d41046478db346);
+        
+
+        marker_858f6e1ec36c4a25be68cd04dfb65ede.bindPopup(popup_5c242bbbc61e4b6788ee51dacd46c277)
+        ;
+
+        
+    
+    
+            var marker_72d67cdf234146e985735d9b81c82a81 = L.marker(
+                [27.4477, 72.1147],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_1734f8ba8e764cea8531db21b93ca583 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_72d67cdf234146e985735d9b81c82a81.setIcon(icon_1734f8ba8e764cea8531db21b93ca583);
+        
+    
+        var popup_86ab39d52b304b908077f27ac9095375 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_17cde2d6c60b4663840692383c5cbf5d = $(`<div id="html_17cde2d6c60b4663840692383c5cbf5d" style="width: 100.0%; height: 100.0%;">S.P. Medical College, Bikaner</div>`)[0];
+            popup_86ab39d52b304b908077f27ac9095375.setContent(html_17cde2d6c60b4663840692383c5cbf5d);
+        
+
+        marker_72d67cdf234146e985735d9b81c82a81.bindPopup(popup_86ab39d52b304b908077f27ac9095375)
+        ;
+
+        
+    
+    
+            var marker_d9349df5773d4937a9e970c3fef019d1 = L.marker(
+                [24.5968, 76.165],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3925d1e47b8a4d5094ac2973313c871e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d9349df5773d4937a9e970c3fef019d1.setIcon(icon_3925d1e47b8a4d5094ac2973313c871e);
+        
+    
+        var popup_d9c9d60abd8c45789d805aed04a64100 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da348c386d0547bc9090fc0b3bfce0f7 = $(`<div id="html_da348c386d0547bc9090fc0b3bfce0f7" style="width: 100.0%; height: 100.0%;">Jhalawar Medical College, Jhalawar</div>`)[0];
+            popup_d9c9d60abd8c45789d805aed04a64100.setContent(html_da348c386d0547bc9090fc0b3bfce0f7);
+        
+
+        marker_d9349df5773d4937a9e970c3fef019d1.bindPopup(popup_d9c9d60abd8c45789d805aed04a64100)
+        ;
+
+        
+    
+    
+            var marker_b177ca59947f4fadaa4318b7d0aa17ba = L.marker(
+                [17.5179, 78.3828],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_dd949b26470241ee88da518f0d6b2ca2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b177ca59947f4fadaa4318b7d0aa17ba.setIcon(icon_dd949b26470241ee88da518f0d6b2ca2);
+        
+    
+        var popup_f5c57028555641bf864f8e38f146126f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38324e5381124e7c9f122c218360f2bc = $(`<div id="html_38324e5381124e7c9f122c218360f2bc" style="width: 100.0%; height: 100.0%;">Osmania Medical College, Hyderabad</div>`)[0];
+            popup_f5c57028555641bf864f8e38f146126f.setContent(html_38324e5381124e7c9f122c218360f2bc);
+        
+
+        marker_b177ca59947f4fadaa4318b7d0aa17ba.bindPopup(popup_f5c57028555641bf864f8e38f146126f)
+        ;
+
+        
+    
+    
+            var marker_e2fdfe4a83e24567b644e4deefa659b9 = L.marker(
+                [17.5043, 78.5426],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_bd8bd0365f464494a2c21520ffd54fd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e2fdfe4a83e24567b644e4deefa659b9.setIcon(icon_bd8bd0365f464494a2c21520ffd54fd1);
+        
+    
+        var popup_ca31ed6493894427ac715f5d28195759 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0edabe29233341ce866c57b23775809d = $(`<div id="html_0edabe29233341ce866c57b23775809d" style="width: 100.0%; height: 100.0%;">Gandhi Medical College, Secunderabad</div>`)[0];
+            popup_ca31ed6493894427ac715f5d28195759.setContent(html_0edabe29233341ce866c57b23775809d);
+        
+
+        marker_e2fdfe4a83e24567b644e4deefa659b9.bindPopup(popup_ca31ed6493894427ac715f5d28195759)
+        ;
+
+        
+    
+    
+            var marker_8e46cd6563964e94a08a325be792d337 = L.marker(
+                [27.8827, 78.2237],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_04af0e224119469d8c69db45caea6a46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8e46cd6563964e94a08a325be792d337.setIcon(icon_04af0e224119469d8c69db45caea6a46);
+        
+    
+        var popup_93a1956dac114498a4ab37a9e37ba3d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ead79244a764e51875e727972a3136e = $(`<div id="html_4ead79244a764e51875e727972a3136e" style="width: 100.0%; height: 100.0%;">Dr Lal PathLabs, National Reference laboratory, New Delhi</div>`)[0];
+            popup_93a1956dac114498a4ab37a9e37ba3d0.setContent(html_4ead79244a764e51875e727972a3136e);
+        
+
+        marker_8e46cd6563964e94a08a325be792d337.bindPopup(popup_93a1956dac114498a4ab37a9e37ba3d0)
+        ;
+
+        
+    
+    
+            var marker_5965237b239b477591962c5203310447 = L.marker(
+                [19.1309, 72.8526],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_293541011cc24ae48dda5e293493c01e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5965237b239b477591962c5203310447.setIcon(icon_293541011cc24ae48dda5e293493c01e);
+        
+    
+        var popup_52da44bd36114e86a9fa9dec5468a387 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e93596763ebf491e8b1794d8d66c2a8f = $(`<div id="html_e93596763ebf491e8b1794d8d66c2a8f" style="width: 100.0%; height: 100.0%;">Suburban Diagnostics(INDIA) Pvt. Ltd, Mumbai</div>`)[0];
+            popup_52da44bd36114e86a9fa9dec5468a387.setContent(html_e93596763ebf491e8b1794d8d66c2a8f);
+        
+
+        marker_5965237b239b477591962c5203310447.bindPopup(popup_52da44bd36114e86a9fa9dec5468a387)
+        ;
+
+        
+    
+    
+            var marker_fff43f0db1124fd5adee884aba126de4 = L.marker(
+                [12.9914, 77.5944],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3895e97e10554620936118961931e782 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fff43f0db1124fd5adee884aba126de4.setIcon(icon_3895e97e10554620936118961931e782);
+        
+    
+        var popup_1bdf9dbc98074eefbd33056b31883bc3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd6b5864e4e54742ae1fb389610c6652 = $(`<div id="html_fd6b5864e4e54742ae1fb389610c6652" style="width: 100.0%; height: 100.0%;">Neuberg Anand Reference Laboratory, Bengaluru</div>`)[0];
+            popup_1bdf9dbc98074eefbd33056b31883bc3.setContent(html_fd6b5864e4e54742ae1fb389610c6652);
+        
+
+        marker_fff43f0db1124fd5adee884aba126de4.bindPopup(popup_1bdf9dbc98074eefbd33056b31883bc3)
+        ;
+
+        
+    
+    
+            var marker_819c226591b8410db665eea2190bbd59 = L.marker(
+                [19.07283, 72.88261],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_038ad6babe2444cda9d619f3484f640f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_819c226591b8410db665eea2190bbd59.setIcon(icon_038ad6babe2444cda9d619f3484f640f);
+        
+    
+        var popup_dd174331c88045b0a053e1f141f79e9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b93180fd94c4b708ca75baf61d0ba0e = $(`<div id="html_0b93180fd94c4b708ca75baf61d0ba0e" style="width: 100.0%; height: 100.0%;">SRL Diagnostics, Goregaon West</div>`)[0];
+            popup_dd174331c88045b0a053e1f141f79e9c.setContent(html_0b93180fd94c4b708ca75baf61d0ba0e);
+        
+
+        marker_819c226591b8410db665eea2190bbd59.bindPopup(popup_dd174331c88045b0a053e1f141f79e9c)
+        ;
+
+        
+    
+    
+            var marker_5daa92ac03a14c92a69062ec8921c980 = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_37bc8633087f4da3879b8816378270f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5daa92ac03a14c92a69062ec8921c980.setIcon(icon_37bc8633087f4da3879b8816378270f1);
+        
+    
+        var popup_3b953173888e467085f757e3e9f4649c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51f31142efb64830b4b853bebf6c81c0 = $(`<div id="html_51f31142efb64830b4b853bebf6c81c0" style="width: 100.0%; height: 100.0%;">Strand Life Sciences, Gurugram</div>`)[0];
+            popup_3b953173888e467085f757e3e9f4649c.setContent(html_51f31142efb64830b4b853bebf6c81c0);
+        
+
+        marker_5daa92ac03a14c92a69062ec8921c980.bindPopup(popup_3b953173888e467085f757e3e9f4649c)
+        ;
+
+        
+    
+    
+            var marker_b586d0438907419db228df39de137180 = L.marker(
+                [28.635759999999998, 77.22445],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7fb820bfdbb24edc81061c1ae1259c11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b586d0438907419db228df39de137180.setIcon(icon_7fb820bfdbb24edc81061c1ae1259c11);
+        
+    
+        var popup_fdbced11813a4bd49bd64a0fbbfb12cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74f720f0befc4f7e9e9ef7119d49c127 = $(`<div id="html_74f720f0befc4f7e9e9ef7119d49c127" style="width: 100.0%; height: 100.0%;"> Ram Manohar Lohia Hospital, New Delhi</div>`)[0];
+            popup_fdbced11813a4bd49bd64a0fbbfb12cf.setContent(html_74f720f0befc4f7e9e9ef7119d49c127);
+        
+
+        marker_b586d0438907419db228df39de137180.bindPopup(popup_fdbced11813a4bd49bd64a0fbbfb12cf)
+        ;
+
+        
+    
+    
+            var marker_9f4ef5cf4df44324a8e7dea904a6579a = L.marker(
+                [28.5439, 77.1523],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ad98d0ee3bea42d5a8e8df013386f985 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9f4ef5cf4df44324a8e7dea904a6579a.setIcon(icon_ad98d0ee3bea42d5a8e8df013386f985);
+        
+    
+        var popup_ad78c19535354f228b7e61617869112f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d44dd4bb64f34af5adcd644cb3983ccb = $(`<div id="html_d44dd4bb64f34af5adcd644cb3983ccb" style="width: 100.0%; height: 100.0%;">Institute of Liver and Biliary Sciences, New Delhi</div>`)[0];
+            popup_ad78c19535354f228b7e61617869112f.setContent(html_d44dd4bb64f34af5adcd644cb3983ccb);
+        
+
+        marker_9f4ef5cf4df44324a8e7dea904a6579a.bindPopup(popup_ad78c19535354f228b7e61617869112f)
+        ;
+
+        
+    
+    
+            var marker_35bcc5c71a7f4446a550eed68895751b = L.marker(
+                [28.674765100000002, 77.22553],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_1cbca2b31dfb4ddbb833aa5fc6a94b1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_35bcc5c71a7f4446a550eed68895751b.setIcon(icon_1cbca2b31dfb4ddbb833aa5fc6a94b1d);
+        
+    
+        var popup_f002b8a2186d45f9b95dc9ffe5db30f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f464cfadb1e41deb519dcc4722cbce2 = $(`<div id="html_3f464cfadb1e41deb519dcc4722cbce2" style="width: 100.0%; height: 100.0%;">National Centre for Disease Control, New Delhi</div>`)[0];
+            popup_f002b8a2186d45f9b95dc9ffe5db30f9.setContent(html_3f464cfadb1e41deb519dcc4722cbce2);
+        
+
+        marker_35bcc5c71a7f4446a550eed68895751b.bindPopup(popup_f002b8a2186d45f9b95dc9ffe5db30f9)
+        ;
+
+        
+    
+    
+            var marker_a4331daec22a46c9aec0c23006ce736a = L.marker(
+                [28.8047, 77.6823],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b08aedac9da842d9ba56f7be3e8326fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4331daec22a46c9aec0c23006ce736a.setIcon(icon_b08aedac9da842d9ba56f7be3e8326fb);
+        
+    
+        var popup_db7d6e624107405da75add95c0aaf833 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51063e40c4cb481bb8014d29f1860cf8 = $(`<div id="html_51063e40c4cb481bb8014d29f1860cf8" style="width: 100.0%; height: 100.0%;">Army Hospital Research & Referral, New Delhi</div>`)[0];
+            popup_db7d6e624107405da75add95c0aaf833.setContent(html_51063e40c4cb481bb8014d29f1860cf8);
+        
+
+        marker_a4331daec22a46c9aec0c23006ce736a.bindPopup(popup_db7d6e624107405da75add95c0aaf833)
+        ;
+
+        
+    
+    
+            var marker_1b0a327317764ee8ae2a9d393f4b5da8 = L.marker(
+                [25.8317, 74.089],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_d036d44e8dd24832a106d5d3b8bbd14d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1b0a327317764ee8ae2a9d393f4b5da8.setIcon(icon_d036d44e8dd24832a106d5d3b8bbd14d);
+        
+    
+        var popup_6e3a90fed5a741e48ebb14358943a589 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0382c053b649497c8f1e0e03c58a2614 = $(`<div id="html_0382c053b649497c8f1e0e03c58a2614" style="width: 100.0%; height: 100.0%;">Command Hospital, Udhampur</div>`)[0];
+            popup_6e3a90fed5a741e48ebb14358943a589.setContent(html_0382c053b649497c8f1e0e03c58a2614);
+        
+
+        marker_1b0a327317764ee8ae2a9d393f4b5da8.bindPopup(popup_6e3a90fed5a741e48ebb14358943a589)
+        ;
+
+        
+    
+    
+            var marker_8ade96c9f0b645ddaa5bba86f4b1add0 = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_499572208a2541a4957659cd6a589df1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8ade96c9f0b645ddaa5bba86f4b1add0.setIcon(icon_499572208a2541a4957659cd6a589df1);
+        
+    
+        var popup_bce7c711816c4413a1b9024987e2bca9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50910e473ad445bcb2cf125e85883f21 = $(`<div id="html_50910e473ad445bcb2cf125e85883f21" style="width: 100.0%; height: 100.0%;">SRL Limited, Gurugram</div>`)[0];
+            popup_bce7c711816c4413a1b9024987e2bca9.setContent(html_50910e473ad445bcb2cf125e85883f21);
+        
+
+        marker_8ade96c9f0b645ddaa5bba86f4b1add0.bindPopup(popup_bce7c711816c4413a1b9024987e2bca9)
+        ;
+
+        
+    
+    
+            var marker_5572be1834c5444fa5b4dac9fef2a441 = L.marker(
+                [13.2029, 76.9627],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_781a1e16e996453eb2397ac28fd388c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5572be1834c5444fa5b4dac9fef2a441.setIcon(icon_781a1e16e996453eb2397ac28fd388c4);
+        
+    
+        var popup_6607ba6d65d04db4a3d6c1cea5264264 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e6eba7a189545638539ed39e166029a = $(`<div id="html_2e6eba7a189545638539ed39e166029a" style="width: 100.0%; height: 100.0%;">Command Hospital (Air Force), Bengaluru</div>`)[0];
+            popup_6607ba6d65d04db4a3d6c1cea5264264.setContent(html_2e6eba7a189545638539ed39e166029a);
+        
+
+        marker_5572be1834c5444fa5b4dac9fef2a441.bindPopup(popup_6607ba6d65d04db4a3d6c1cea5264264)
+        ;
+
+        
+    
+    
+            var marker_1c80ed36ad2247fe886ce531775e44ce = L.marker(
+                [27.42397, 77.09921999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ff7519493a2b4389bb4f1a5265425acc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c80ed36ad2247fe886ce531775e44ce.setIcon(icon_ff7519493a2b4389bb4f1a5265425acc);
+        
+    
+        var popup_b514106139894536a3c20ae5cb294354 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1444a13d91445a1b5f654bbcc0da04c = $(`<div id="html_e1444a13d91445a1b5f654bbcc0da04c" style="width: 100.0%; height: 100.0%;">Sree Chitra Tirunal Institute for Medical Sciences & Technology, Thiruvananthapuram</div>`)[0];
+            popup_b514106139894536a3c20ae5cb294354.setContent(html_e1444a13d91445a1b5f654bbcc0da04c);
+        
+
+        marker_1c80ed36ad2247fe886ce531775e44ce.bindPopup(popup_b514106139894536a3c20ae5cb294354)
+        ;
+
+        
+    
+    
+            var marker_6a3ac708877d492bb004ad00ad8b671b = L.marker(
+                [19.0167, 72.85],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f1eb11d519d74e0f8af3d800daaf5e64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6a3ac708877d492bb004ad00ad8b671b.setIcon(icon_f1eb11d519d74e0f8af3d800daaf5e64);
+        
+    
+        var popup_02a636fc6b5e4dfab0e6144f38616b78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9775be7430034a169432f0b6f5a3c5ce = $(`<div id="html_9775be7430034a169432f0b6f5a3c5ce" style="width: 100.0%; height: 100.0%;">Kasturba Hospital for Infectious Diseases, Mumbai</div>`)[0];
+            popup_02a636fc6b5e4dfab0e6144f38616b78.setContent(html_9775be7430034a169432f0b6f5a3c5ce);
+        
+
+        marker_6a3ac708877d492bb004ad00ad8b671b.bindPopup(popup_02a636fc6b5e4dfab0e6144f38616b78)
+        ;
+
+        
+    
+    
+            var marker_f77da13d66f54a0ea6b092bbf15922c5 = L.marker(
+                [18.51957, 73.85535],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_dcd7c4d0fb4a4b64a98a0ff6e3b7f7a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f77da13d66f54a0ea6b092bbf15922c5.setIcon(icon_dcd7c4d0fb4a4b64a98a0ff6e3b7f7a1);
+        
+    
+        var popup_dedbb2daa3c641e5a76cda702a6c0c65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d51793c6c9cd433fa84959864074a01b = $(`<div id="html_d51793c6c9cd433fa84959864074a01b" style="width: 100.0%; height: 100.0%;">Armed Forces Medical College, Pune</div>`)[0];
+            popup_dedbb2daa3c641e5a76cda702a6c0c65.setContent(html_d51793c6c9cd433fa84959864074a01b);
+        
+
+        marker_f77da13d66f54a0ea6b092bbf15922c5.bindPopup(popup_dedbb2daa3c641e5a76cda702a6c0c65)
+        ;
+
+        
+    
+    
+            var marker_b85ddb6a25c543a2883bcf9827768c28 = L.marker(
+                [18.5196, 73.8554],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_516956c2f1ce43d384683e056da1e17c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b85ddb6a25c543a2883bcf9827768c28.setIcon(icon_516956c2f1ce43d384683e056da1e17c);
+        
+    
+        var popup_e55bdcfe52f14a549c88944caa1622a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e2b186225dd34cbc8710b8c6fc2b32f8 = $(`<div id="html_e2b186225dd34cbc8710b8c6fc2b32f8" style="width: 100.0%; height: 100.0%;">BJ Medical College, Pune</div>`)[0];
+            popup_e55bdcfe52f14a549c88944caa1622a7.setContent(html_e2b186225dd34cbc8710b8c6fc2b32f8);
+        
+
+        marker_b85ddb6a25c543a2883bcf9827768c28.bindPopup(popup_e55bdcfe52f14a549c88944caa1622a7)
+        ;
+
+        
+    
+    
+            var marker_14dc29f67e0d4e9c8b64987295b8b821 = L.marker(
+                [26.449759999999998, 74.64116],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_da32bbe1102d414683ce04174fb70a5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_14dc29f67e0d4e9c8b64987295b8b821.setIcon(icon_da32bbe1102d414683ce04174fb70a5a);
+        
+    
+        var popup_0aad1d4ea95448aaa11671af44cce60b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7810e14c44a458c8dd149f07353e9c4 = $(`<div id="html_f7810e14c44a458c8dd149f07353e9c4" style="width: 100.0%; height: 100.0%;">JLN Medical College, Ajmer</div>`)[0];
+            popup_0aad1d4ea95448aaa11671af44cce60b.setContent(html_f7810e14c44a458c8dd149f07353e9c4);
+        
+
+        marker_14dc29f67e0d4e9c8b64987295b8b821.bindPopup(popup_0aad1d4ea95448aaa11671af44cce60b)
+        ;
+
+        
+    
+    
+            var marker_b48f3504a4f6400c852b943a1d23e666 = L.marker(
+                [26.8176012, 80.94033],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3708b3137df442faadb28cdade19b8d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b48f3504a4f6400c852b943a1d23e666.setIcon(icon_3708b3137df442faadb28cdade19b8d8);
+        
+    
+        var popup_3a2a39fe6b7a4b039241ed54e9285355 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89e4f21741e14f8ca71183b2b0252a27 = $(`<div id="html_89e4f21741e14f8ca71183b2b0252a27" style="width: 100.0%; height: 100.0%;">Command Hospital, Lucknow</div>`)[0];
+            popup_3a2a39fe6b7a4b039241ed54e9285355.setContent(html_89e4f21741e14f8ca71183b2b0252a27);
+        
+
+        marker_b48f3504a4f6400c852b943a1d23e666.bindPopup(popup_3a2a39fe6b7a4b039241ed54e9285355)
+        ;
+
+        
+    
+    
+            var marker_9e141dbfebe546a388cda31ec030dbe2 = L.marker(
+                [25.18254, 75.83906999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ce4d3199f65b4f0db3a20261f9e75d7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9e141dbfebe546a388cda31ec030dbe2.setIcon(icon_ce4d3199f65b4f0db3a20261f9e75d7d);
+        
+    
+        var popup_d339e390f5ad4e40afc5d49e74f656ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ee3ecfe733d4bb391fa595f738da5b6 = $(`<div id="html_0ee3ecfe733d4bb391fa595f738da5b6" style="width: 100.0%; height: 100.0%;">Govt. Medical College, Kota</div>`)[0];
+            popup_d339e390f5ad4e40afc5d49e74f656ee.setContent(html_0ee3ecfe733d4bb391fa595f738da5b6);
+        
+
+        marker_9e141dbfebe546a388cda31ec030dbe2.bindPopup(popup_d339e390f5ad4e40afc5d49e74f656ee)
+        ;
+
+        
+    
+    
+            var marker_6e2299b396c247a79ceb7f6590e88593 = L.marker(
+                [28.967, 77.6657],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_fcdfa420fed6492bbfd5a2331e1429ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6e2299b396c247a79ceb7f6590e88593.setIcon(icon_fcdfa420fed6492bbfd5a2331e1429ca);
+        
+    
+        var popup_4bbb12307f2d423199caaa15638ccf9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0315a3bf32af4936afbdde9d5f79fdfd = $(`<div id="html_0315a3bf32af4936afbdde9d5f79fdfd" style="width: 100.0%; height: 100.0%;">Lala Lajpat Rai Memorial Medical College, Meerut</div>`)[0];
+            popup_4bbb12307f2d423199caaa15638ccf9f.setContent(html_0315a3bf32af4936afbdde9d5f79fdfd);
+        
+
+        marker_6e2299b396c247a79ceb7f6590e88593.bindPopup(popup_4bbb12307f2d423199caaa15638ccf9f)
+        ;
+
+        
+    
+    
+            var marker_144d35c9f37b421383c358d20b8c9186 = L.marker(
+                [26.697, 83.1876],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f151b74dfa4343d08388f5bf382c1380 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_144d35c9f37b421383c358d20b8c9186.setIcon(icon_f151b74dfa4343d08388f5bf382c1380);
+        
+    
+        var popup_491cdd1a23a6499f924d334ebbbd756f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_252517a5f8c94b3aaaf5d248a23746b5 = $(`<div id="html_252517a5f8c94b3aaaf5d248a23746b5" style="width: 100.0%; height: 100.0%;">Sanjay Gandhi Post Graduate Institute, Lucknow</div>`)[0];
+            popup_491cdd1a23a6499f924d334ebbbd756f.setContent(html_252517a5f8c94b3aaaf5d248a23746b5);
+        
+
+        marker_144d35c9f37b421383c358d20b8c9186.bindPopup(popup_491cdd1a23a6499f924d334ebbbd756f)
+        ;
+
+        
+    
+    
+            var marker_9cd9ba3625e549f0bfb60adb5115828e = L.marker(
+                [28.635759999999998, 77.22445],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_e871225ee7b74389bb4c2c3fccd42813 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9cd9ba3625e549f0bfb60adb5115828e.setIcon(icon_e871225ee7b74389bb4c2c3fccd42813);
+        
+    
+        var popup_af4d721e394e4d6594636aa56084919d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1192d3c41a648639536a2a1eac3ca02 = $(`<div id="html_c1192d3c41a648639536a2a1eac3ca02" style="width: 100.0%; height: 100.0%;">Dr. Dang’s Lab, New Delhi</div>`)[0];
+            popup_af4d721e394e4d6594636aa56084919d.setContent(html_c1192d3c41a648639536a2a1eac3ca02);
+        
+
+        marker_9cd9ba3625e549f0bfb60adb5115828e.bindPopup(popup_af4d721e394e4d6594636aa56084919d)
+        ;
+
+        
+    
+    
+            var marker_066e0ef236444a09bb17887c0bc2855d = L.marker(
+                [28.2636, 77.399],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_51f8513d403e4d39a8d203a9e9e9acbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_066e0ef236444a09bb17887c0bc2855d.setIcon(icon_51f8513d403e4d39a8d203a9e9e9acbb);
+        
+    
+        var popup_6613c3a44b4a4f98954c1c4d1db3c81e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bb22c52336145c3aa587e56d570242b = $(`<div id="html_2bb22c52336145c3aa587e56d570242b" style="width: 100.0%; height: 100.0%;">Laboratory Services Indraprastha Apollo Hospitals, New Delhi</div>`)[0];
+            popup_6613c3a44b4a4f98954c1c4d1db3c81e.setContent(html_2bb22c52336145c3aa587e56d570242b);
+        
+
+        marker_066e0ef236444a09bb17887c0bc2855d.bindPopup(popup_6613c3a44b4a4f98954c1c4d1db3c81e)
+        ;
+
+        
+    
+    
+            var marker_1f796704f7a64d0ca47d24f1e58a6294 = L.marker(
+                [17.38405, 78.45636],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_d1eb97b1012541c2b58682bdbfe9a3c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1f796704f7a64d0ca47d24f1e58a6294.setIcon(icon_d1eb97b1012541c2b58682bdbfe9a3c4);
+        
+    
+        var popup_1241968b478443c58486de231e8813fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_402d564bcc684da9a8d36a2ad74e2239 = $(`<div id="html_402d564bcc684da9a8d36a2ad74e2239" style="width: 100.0%; height: 100.0%;">Vimta Labs Ltd., Hyderabad</div>`)[0];
+            popup_1241968b478443c58486de231e8813fe.setContent(html_402d564bcc684da9a8d36a2ad74e2239);
+        
+
+        marker_1f796704f7a64d0ca47d24f1e58a6294.bindPopup(popup_1241968b478443c58486de231e8813fe)
+        ;
+
+        
+    
+    
+            var marker_1f1c2c4846024a93a422129b116580a1 = L.marker(
+                [20.91667, 73.05],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_0aa6d9d03ab24c38a348bd7cf9329291 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1f1c2c4846024a93a422129b116580a1.setIcon(icon_0aa6d9d03ab24c38a348bd7cf9329291);
+        
+    
+        var popup_3d152a7c75c5429ca7e81c259c463655 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90a8ce32e0e64f39818d9824b3cb9a86 = $(`<div id="html_90a8ce32e0e64f39818d9824b3cb9a86" style="width: 100.0%; height: 100.0%;">S. N. GENELAB, Nanpura, Surat</div>`)[0];
+            popup_3d152a7c75c5429ca7e81c259c463655.setContent(html_90a8ce32e0e64f39818d9824b3cb9a86);
+        
+
+        marker_1f1c2c4846024a93a422129b116580a1.bindPopup(popup_3d152a7c75c5429ca7e81c259c463655)
+        ;
+
+        
+    
+    
+            var marker_92ac643ba9964ed08d1a04670674b711 = L.marker(
+                [12.97194, 77.59369000000001],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_e0cfc4e9e9bd43b2b2ffe7eaaa4f5f52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_92ac643ba9964ed08d1a04670674b711.setIcon(icon_e0cfc4e9e9bd43b2b2ffe7eaaa4f5f52);
+        
+    
+        var popup_e81c29e69df8476e8f047b7d11a5a454 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3b85d60cd1541c1909a37fa59a53dd2 = $(`<div id="html_c3b85d60cd1541c1909a37fa59a53dd2" style="width: 100.0%; height: 100.0%;">Cancyte Technologies Private Limited, Bengaluru</div>`)[0];
+            popup_e81c29e69df8476e8f047b7d11a5a454.setContent(html_c3b85d60cd1541c1909a37fa59a53dd2);
+        
+
+        marker_92ac643ba9964ed08d1a04670674b711.bindPopup(popup_e81c29e69df8476e8f047b7d11a5a454)
+        ;
+
+        
+    
+    
+            var marker_5961e0a41415479991ca2442ccace8f4 = L.marker(
+                [19.07283, 72.88261],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_3756c49bf224405a9c18e13c665bdac0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5961e0a41415479991ca2442ccace8f4.setIcon(icon_3756c49bf224405a9c18e13c665bdac0);
+        
+    
+        var popup_8b77edfdfd7340f382d01cb73c02da52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad3136c9695f431794d6d2b7b1de2b51 = $(`<div id="html_ad3136c9695f431794d6d2b7b1de2b51" style="width: 100.0%; height: 100.0%;">Kokilaben Dhirubhai Ambani Hospital Laboratory, Mumbai</div>`)[0];
+            popup_8b77edfdfd7340f382d01cb73c02da52.setContent(html_ad3136c9695f431794d6d2b7b1de2b51);
+        
+
+        marker_5961e0a41415479991ca2442ccace8f4.bindPopup(popup_8b77edfdfd7340f382d01cb73c02da52)
+        ;
+
+        
+    
+    
+            var marker_94b541e7c4a14e8d9b0a4ae5823be8c1 = L.marker(
+                [19.33333, 73.25],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7a4a1e0b7ac44030b6d482400b4c0817 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_94b541e7c4a14e8d9b0a4ae5823be8c1.setIcon(icon_7a4a1e0b7ac44030b6d482400b4c0817);
+        
+    
+        var popup_e82ee9e1aad24868b8e756147a2c8f44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebf32a88d67940b5a49081437463a3c4 = $(`<div id="html_ebf32a88d67940b5a49081437463a3c4" style="width: 100.0%; height: 100.0%;">InfeXn Laboratories Private Ltd, Thane</div>`)[0];
+            popup_e82ee9e1aad24868b8e756147a2c8f44.setContent(html_ebf32a88d67940b5a49081437463a3c4);
+        
+
+        marker_94b541e7c4a14e8d9b0a4ae5823be8c1.bindPopup(popup_e82ee9e1aad24868b8e756147a2c8f44)
+        ;
+
+        
+    
+    
+            var marker_fec49cbfebc44db385048374a3e5d08d = L.marker(
+                [25.2231, 83.6422],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_eb8547693d9f432189e72a8c4dde5c03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fec49cbfebc44db385048374a3e5d08d.setIcon(icon_eb8547693d9f432189e72a8c4dde5c03);
+        
+    
+        var popup_89526d89bbbb418b92a19ae90d4a4f1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e09ed85072254157b1b176479a9eb889 = $(`<div id="html_e09ed85072254157b1b176479a9eb889" style="width: 100.0%; height: 100.0%;">Indira Gandhi Institute of Medical Sciences, Patna</div>`)[0];
+            popup_89526d89bbbb418b92a19ae90d4a4f1c.setContent(html_e09ed85072254157b1b176479a9eb889);
+        
+
+        marker_fec49cbfebc44db385048374a3e5d08d.bindPopup(popup_89526d89bbbb418b92a19ae90d4a4f1c)
+        ;
+
+        
+    
+    
+            var marker_f8caeb6fca704feab011c12582313753 = L.marker(
+                [8.5029, 76.9386],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b651312cfb7a42569c70ce7d03fba2c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f8caeb6fca704feab011c12582313753.setIcon(icon_b651312cfb7a42569c70ce7d03fba2c3);
+        
+    
+        var popup_5e22e2b50c8d4985908488500d57a396 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a73d4d259824486b113769d14675ffa = $(`<div id="html_0a73d4d259824486b113769d14675ffa" style="width: 100.0%; height: 100.0%;">State Public Health Laboratory, Trivandrum</div>`)[0];
+            popup_5e22e2b50c8d4985908488500d57a396.setContent(html_0a73d4d259824486b113769d14675ffa);
+        
+
+        marker_f8caeb6fca704feab011c12582313753.bindPopup(popup_5e22e2b50c8d4985908488500d57a396)
+        ;
+
+        
+    
+    
+            var marker_56157b617b46427595b0d0eb4a2f18fd = L.marker(
+                [9.5781859, 76.5809397],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_a76eef4f9d2f461ab72e61c559e07e7e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_56157b617b46427595b0d0eb4a2f18fd.setIcon(icon_a76eef4f9d2f461ab72e61c559e07e7e);
+        
+    
+        var popup_0c5c0a5ca80d43fcb9ae90e932c12ed6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bbf4cab4bd1944b697b4c7b5fd81eef8 = $(`<div id="html_bbf4cab4bd1944b697b4c7b5fd81eef8" style="width: 100.0%; height: 100.0%;">Interuniversity, Kottayam</div>`)[0];
+            popup_0c5c0a5ca80d43fcb9ae90e932c12ed6.setContent(html_bbf4cab4bd1944b697b4c7b5fd81eef8);
+        
+
+        marker_56157b617b46427595b0d0eb4a2f18fd.bindPopup(popup_0c5c0a5ca80d43fcb9ae90e932c12ed6)
+        ;
+
+        
+    
+    
+            var marker_96ea421b93fd478a988c73e472abae95 = L.marker(
+                [28.0706, 76.0067],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_10b5008a4458490aa8e0320919ce68de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_96ea421b93fd478a988c73e472abae95.setIcon(icon_10b5008a4458490aa8e0320919ce68de);
+        
+    
+        var popup_e96fbe4b432b4324ac0e61cd3c01f375 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcf50a95458f4b32b35f90c6f476dced = $(`<div id="html_bcf50a95458f4b32b35f90c6f476dced" style="width: 100.0%; height: 100.0%;">All India Institute of Medical Sciences (AIIMS), Bhubaneswar</div>`)[0];
+            popup_e96fbe4b432b4324ac0e61cd3c01f375.setContent(html_bcf50a95458f4b32b35f90c6f476dced);
+        
+
+        marker_96ea421b93fd478a988c73e472abae95.bindPopup(popup_e96fbe4b432b4324ac0e61cd3c01f375)
+        ;
+
+        
+    
+    
+            var marker_602b1151d45b421fb1d5f4ea390d8eab = L.marker(
+                [17.48, 78.4266],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_bbe0085fb6be457486c8b2a06fa7839d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_602b1151d45b421fb1d5f4ea390d8eab.setIcon(icon_bbe0085fb6be457486c8b2a06fa7839d);
+        
+    
+        var popup_7c8a6704e40e4e97a6f14b0aedcd2f89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce333f9295da4fc69f14ee74c68581eb = $(`<div id="html_ce333f9295da4fc69f14ee74c68581eb" style="width: 100.0%; height: 100.0%;">Sir Ronald Ross of Tropical & Communicable Diseases, Hyderabad</div>`)[0];
+            popup_7c8a6704e40e4e97a6f14b0aedcd2f89.setContent(html_ce333f9295da4fc69f14ee74c68581eb);
+        
+
+        marker_602b1151d45b421fb1d5f4ea390d8eab.bindPopup(popup_7c8a6704e40e4e97a6f14b0aedcd2f89)
+        ;
+
+        
+    
+    
+            var marker_612542197e3c431b8b77bc43794a97ee = L.marker(
+                [17.5, 78.2009],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_29844b77e56c4ac6858c64c7fb8d29ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_612542197e3c431b8b77bc43794a97ee.setIcon(icon_29844b77e56c4ac6858c64c7fb8d29ee);
+        
+    
+        var popup_fbcdc580000a4d249296bf18a5e8334e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5979b3a95a9437bb9c1e82eb2fa0b82 = $(`<div id="html_a5979b3a95a9437bb9c1e82eb2fa0b82" style="width: 100.0%; height: 100.0%;">Nizam's Institute Of Medical Sciences, Hyderabad</div>`)[0];
+            popup_fbcdc580000a4d249296bf18a5e8334e.setContent(html_a5979b3a95a9437bb9c1e82eb2fa0b82);
+        
+
+        marker_612542197e3c431b8b77bc43794a97ee.bindPopup(popup_fbcdc580000a4d249296bf18a5e8334e)
+        ;
+
+        
+    
+    
+            var marker_085950ad3fa14a0cb7ece1d71ae8f087 = L.marker(
+                [19.0737, 72.9009],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9de7af7ac35044ab9c5f6efc99df3a70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_085950ad3fa14a0cb7ece1d71ae8f087.setIcon(icon_9de7af7ac35044ab9c5f6efc99df3a70);
+        
+    
+        var popup_a726273f1d0d4cce8afe623fdca83b6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_730c06c57a5d4ff490f2892d2b5cfb99 = $(`<div id="html_730c06c57a5d4ff490f2892d2b5cfb99" style="width: 100.0%; height: 100.0%;">iGenetic Diagnostics Pvt. Ltd., Mumbai</div>`)[0];
+            popup_a726273f1d0d4cce8afe623fdca83b6a.setContent(html_730c06c57a5d4ff490f2892d2b5cfb99);
+        
+
+        marker_085950ad3fa14a0cb7ece1d71ae8f087.bindPopup(popup_a726273f1d0d4cce8afe623fdca83b6a)
+        ;
+
+        
+    
+    
+            var marker_fc7ec26c48894d5c87aa26be55527ddb = L.marker(
+                [22.56263, 88.36304],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_46cd81eba0e849f0875392e94b4a4f83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fc7ec26c48894d5c87aa26be55527ddb.setIcon(icon_46cd81eba0e849f0875392e94b4a4f83);
+        
+    
+        var popup_cc1943ac7dff46408c1614dd91cadb73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9afff0ce8eac4941bf797e5b12542c24 = $(`<div id="html_9afff0ce8eac4941bf797e5b12542c24" style="width: 100.0%; height: 100.0%;">Apollo Gleneagles Hospitals, Kolkata</div>`)[0];
+            popup_cc1943ac7dff46408c1614dd91cadb73.setContent(html_9afff0ce8eac4941bf797e5b12542c24);
+        
+
+        marker_fc7ec26c48894d5c87aa26be55527ddb.bindPopup(popup_cc1943ac7dff46408c1614dd91cadb73)
+        ;
+
+        
+    
+    
+            var marker_0e30a55c01864004929d27ca9b154438 = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b64f7ad4be1b46b6bfe1a2d1f509a5bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e30a55c01864004929d27ca9b154438.setIcon(icon_b64f7ad4be1b46b6bfe1a2d1f509a5bc);
+        
+    
+        var popup_723fcca2c7e44cfc9bf7fb49925c0fa6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8753082ca69b426a963f46af742271c1 = $(`<div id="html_8753082ca69b426a963f46af742271c1" style="width: 100.0%; height: 100.0%;">Modern Diagnostic & Research Centre Laboratory, Gurugram</div>`)[0];
+            popup_723fcca2c7e44cfc9bf7fb49925c0fa6.setContent(html_8753082ca69b426a963f46af742271c1);
+        
+
+        marker_0e30a55c01864004929d27ca9b154438.bindPopup(popup_723fcca2c7e44cfc9bf7fb49925c0fa6)
+        ;
+
+        
+    
+    
+            var marker_dee53141b8044984afd247851e5a5381 = L.marker(
+                [17.48, 78.4266],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_eaa9265ee905491882b7b992628a5a8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dee53141b8044984afd247851e5a5381.setIcon(icon_eaa9265ee905491882b7b992628a5a8b);
+        
+    
+        var popup_652b468913ca4a28a12c9fe76d375ea5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_356a2eeb05294a45a665b827fd337616 = $(`<div id="html_356a2eeb05294a45a665b827fd337616" style="width: 100.0%; height: 100.0%;">Apollo Health and Lifestyle Limited-Secunderabad, Diagnostics Laboratory, Hyderabad</div>`)[0];
+            popup_652b468913ca4a28a12c9fe76d375ea5.setContent(html_356a2eeb05294a45a665b827fd337616);
+        
+
+        marker_dee53141b8044984afd247851e5a5381.bindPopup(popup_652b468913ca4a28a12c9fe76d375ea5)
+        ;
+
+        
+    
+    
+            var marker_fd5c46428c87413abf0a3f58a1d7a247 = L.marker(
+                [20.27241, 85.83385],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_8040145280a24f2f80539494aa0726f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fd5c46428c87413abf0a3f58a1d7a247.setIcon(icon_8040145280a24f2f80539494aa0726f2);
+        
+    
+        var popup_a6bbf653b1ec4bd4ac2fba2c888bb074 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68b0e2068b024a2bbb3e1819afc9bad6 = $(`<div id="html_68b0e2068b024a2bbb3e1819afc9bad6" style="width: 100.0%; height: 100.0%;">Department of Laboratory Services Apollo Hospitals, Bhubaneswar</div>`)[0];
+            popup_a6bbf653b1ec4bd4ac2fba2c888bb074.setContent(html_68b0e2068b024a2bbb3e1819afc9bad6);
+        
+
+        marker_fd5c46428c87413abf0a3f58a1d7a247.bindPopup(popup_a6bbf653b1ec4bd4ac2fba2c888bb074)
+        ;
+
+        
+    
+    
+            var marker_8e69d2055f4f4c4fa11f01face63ca5e = L.marker(
+                [17.5, 78.2009],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_0d2527f965cb432e82fb08025c98bdba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8e69d2055f4f4c4fa11f01face63ca5e.setIcon(icon_0d2527f965cb432e82fb08025c98bdba);
+        
+    
+        var popup_8e48fabe57a54696ac14196f9804b46b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_876551726c9b4ff9bcd6c25578671d87 = $(`<div id="html_876551726c9b4ff9bcd6c25578671d87" style="width: 100.0%; height: 100.0%;">Dr. Remedies labs Private Limited , Hyderabad</div>`)[0];
+            popup_8e48fabe57a54696ac14196f9804b46b.setContent(html_876551726c9b4ff9bcd6c25578671d87);
+        
+
+        marker_8e69d2055f4f4c4fa11f01face63ca5e.bindPopup(popup_8e48fabe57a54696ac14196f9804b46b)
+        ;
+
+        
+    
+    
+            var marker_7ac546b6500d4cc682bb28d1dfcdab41 = L.marker(
+                [28.635759999999998, 77.22445],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_7fd1a8e9fadd46c38938f927da6f803f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7ac546b6500d4cc682bb28d1dfcdab41.setIcon(icon_7fd1a8e9fadd46c38938f927da6f803f);
+        
+    
+        var popup_7bc749dbd518496a817c4e535d3c2bd5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d42b75d79b644a2b5d8bad1e309fe12 = $(`<div id="html_8d42b75d79b644a2b5d8bad1e309fe12" style="width: 100.0%; height: 100.0%;">Sir Ganga Ram Hospital Clinical Laboratory Services, New Delhi</div>`)[0];
+            popup_7bc749dbd518496a817c4e535d3c2bd5.setContent(html_8d42b75d79b644a2b5d8bad1e309fe12);
+        
+
+        marker_7ac546b6500d4cc682bb28d1dfcdab41.bindPopup(popup_7bc749dbd518496a817c4e535d3c2bd5)
+        ;
+
+        
+    
+    
+            var marker_76d8285d539b4757aae50a2068184906 = L.marker(
+                [23.02579, 72.58726999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_290800b6152d40b3b0d7d0cbb944d2ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_76d8285d539b4757aae50a2068184906.setIcon(icon_290800b6152d40b3b0d7d0cbb944d2ca);
+        
+    
+        var popup_fd3a3dd422b74a16b5779c4204275051 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f1bb8172883430fb15d18b70383d404 = $(`<div id="html_3f1bb8172883430fb15d18b70383d404" style="width: 100.0%; height: 100.0%;">PanGenomics International Pvt. Ltd., Ahmedabad</div>`)[0];
+            popup_fd3a3dd422b74a16b5779c4204275051.setContent(html_3f1bb8172883430fb15d18b70383d404);
+        
+
+        marker_76d8285d539b4757aae50a2068184906.bindPopup(popup_fd3a3dd422b74a16b5779c4204275051)
+        ;
+
+        
+    
+    
+            var marker_afed54bdcd05466f99db6f4fe4256003 = L.marker(
+                [13.0356, 80.1582],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9bc889dd96324efe8ea608b454137e53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_afed54bdcd05466f99db6f4fe4256003.setIcon(icon_9bc889dd96324efe8ea608b454137e53);
+        
+    
+        var popup_edf1011c3d324153a45d5f4728f12286 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0184b9861c984546beae981482acbf98 = $(`<div id="html_0184b9861c984546beae981482acbf98" style="width: 100.0%; height: 100.0%;">Sri Ramachandra Laboratory Services, Chennai</div>`)[0];
+            popup_edf1011c3d324153a45d5f4728f12286.setContent(html_0184b9861c984546beae981482acbf98);
+        
+
+        marker_afed54bdcd05466f99db6f4fe4256003.bindPopup(popup_edf1011c3d324153a45d5f4728f12286)
+        ;
+
+        
+    
+    
+            var marker_fa6a87f259c74963b7bcd6e8cead533a = L.marker(
+                [26.879006800000003, 80.93570840000001],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_e9be720a38664941b0739e0e634004cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fa6a87f259c74963b7bcd6e8cead533a.setIcon(icon_e9be720a38664941b0739e0e634004cf);
+        
+    
+        var popup_68e8d50e58a74ad1a0d5fa7c08ab498d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0eb33624275a4d0983404489c9edcf58 = $(`<div id="html_0eb33624275a4d0983404489c9edcf58" style="width: 100.0%; height: 100.0%;">RML Mehrotra Pathology Pvt Ltd., Lucknow</div>`)[0];
+            popup_68e8d50e58a74ad1a0d5fa7c08ab498d.setContent(html_0eb33624275a4d0983404489c9edcf58);
+        
+
+        marker_fa6a87f259c74963b7bcd6e8cead533a.bindPopup(popup_68e8d50e58a74ad1a0d5fa7c08ab498d)
+        ;
+
+        
+    
+    
+            var marker_fc4563eea5554f15898340719cc3e534 = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_eb6600466e8a42fd88dd1a7dcd8c5445 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fc4563eea5554f15898340719cc3e534.setIcon(icon_eb6600466e8a42fd88dd1a7dcd8c5445);
+        
+    
+        var popup_cbd99e6efb4245ee89549b3003d9b83f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_556afcca0aae44799e24efa6029609df = $(`<div id="html_556afcca0aae44799e24efa6029609df" style="width: 100.0%; height: 100.0%;">CORE Diagnostics Pvt Ltd, Gurugram</div>`)[0];
+            popup_cbd99e6efb4245ee89549b3003d9b83f.setContent(html_556afcca0aae44799e24efa6029609df);
+        
+
+        marker_fc4563eea5554f15898340719cc3e534.bindPopup(popup_cbd99e6efb4245ee89549b3003d9b83f)
+        ;
+
+        
+    
+    
+            var marker_d68311d6a2114438a122cbd68e83950c = L.marker(
+                [27.42397, 77.09921999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5f45f9912a904dc59a791c4763b29407 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d68311d6a2114438a122cbd68e83950c.setIcon(icon_5f45f9912a904dc59a791c4763b29407);
+        
+    
+        var popup_cf9f0948fdd644c9a626fdf516c44dd0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b65c810ea6e94f98adb670e3293e95f4 = $(`<div id="html_b65c810ea6e94f98adb670e3293e95f4" style="width: 100.0%; height: 100.0%;">DDRC SRL Diagnostics Pvt Ltd, Ernakulam</div>`)[0];
+            popup_cf9f0948fdd644c9a626fdf516c44dd0.setContent(html_b65c810ea6e94f98adb670e3293e95f4);
+        
+
+        marker_d68311d6a2114438a122cbd68e83950c.bindPopup(popup_cf9f0948fdd644c9a626fdf516c44dd0)
+        ;
+
+        
+    
+    
+            var marker_aab4040d25464a1b9b784a60d81a9421 = L.marker(
+                [11.7655, 75.4634],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_64d4039e3aac4dada16d6e407e32ebba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_aab4040d25464a1b9b784a60d81a9421.setIcon(icon_64d4039e3aac4dada16d6e407e32ebba);
+        
+    
+        var popup_9626135942ed49549c4c2ec90456cd5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cb1370ce66b475a8de64ce69991d495 = $(`<div id="html_1cb1370ce66b475a8de64ce69991d495" style="width: 100.0%; height: 100.0%;">Malabar Cancer Centre, Thalassery</div>`)[0];
+            popup_9626135942ed49549c4c2ec90456cd5a.setContent(html_1cb1370ce66b475a8de64ce69991d495);
+        
+
+        marker_aab4040d25464a1b9b784a60d81a9421.bindPopup(popup_9626135942ed49549c4c2ec90456cd5a)
+        ;
+
+        
+    
+    
+            var marker_71b1858de9a848d99581565acc8e02d7 = L.marker(
+                [17.38405, 78.45636],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b45b985fe730497aa0399d5d06cd1140 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_71b1858de9a848d99581565acc8e02d7.setIcon(icon_b45b985fe730497aa0399d5d06cd1140);
+        
+    
+        var popup_92b1e6f3c2c24878822282ce2ad61b4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6ddad5fe0bc4a99b5e968b3a22a382d = $(`<div id="html_d6ddad5fe0bc4a99b5e968b3a22a382d" style="width: 100.0%; height: 100.0%;">PATHCARE Labs Pvt. Ltd., Hyderabad</div>`)[0];
+            popup_92b1e6f3c2c24878822282ce2ad61b4d.setContent(html_d6ddad5fe0bc4a99b5e968b3a22a382d);
+        
+
+        marker_71b1858de9a848d99581565acc8e02d7.bindPopup(popup_92b1e6f3c2c24878822282ce2ad61b4d)
+        ;
+
+        
+    
+    
+            var marker_a6cdbda742cf448d91ab5d830d4c31b1 = L.marker(
+                [17.3943658, 78.4899578],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_cee5a788599c4b9a85040360bc9a7cf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a6cdbda742cf448d91ab5d830d4c31b1.setIcon(icon_cee5a788599c4b9a85040360bc9a7cf2);
+        
+    
+        var popup_57ceaa40a2b04353b66edcf21e5e8e47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89f77dbd504043bf86343eaa82f88f3b = $(`<div id="html_89f77dbd504043bf86343eaa82f88f3b" style="width: 100.0%; height: 100.0%;">Institute of Preventive Medicine, Hyderabad</div>`)[0];
+            popup_57ceaa40a2b04353b66edcf21e5e8e47.setContent(html_89f77dbd504043bf86343eaa82f88f3b);
+        
+
+        marker_a6cdbda742cf448d91ab5d830d4c31b1.bindPopup(popup_57ceaa40a2b04353b66edcf21e5e8e47)
+        ;
+
+        
+    
+    
+            var marker_83857ef0a135449eac82b39c8d4af9fe = L.marker(
+                [17.4263, 78.0219],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5b5a0273c8a4491887386fa3990db41d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_83857ef0a135449eac82b39c8d4af9fe.setIcon(icon_5b5a0273c8a4491887386fa3990db41d);
+        
+    
+        var popup_b43638a85e1c4938b940f44485fcf509 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ee77b05311840b1a7864acc09d4076e = $(`<div id="html_5ee77b05311840b1a7864acc09d4076e" style="width: 100.0%; height: 100.0%;">AMERICAN Institute of Pathology and Laboratory Sciences Private Limited, Hyderabad</div>`)[0];
+            popup_b43638a85e1c4938b940f44485fcf509.setContent(html_5ee77b05311840b1a7864acc09d4076e);
+        
+
+        marker_83857ef0a135449eac82b39c8d4af9fe.bindPopup(popup_b43638a85e1c4938b940f44485fcf509)
+        ;
+
+        
+    
+    
+            var marker_fd762f059f934affb01e3c56248a769a = L.marker(
+                [22.56263, 88.36304],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5930ff465ad44d9d928424e74bbd2262 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fd762f059f934affb01e3c56248a769a.setIcon(icon_5930ff465ad44d9d928424e74bbd2262);
+        
+    
+        var popup_afa11ce892c7451d8cb878dd8cfa43f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5b35e65d31549caa67e36f81ba32040 = $(`<div id="html_d5b35e65d31549caa67e36f81ba32040" style="width: 100.0%; height: 100.0%;">Department of Laboratory Sciences, Tata Medical Center, Kolkata</div>`)[0];
+            popup_afa11ce892c7451d8cb878dd8cfa43f9.setContent(html_d5b35e65d31549caa67e36f81ba32040);
+        
+
+        marker_fd762f059f934affb01e3c56248a769a.bindPopup(popup_afa11ce892c7451d8cb878dd8cfa43f9)
+        ;
+
+        
+    
+    
+            var marker_42a898670bb14c968ec179720d07e655 = L.marker(
+                [22.23944, 68.96778],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_4d7e8721705549658f0cb78dfda80f9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_42a898670bb14c968ec179720d07e655.setIcon(icon_4d7e8721705549658f0cb78dfda80f9f);
+        
+    
+        var popup_b8237b89c7f444d2bebb96d45ccb4b82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5033100686742d397a9583dcfa260fa = $(`<div id="html_f5033100686742d397a9583dcfa260fa" style="width: 100.0%; height: 100.0%;">Prognosis Laboratories, New Delhi</div>`)[0];
+            popup_b8237b89c7f444d2bebb96d45ccb4b82.setContent(html_f5033100686742d397a9583dcfa260fa);
+        
+
+        marker_42a898670bb14c968ec179720d07e655.bindPopup(popup_b8237b89c7f444d2bebb96d45ccb4b82)
+        ;
+
+        
+    
+    
+            var marker_8b6dd222032440649a60be0bd1f98330 = L.marker(
+                [11.5, 76.0],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_8cc76c7ba808427ab90ea360f8362d51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8b6dd222032440649a60be0bd1f98330.setIcon(icon_8cc76c7ba808427ab90ea360f8362d51);
+        
+    
+        var popup_1c7b3ba77e4d4bdfa0a0487e154088aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6990372faeed4074b0f9d64c090e5e49 = $(`<div id="html_6990372faeed4074b0f9d64c090e5e49" style="width: 100.0%; height: 100.0%;">MIMS Laboratory Services, Kozhikode</div>`)[0];
+            popup_1c7b3ba77e4d4bdfa0a0487e154088aa.setContent(html_6990372faeed4074b0f9d64c090e5e49);
+        
+
+        marker_8b6dd222032440649a60be0bd1f98330.bindPopup(popup_1c7b3ba77e4d4bdfa0a0487e154088aa)
+        ;
+
+        
+    
+    
+            var marker_46baeff35ae1400db7a12d2d87b54ddd = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_4fa9c7064a074c3d88f9b6bd91cae6da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_46baeff35ae1400db7a12d2d87b54ddd.setIcon(icon_4fa9c7064a074c3d88f9b6bd91cae6da);
+        
+    
+        var popup_7a64b849e5b44ca08aaf8b8cbe47f4cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b887a7fe0a844e1984752da51448da1d = $(`<div id="html_b887a7fe0a844e1984752da51448da1d" style="width: 100.0%; height: 100.0%;">Molq Lab (A Unit of Molecular Quest Healthcare Private Limited), Gurugram</div>`)[0];
+            popup_7a64b849e5b44ca08aaf8b8cbe47f4cf.setContent(html_b887a7fe0a844e1984752da51448da1d);
+        
+
+        marker_46baeff35ae1400db7a12d2d87b54ddd.bindPopup(popup_7a64b849e5b44ca08aaf8b8cbe47f4cf)
+        ;
+
+        
+    
+    
+            var marker_d82673dcd0714339a1245aca132d8370 = L.marker(
+                [17.75, 75.5],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_96f816529d864aafbc9b45be4bd44be0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d82673dcd0714339a1245aca132d8370.setIcon(icon_96f816529d864aafbc9b45be4bd44be0);
+        
+    
+        var popup_cc34407beedb4e318aa2053aa22074dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8cf21b1a47a4ac58fedd8a18d51cd3e = $(`<div id="html_a8cf21b1a47a4ac58fedd8a18d51cd3e" style="width: 100.0%; height: 100.0%;">V. M. Govt. Medical College, Solapur</div>`)[0];
+            popup_cc34407beedb4e318aa2053aa22074dd.setContent(html_a8cf21b1a47a4ac58fedd8a18d51cd3e);
+        
+
+        marker_d82673dcd0714339a1245aca132d8370.bindPopup(popup_cc34407beedb4e318aa2053aa22074dd)
+        ;
+
+        
+    
+    
+            var marker_b3a2283d8f3341b6849f5aac0d8fe10d = L.marker(
+                [15.4589541, 73.85897920000001],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_a581ae0f93e747569019e5e7a7582b79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b3a2283d8f3341b6849f5aac0d8fe10d.setIcon(icon_a581ae0f93e747569019e5e7a7582b79);
+        
+    
+        var popup_5845cbcfd29746679ab93bbca0a8bffc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af3f4da6762c45bd9d58172ba8da654c = $(`<div id="html_af3f4da6762c45bd9d58172ba8da654c" style="width: 100.0%; height: 100.0%;">Goa Medical College and Hospital, Bambolim</div>`)[0];
+            popup_5845cbcfd29746679ab93bbca0a8bffc.setContent(html_af3f4da6762c45bd9d58172ba8da654c);
+        
+
+        marker_b3a2283d8f3341b6849f5aac0d8fe10d.bindPopup(popup_5845cbcfd29746679ab93bbca0a8bffc)
+        ;
+
+        
+    
+    
+            var marker_8bc4fa8a74244b0a8b319a7b708ed6cf = L.marker(
+                [19.0052672, 72.8397502],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_65242487d60f4333a1f1aee0476b502e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8bc4fa8a74244b0a8b319a7b708ed6cf.setIcon(icon_65242487d60f4333a1f1aee0476b502e);
+        
+    
+        var popup_eeb5bcf0237740f9b6c65b06e0223144 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12b16de42fd64b988dd57517b684ac5f = $(`<div id="html_12b16de42fd64b988dd57517b684ac5f" style="width: 100.0%; height: 100.0%;">Haffkine Institute, Mumbai</div>`)[0];
+            popup_eeb5bcf0237740f9b6c65b06e0223144.setContent(html_12b16de42fd64b988dd57517b684ac5f);
+        
+
+        marker_8bc4fa8a74244b0a8b319a7b708ed6cf.bindPopup(popup_eeb5bcf0237740f9b6c65b06e0223144)
+        ;
+
+        
+    
+    
+            var marker_b01a074d2d844c99b253b43e4291cccd = L.marker(
+                [26.5374, 77.7248],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f9b11038bdeb4f37a993e602b1423af1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b01a074d2d844c99b253b43e4291cccd.setIcon(icon_f9b11038bdeb4f37a993e602b1423af1);
+        
+    
+        var popup_47052a950e9040c2bdc6b2f4995a4a83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_078c08bf00804fa48982a6f60ded5864 = $(`<div id="html_078c08bf00804fa48982a6f60ded5864" style="width: 100.0%; height: 100.0%;">Defence Research & Development Establishment (DRDE), Gwalior</div>`)[0];
+            popup_47052a950e9040c2bdc6b2f4995a4a83.setContent(html_078c08bf00804fa48982a6f60ded5864);
+        
+
+        marker_b01a074d2d844c99b253b43e4291cccd.bindPopup(popup_47052a950e9040c2bdc6b2f4995a4a83)
+        ;
+
+        
+    
+    
+            var marker_799da2d1be8d4266befb6fc349191413 = L.marker(
+                [13.1052413, 80.2828324],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_55cd2cedfa304535a79f7d05ea9c60c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_799da2d1be8d4266befb6fc349191413.setIcon(icon_55cd2cedfa304535a79f7d05ea9c60c1);
+        
+    
+        var popup_cd5e8882abf147f280d5cb86389ddeb7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d296ee7d001f4bcb8b84c7d0f354ac17 = $(`<div id="html_d296ee7d001f4bcb8b84c7d0f354ac17" style="width: 100.0%; height: 100.0%;">Stanley Medical College, Chennai</div>`)[0];
+            popup_cd5e8882abf147f280d5cb86389ddeb7.setContent(html_d296ee7d001f4bcb8b84c7d0f354ac17);
+        
+
+        marker_799da2d1be8d4266befb6fc349191413.bindPopup(popup_cd5e8882abf147f280d5cb86389ddeb7)
+        ;
+
+        
+    
+    
+            var marker_ebfff400c6a640158f6ecc62237dc3ee = L.marker(
+                [27.3257, 88.6122],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_c01acab9f462454fad68581098f946e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ebfff400c6a640158f6ecc62237dc3ee.setIcon(icon_c01acab9f462454fad68581098f946e2);
+        
+    
+        var popup_5d027e0149c04dfe984052e308afeb67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_872939d4e4fc4611993406ab348447c9 = $(`<div id="html_872939d4e4fc4611993406ab348447c9" style="width: 100.0%; height: 100.0%;">Sir Thutob Namgyal Memorial (STNM), Gangtok</div>`)[0];
+            popup_5d027e0149c04dfe984052e308afeb67.setContent(html_872939d4e4fc4611993406ab348447c9);
+        
+
+        marker_ebfff400c6a640158f6ecc62237dc3ee.bindPopup(popup_5d027e0149c04dfe984052e308afeb67)
+        ;
+
+        
+    
+    
+            var marker_b7db024550de4b23bff26f4e633545dc = L.marker(
+                [34.165040000000005, 77.58402],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_68f2ab41fb674cc0a306ab7b38039c35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b7db024550de4b23bff26f4e633545dc.setIcon(icon_68f2ab41fb674cc0a306ab7b38039c35);
+        
+    
+        var popup_38407b2f62654975b44853e9fb1ed059 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5bdbdd4fb364646ba1f56788e0508c0 = $(`<div id="html_f5bdbdd4fb364646ba1f56788e0508c0" style="width: 100.0%; height: 100.0%;"> Sonam Nurboo Memorial Hospital, Leh-Ladakh</div>`)[0];
+            popup_38407b2f62654975b44853e9fb1ed059.setContent(html_f5bdbdd4fb364646ba1f56788e0508c0);
+        
+
+        marker_b7db024550de4b23bff26f4e633545dc.bindPopup(popup_38407b2f62654975b44853e9fb1ed059)
+        ;
+
+        
+    
+    
+            var marker_659829c878cd4331902ca0e1646d37bd = L.marker(
+                [27.1047, 93.6952],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_9185a4eaf3e247409ca232ec48e83620 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_659829c878cd4331902ca0e1646d37bd.setIcon(icon_9185a4eaf3e247409ca232ec48e83620);
+        
+    
+        var popup_6610633426944c66afcc05ada12b82a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f58346a4a41497db22bcc3768db1467 = $(`<div id="html_0f58346a4a41497db22bcc3768db1467" style="width: 100.0%; height: 100.0%;">Tomo Riba Institute Health and Medical Sciences (TRIHMS), Naharlagun</div>`)[0];
+            popup_6610633426944c66afcc05ada12b82a5.setContent(html_0f58346a4a41497db22bcc3768db1467);
+        
+
+        marker_659829c878cd4331902ca0e1646d37bd.bindPopup(popup_6610633426944c66afcc05ada12b82a5)
+        ;
+
+        
+    
+    
+            var marker_16e12a4bca284e3f83dc2eeae88a103a = L.marker(
+                [12.3965, 75.0351],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_5a1d37a42b42436f96c9ac0edadcffdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_16e12a4bca284e3f83dc2eeae88a103a.setIcon(icon_5a1d37a42b42436f96c9ac0edadcffdd);
+        
+    
+        var popup_ccc6706fe3b04f58ab4bea8fcbe8852a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7afad99fa7274ab0b9972fd7637e5741 = $(`<div id="html_7afad99fa7274ab0b9972fd7637e5741" style="width: 100.0%; height: 100.0%;">Central University of Kerala, Kasaragod</div>`)[0];
+            popup_ccc6706fe3b04f58ab4bea8fcbe8852a.setContent(html_7afad99fa7274ab0b9972fd7637e5741);
+        
+
+        marker_16e12a4bca284e3f83dc2eeae88a103a.bindPopup(popup_ccc6706fe3b04f58ab4bea8fcbe8852a)
+        ;
+
+        
+    
+    
+            var marker_126c7939d08146dcb10a23f0eda45959 = L.marker(
+                [11.00555, 76.96611999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f0c923081b284c7f997b9571fdf9de74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_126c7939d08146dcb10a23f0eda45959.setIcon(icon_f0c923081b284c7f997b9571fdf9de74);
+        
+    
+        var popup_e1d7eb81f4b24f6d8a21bc6e5ea17d53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a4ea394e9a445e093671720c89ee4f7 = $(`<div id="html_3a4ea394e9a445e093671720c89ee4f7" style="width: 100.0%; height: 100.0%;">Microbiological Laboratory, Coimbatore</div>`)[0];
+            popup_e1d7eb81f4b24f6d8a21bc6e5ea17d53.setContent(html_3a4ea394e9a445e093671720c89ee4f7);
+        
+
+        marker_126c7939d08146dcb10a23f0eda45959.bindPopup(popup_e1d7eb81f4b24f6d8a21bc6e5ea17d53)
+        ;
+
+        
+    
+    
+            var marker_a71fbb8ba64f4fe2b283b69539d68f13 = L.marker(
+                [22.5748473, 88.3603332],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_f0c606e86d764f6c8ebe82cc0ac0ce28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a71fbb8ba64f4fe2b283b69539d68f13.setIcon(icon_f0c606e86d764f6c8ebe82cc0ac0ce28);
+        
+    
+        var popup_898977c2b46f4c8c94b639264852c220 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad46d4df9c3e4320b3035da48ccee83e = $(`<div id="html_ad46d4df9c3e4320b3035da48ccee83e" style="width: 100.0%; height: 100.0%;">School of Tropical Medicine, Kolkata</div>`)[0];
+            popup_898977c2b46f4c8c94b639264852c220.setContent(html_ad46d4df9c3e4320b3035da48ccee83e);
+        
+
+        marker_a71fbb8ba64f4fe2b283b69539d68f13.bindPopup(popup_898977c2b46f4c8c94b639264852c220)
+        ;
+
+        
+    
+    
+            var marker_63d46d59c035439994cb464e84adb803 = L.marker(
+                [17.50427, 78.54263],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_ceeb834425294f90a06fd01212faed0e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_63d46d59c035439994cb464e84adb803.setIcon(icon_ceeb834425294f90a06fd01212faed0e);
+        
+    
+        var popup_18942439ecfa4933a193f3bf547e2d06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd452eacf4af4b8ba4af5a44aeada1d5 = $(`<div id="html_fd452eacf4af4b8ba4af5a44aeada1d5" style="width: 100.0%; height: 100.0%;">The Department of Laboratory Medicine, Yashoda Hospital, Secunderabad</div>`)[0];
+            popup_18942439ecfa4933a193f3bf547e2d06.setContent(html_fd452eacf4af4b8ba4af5a44aeada1d5);
+        
+
+        marker_63d46d59c035439994cb464e84adb803.bindPopup(popup_18942439ecfa4933a193f3bf547e2d06)
+        ;
+
+        
+    
+    
+            var marker_f9b4fa015e47452183f7deefa2678322 = L.marker(
+                [26.7507, 75.7348],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_074c3a24970c4e609a00113f5fdf7baf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f9b4fa015e47452183f7deefa2678322.setIcon(icon_074c3a24970c4e609a00113f5fdf7baf);
+        
+    
+        var popup_872b3a8bf01043b786b8b687852ae378 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f592a5f2419b428a8af5a3e4549db937 = $(`<div id="html_f592a5f2419b428a8af5a3e4549db937" style="width: 100.0%; height: 100.0%;">Dr. Ahuja’s Pathlogy and Imaging Centre-Department of Laboratory Medicine, Dehradun</div>`)[0];
+            popup_872b3a8bf01043b786b8b687852ae378.setContent(html_f592a5f2419b428a8af5a3e4549db937);
+        
+
+        marker_f9b4fa015e47452183f7deefa2678322.bindPopup(popup_872b3a8bf01043b786b8b687852ae378)
+        ;
+
+        
+    
+    
+            var marker_8939604fc4cc40e0ae8d2e31e6ed6bb8 = L.marker(
+                [29.25, 76.33333],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_b6d4afac66214a98b8857bbfff99b782 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8939604fc4cc40e0ae8d2e31e6ed6bb8.setIcon(icon_b6d4afac66214a98b8857bbfff99b782);
+        
+    
+        var popup_355c193253e34b0481aa116d6ee9ad22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae00ecf3dbd247ecaf0b8605d7423e8b = $(`<div id="html_ae00ecf3dbd247ecaf0b8605d7423e8b" style="width: 100.0%; height: 100.0%;">PATHKIND Diagnostics Pvt. Ltd., Gurugram</div>`)[0];
+            popup_355c193253e34b0481aa116d6ee9ad22.setContent(html_ae00ecf3dbd247ecaf0b8605d7423e8b);
+        
+
+        marker_8939604fc4cc40e0ae8d2e31e6ed6bb8.bindPopup(popup_355c193253e34b0481aa116d6ee9ad22)
+        ;
+
+        
+    
+    
+            var marker_c2560f4b4fcf498fa94d76c378d248f6 = L.marker(
+                [28.41252, 77.31976999999999],
+                {}
+            ).addTo(map_1eb1cb45236d40b09ce639c29f46ba69);
+        
+    
+            var icon_02f5c3631dae43eeba2c6023564cd573 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c2560f4b4fcf498fa94d76c378d248f6.setIcon(icon_02f5c3631dae43eeba2c6023564cd573);
+        
+    
+        var popup_3c82f6706132486c8e77f7c0ece80286 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45af2e1eece149e381984561e077bd1f = $(`<div id="html_45af2e1eece149e381984561e077bd1f" style="width: 100.0%; height: 100.0%;">ESIC Medical College and Hospital, Faridabad</div>`)[0];
+            popup_3c82f6706132486c8e77f7c0ece80286.setContent(html_45af2e1eece149e381984561e077bd1f);
+        
+
+        marker_c2560f4b4fcf498fa94d76c378d248f6.bindPopup(popup_3c82f6706132486c8e77f7c0ece80286)
+        ;
+
+        
+    
+</script>

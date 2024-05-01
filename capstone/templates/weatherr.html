@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='snap.svg-min.js')}}"></script>
+  <script src="{{url_for('static', filename='snap.svg.js')}}"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <link href="{{url_for('static', filename='weath.css')}}" rel="stylesheet">
+  
+ 
+</head>
+<style>
+        body {
+         
+          line-height: 1.8;
+          color: red;
+        }
+        p {font-size: 16px;}
+  .margin {margin-bottom: 25px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: yellow; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #576574; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 0px;
+    padding-bottom: 3px;
+  }
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .navbar-nav  li a:hover {
+    color: white !important;
+  }
+
+  .navbar-default .navbar-nav>li>a{
+    
+    color: #7eb415;
+  }
+        .g{
+          display: none;
+        }
+        </style>
+<body>
+        <nav class="navbar navbar-default" style="background-color: black">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">Natural Disaster Predictor</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                          <li><a href="{{ url_for('index') }}">Home</a></li>
+                          <li><a href="{{ url_for('earthquake') }}">Earthquake Prediction</a></li>
+                          <li><a href="{{ url_for('flood') }}">Flood Prediction</a></li>
+                          <li><a href="{{ url_for('weather') }}">Weather Prediction</a></li>
+                          <li style="display: none"><a href="{{ url_for('cyclone') }}">Cyclone Prediction</a></li>
+                        <li style="display: none"><a href="{{ url_for('hailstorm') }}">Hailstorm Prediction</a></li>
+                        <li ><a href="{{ url_for('sent') }}">Sentimental Analysis</a></li>
+                          <li><a href="{{ url_for('hurricane') }}">Hurricane Prediction</a></li>
+                          <li><a href="{{ url_for('tsunami') }}">Tsunami Prediction</a></li>
+                          <li><a href="{{ url_for('comp') }}">Comparison Analytics</a></li>
+            <li style="color: red;"><a href="{{ url_for('covid') }}" style="color: red;">COVID-19</a></li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+    <h1 style="color: black">Weather Prediction </h1>
+    <div style="width:30%;height:800px;float:left;margin:5px;padding:2px">
+            <div style="width:100%;height:750px;float:left;margin:5px;padding:2px;color: black;font-size: 16px">
+                    <form style="display: none;"> 
+                           
+                            <input type="text" class="txt" id="me" value=Thepredictedweatheris{{Predictions}} style="display:none;">
+                            <input type="text" class="txt" id="lat" value={{lat}}>
+                            <input type="text" class="txt" id="mes"  value={{Predictions}}>
+                            <input type="text" class="txt" id="long" value={{lon}}>
+                            <input type="text" class="txt" value={{date}}>
+                            <div style="display: none;">
+                              <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+                              <div class="rate-value">1</div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div style="display: none;">
+                              <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+                              <div class="pitch-value">1</div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <select>
+                        
+                            </select>
+                            <div class="controls">
+                              <button id="play" type="submit" name="play">Play</button>
+                            </div>
+                    </form>
+                   
+    
+    {% if Predictions %}
+
+    
+   <h2><strong style="font-size: 20px;color: rebeccapurple">Prediction:{{Predictions}}</strong></h2>
+    <h2><strong style="font-size: 20px;color: purple">Actual:{{Actual}}</strong></h2>
+   
+
+    {% elif Predictions != Actual %}
+
+    <h1>Prediction Not Matched</h1>
+
+    {% endif %}
+    <form style="display: none;">
+      <input type="text" id="pred" name="pred" value={{Predictions}}>
+     </form>
+    
+</div>
+</div>
+
+
+<div style="width:65%;height:700px;float:right;margin:5px;padding:2px">
+    
+    {% if Predictions  %}
+    <h1 style="text-align: center;color: peru">Predicted Weather</h1>
+    <p>
+      Latitude:{{lat}}
+      Longitude:{{lon}}
+      City:{{city}}
+      Date:{{date}}
+    </p>
+    <div style="width:50%;height:500px;float:left;margin:5px;padding:2px;color: black;font-size: 16px">
+        <div class="background">
+            <div class="container">	
+                <svg id="back">
+                    <radialGradient id="SVGID_1_" cx="0" cy="0" r="320.8304" gradientUnits="userSpaceOnUse">
+                        <stop  offset="0" style="stop-color:#FFDE17;stop-opacity:0.7"/>
+                        <stop  offset="1" style="stop-color:#FFF200;stop-opacity:0"/>
+                    </radialGradient>
+                    <path id="sunburst" style="fill:url(#SVGID_1_);" d="M0,319.7c-18.6,0-37.3-1.6-55.5-4.8L-7.8,41.4c5.1,0.9,10.6,0.9,15.7,0L56,314.8C37.6,318,18.8,319.7,0,319.7z
+                 M-160.8,276.6c-32.5-18.8-61.3-42.9-85.5-71.6L-34,26.2c3.4,4.1,7.4,7.4,12,10.1L-160.8,276.6z M161.3,276.4L22.1,36.2
+                c4.5-2.6,8.6-6,12-10.1l212.6,178.5C222.5,233.4,193.8,257.6,161.3,276.4z M-302.5,108.3C-315.4,73-321.9,36-322-1.8l277.6-0.5
+                c0,5.3,0.9,10.4,2.7,15.2L-302.5,108.3z M302.6,107.8L41.8,12.8c1.7-4.7,2.6-9.7,2.6-14.9c0-0.3,0-0.6,0-1H322l0-1.3l0,1.9
+                C322,35.4,315.5,72.5,302.6,107.8z M-41.8-17.5l-261-94.5c12.8-35.4,31.6-68,55.8-96.9L-34.1-30.8C-37.5-26.8-40.1-22.3-41.8-17.5z
+                 M41.7-17.7c-1.8-4.8-4.4-9.3-7.8-13.3l212-179.2c24.3,28.8,43.3,61.3,56.3,96.6L41.7-17.7z M-22.2-40.8l-139.6-240
+                c32.7-19,68.1-32,105.2-38.6L-8-46.1C-13-45.2-17.8-43.4-22.2-40.8z M22-40.9c-4.4-2.6-9.2-4.3-14.2-5.1l47.1-273.6
+                c37.2,6.4,72.7,19.2,105.4,38L22-40.9z"/>
+                </svg>
+                <nav style="display: none;">
+                    <ul>
+                        <li><a id="button-snow" class="active"><i class="wi wi-snow"></i></a></li>
+                        <li><a id="button-wind"><i class="wi wi-strong-wind"></i></a></li>
+                        <li><a id="button-rain"><i class="wi wi-rain"></i></a></li>
+                        <li><a id="button-thunder"><i class="wi wi-lightning"></i></a></li>
+                        <li><a id="button-sun"><i class="wi wi-day-sunny"></i></a></li>
+                    </ul>
+                </nav>
+                <div id="card" class="weather">
+                    <svg id="inner">
+                        <defs>
+                            <path id="leaf" d="M41.9,56.3l0.1-2.5c0,0,4.6-1.2,5.6-2.2c1-1,3.6-13,12-15.6c9.7-3.1,19.9-2,26.1-2.1c2.7,0-10,23.9-20.5,25 c-7.5,0.8-17.2-5.1-17.2-5.1L41.9,56.3z"/>
+                        </defs>
+                        <circle id="sun" style="fill: #F7ED47" cx="0" cy="0" r="50"/>
+                        <g id="layer3"></g>
+                        <g id="cloud3" class="cloud"></g>
+                        <g id="layer2"></g>
+                        <g id="cloud2" class="cloud"></g>
+                        <g id="layer1"></g>
+                        <g id="cloud1" class="cloud"></g>
+                    </svg>
+                    <div class="details">
+                        <div class="temp">{{Predictions}}<span>c</span></div>
+                        <div class="right">
+                            <div id="date">Predicted Weather</div>
+                            <div id="summary"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <svg id="outer"></svg>
+            </div>
+            </div>
+        </div>
+        {% endif %}
+<script>
+var we=document.getElementById("mes").value
+if (we == 'Clear') {
+    document.getElementById("button-sun").click();
+}else{
+    if(we == 'Rainy'){
+        document.getElementById("button-rain").click();
+        console.log('Ready to receive a color command.'); 
+    }else{
+        if(we == 'Clouds'){
+        document.getElementById("button-thunder").click();
+        console.log('Ready to receive a color command.'); 
+    }else{
+        if( we == 'Haze'){
+        document.getElementById("button-wind").click();
+        console.log('Ready to receive a color command.'); 
+    }else{
+        if(we == 'Smoke'){
+        document.getElementById("button-wind").click();
+        console.log('Ready to receive a color command.'); 
+    }else{
+        if( we == 'Mist'){
+        document.getElementById("button-rain").click();
+        console.log('Ready to receive a color command.'); 
+        }else{
+            if( we == 'Storm'){
+                document.getElementById("button-thunder").click();
+                console.log('Ready to receive a color command.'); 
+            }else{
+                if(we=='Snow'){
+                    document.getElementById("button-snow").click();
+                     console.log('Ready to receive a color command.'); 
+                                }
+                                else{
+                                    document.getElementById("button-thunder").click();
+                                    console.log('Ready to receive a color command.'); 
+                                }
+                            }
+                            }
+                        }
+                        }
+                    }
+                    }
+                        
+                    }
+                    
+                  </script>
+                  <script src="{{url_for('static', filename='weather.js')}}"></script>
+        {% if Actual  %}
+        <div style="width:48%;height:500px;float:right;margin:5px;padding:2px;color: black;font-size: 16px">
+            <div id="map" style="width:100%;height:450px;">
+       
+              </div>
+
+        </div>
+       
+        <div>
+            <p style="font-size:15px;"><strong>Table depicts the latest 5 queries for the prediction model</strong></p>
+            <table  class="table" style="background-color:#222f3e;margin:20px 40px;border: 1px solid blue;width: 700px;color: olivedrab">
+                <tr style="color: #feca57;">
+                    <td>Latitude</td>
+                    <td>Longitude</td>
+                    <td>City</td>
+                    <td>Predict</td>
+                    <td>Actual</td>
+                    <td>Date</td>
+                    <td>Match</td>
+                </tr>
+            {% for item in data %}
+            
+            <tr>
+                <td style="display: none;">{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td>{{item[5]}}</td>
+                <td>{{item[6]}}</td>
+                <td>{{item[7]}}</td>
+            
+            </tr>
+            {% endfor %}
+          </table>
+          
+          </div>
+        {% endif %}
+        
+</div>
+
+
+    <script src="{{url_for('static', filename='maps2.js')}}"></script>
+    <script>
+            document.body.onload= function() {
+              document.getElementById("play").click();
+              console.log('Ready to receive a color command.');  
+            }
+            
+            </script>
+         
+        <p class="hints" style="display: none;"></p>
+    <div>
+        <p class="output"><em>...diagnostic messages</em></p>
+    </div>   
+   
+    <script src="{{url_for('static', filename='scripts.js')}}"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+
+
+<script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs4yUs1YswCjM7pQdMh5XzyXSKw1A22HI&callback=initMap">
+  </script>
+   <!-- {{Predictions}}-->
+</body>
+</html>

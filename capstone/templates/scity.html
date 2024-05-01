@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc8a945b22d84b7c94e8d8584f5bcd15 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cc8a945b22d84b7c94e8d8584f5bcd15" ></div>
+        
+</body>
+<script>    
+    
+            var map_cc8a945b22d84b7c94e8d8584f5bcd15 = L.map(
+                "map_cc8a945b22d84b7c94e8d8584f5bcd15",
+                {
+                    center: [20.593684, 78.96288],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8c1caa7e97e94e9b9a12b6eb63043f2f = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var marker_6feed6a2117842be8744cf2aadd7a7ec = L.marker(
+                [33.2296111, -79.2042149],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_c78a72f5dd2d407e94190ec19bb844cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6feed6a2117842be8744cf2aadd7a7ec.setIcon(icon_c78a72f5dd2d407e94190ec19bb844cd);
+        
+    
+        var popup_b14ec2e7f3db43a6aa6dc7d66b78aa33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f353d44c979f4b57868fd01947f40a39 = $(`<div id="html_f353d44c979f4b57868fd01947f40a39" style="width: 100.0%; height: 100.0%;">City Name:Railway Quarantine Active Case:23 Death:0 Confirm:23</div>`)[0];
+            popup_b14ec2e7f3db43a6aa6dc7d66b78aa33.setContent(html_f353d44c979f4b57868fd01947f40a39);
+        
+
+        marker_6feed6a2117842be8744cf2aadd7a7ec.bindPopup(popup_b14ec2e7f3db43a6aa6dc7d66b78aa33)
+        ;
+
+        
+    
+    
+            var marker_43c09250673f427eab2dfc51b7d31b3b = L.marker(
+                [18.7713537, 98.9716458],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_31935f277ecb480d9de465f38fa82c98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_43c09250673f427eab2dfc51b7d31b3b.setIcon(icon_31935f277ecb480d9de465f38fa82c98);
+        
+    
+        var popup_675eef00122f435b9712c2eab3121701 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a36234c36a74326bb2b51a69171d9cf = $(`<div id="html_0a36234c36a74326bb2b51a69171d9cf" style="width: 100.0%; height: 100.0%;">City Name:Airport Quarantine Active Case:84 Death:0 Confirm:86</div>`)[0];
+            popup_675eef00122f435b9712c2eab3121701.setContent(html_0a36234c36a74326bb2b51a69171d9cf);
+        
+
+        marker_43c09250673f427eab2dfc51b7d31b3b.bindPopup(popup_675eef00122f435b9712c2eab3121701)
+        ;
+
+        
+    
+    
+            var marker_76558b8c829b4abbab2b4930e332abaa = L.marker(
+                [60.5991365, -134.8802513],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_18a6b16fc96b4863b2047f8098e43ac2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_76558b8c829b4abbab2b4930e332abaa.setIcon(icon_18a6b16fc96b4863b2047f8098e43ac2);
+        
+    
+        var popup_ff0431bda30b4fdb9c16f232c47d8196 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29ede7d820214734a7df854135118ff6 = $(`<div id="html_29ede7d820214734a7df854135118ff6" style="width: 100.0%; height: 100.0%;">City Name:Other State Active Case:0 Death:1 Confirm:1</div>`)[0];
+            popup_ff0431bda30b4fdb9c16f232c47d8196.setContent(html_29ede7d820214734a7df854135118ff6);
+        
+
+        marker_76558b8c829b4abbab2b4930e332abaa.bindPopup(popup_ff0431bda30b4fdb9c16f232c47d8196)
+        ;
+
+        
+    
+    
+            var marker_3c3eab65b90e4da3b0046c74fc0a07e7 = L.marker(
+                [11.0760359, 79.1174554],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_549875911635481489a6127098d74a9a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3c3eab65b90e4da3b0046c74fc0a07e7.setIcon(icon_549875911635481489a6127098d74a9a);
+        
+    
+        var popup_3007b35ce06045afad870a467717aabf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e9b73dc12da4f319aba8d5eeb71c398 = $(`<div id="html_4e9b73dc12da4f319aba8d5eeb71c398" style="width: 100.0%; height: 100.0%;">City Name:Ariyalur Active Case:9 Death:0 Confirm:357</div>`)[0];
+            popup_3007b35ce06045afad870a467717aabf.setContent(html_4e9b73dc12da4f319aba8d5eeb71c398);
+        
+
+        marker_3c3eab65b90e4da3b0046c74fc0a07e7.bindPopup(popup_3007b35ce06045afad870a467717aabf)
+        ;
+
+        
+    
+    
+            var circle_marker_9b08ae12adf6481b9519d88f836b63ab = L.circleMarker(
+                [12.7665742, 79.9993191],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+        var popup_d7cf85dbadb54320bf78670b8f9e8212 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1be47f16ba3742bcad38456e2b07f718 = $(`<div id="html_1be47f16ba3742bcad38456e2b07f718" style="width: 100.0%; height: 100.0%;">City Name:Chengalpattu Active Case:588 Death:7 Confirm:853</div>`)[0];
+            popup_d7cf85dbadb54320bf78670b8f9e8212.setContent(html_1be47f16ba3742bcad38456e2b07f718);
+        
+
+        circle_marker_9b08ae12adf6481b9519d88f836b63ab.bindPopup(popup_d7cf85dbadb54320bf78670b8f9e8212)
+        ;
+
+        
+    
+    
+            var marker_6ad40f151fcf4b399b860a1a100b5e9c = L.marker(
+                [13.0801721, 80.2838331],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_ff2efe428ecd4d559d236dcb118ddfe0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6ad40f151fcf4b399b860a1a100b5e9c.setIcon(icon_ff2efe428ecd4d559d236dcb118ddfe0);
+        
+    
+        var popup_894a9723c29045158264a13a703c0b23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c53163a6fc29407c8239efd030f624d2 = $(`<div id="html_c53163a6fc29407c8239efd030f624d2" style="width: 100.0%; height: 100.0%;">City Name:Chennai Active Case:6055 Death:94 Confirm:11641</div>`)[0];
+            popup_894a9723c29045158264a13a703c0b23.setContent(html_c53163a6fc29407c8239efd030f624d2);
+        
+
+        marker_6ad40f151fcf4b399b860a1a100b5e9c.bindPopup(popup_894a9723c29045158264a13a703c0b23)
+        ;
+
+        
+    
+    
+            var marker_214d756dcaa3473da8692a66e56e8b50 = L.marker(
+                [11.0018115, 76.9628425],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_ac80775730f84329a9c4a81f946cd0d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_214d756dcaa3473da8692a66e56e8b50.setIcon(icon_ac80775730f84329a9c4a81f946cd0d7);
+        
+    
+        var popup_32916f1b486b40b682c47b9672478de8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4df6c07a8d5c404680e816da3f2da353 = $(`<div id="html_4df6c07a8d5c404680e816da3f2da353" style="width: 100.0%; height: 100.0%;">City Name:Coimbatore Active Case:0 Death:1 Confirm:145</div>`)[0];
+            popup_32916f1b486b40b682c47b9672478de8.setContent(html_4df6c07a8d5c404680e816da3f2da353);
+        
+
+        marker_214d756dcaa3473da8692a66e56e8b50.bindPopup(popup_32916f1b486b40b682c47b9672478de8)
+        ;
+
+        
+    
+    
+            var marker_938183075e50448c9ef9f421aae6db79 = L.marker(
+                [11.7426938, 79.7503064],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_93860236aac9491ab5004d68769105e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_938183075e50448c9ef9f421aae6db79.setIcon(icon_93860236aac9491ab5004d68769105e5);
+        
+    
+        var popup_055082abbffc42bda0fb46f8ac4aa933 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e5c092715a5481c947e14e8a594c866 = $(`<div id="html_0e5c092715a5481c947e14e8a594c866" style="width: 100.0%; height: 100.0%;">City Name:Cuddalore Active Case:20 Death:1 Confirm:435</div>`)[0];
+            popup_055082abbffc42bda0fb46f8ac4aa933.setContent(html_0e5c092715a5481c947e14e8a594c866);
+        
+
+        marker_938183075e50448c9ef9f421aae6db79.bindPopup(popup_055082abbffc42bda0fb46f8ac4aa933)
+        ;
+
+        
+    
+    
+            var marker_969a7977b53248b1b48482110e5eef10 = L.marker(
+                [12.0968048, 78.193043],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_185e1245f99e4557a81f0d26138d83c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_969a7977b53248b1b48482110e5eef10.setIcon(icon_185e1245f99e4557a81f0d26138d83c5);
+        
+    
+        var popup_3f804bbf3f0c4f488bb183182ada06b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_588d67e32a2b4c47936736ffbccaaf09 = $(`<div id="html_588d67e32a2b4c47936736ffbccaaf09" style="width: 100.0%; height: 100.0%;">City Name:Dharmapuri Active Case:3 Death:0 Confirm:8</div>`)[0];
+            popup_3f804bbf3f0c4f488bb183182ada06b7.setContent(html_588d67e32a2b4c47936736ffbccaaf09);
+        
+
+        marker_969a7977b53248b1b48482110e5eef10.bindPopup(popup_3f804bbf3f0c4f488bb183182ada06b7)
+        ;
+
+        
+    
+    
+            var marker_3ce29e2b228946ebb0ef59f2e72f48b8 = L.marker(
+                [10.3303299, 78.0673979],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_7f3a9e5e175c40789c4efa5e1a177af1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3ce29e2b228946ebb0ef59f2e72f48b8.setIcon(icon_7f3a9e5e175c40789c4efa5e1a177af1);
+        
+    
+        var popup_1e2f14fa0c34453b819a416663ac8764 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e20c607d36434799a1550ae9e7d6eb04 = $(`<div id="html_e20c607d36434799a1550ae9e7d6eb04" style="width: 100.0%; height: 100.0%;">City Name:Dindigul Active Case:21 Death:1 Confirm:134</div>`)[0];
+            popup_1e2f14fa0c34453b819a416663ac8764.setContent(html_e20c607d36434799a1550ae9e7d6eb04);
+        
+
+        marker_3ce29e2b228946ebb0ef59f2e72f48b8.bindPopup(popup_1e2f14fa0c34453b819a416663ac8764)
+        ;
+
+        
+    
+    
+            var marker_4858aed3d14e436f80e9cdf384ef7e11 = L.marker(
+                [11.3692044, 77.6766269],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_05f7ada94fc248628f9e6a7169e40d6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4858aed3d14e436f80e9cdf384ef7e11.setIcon(icon_05f7ada94fc248628f9e6a7169e40d6a);
+        
+    
+        var popup_995157513586479d8177d7889390ce4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e18001c357124dd7968624c1b242b080 = $(`<div id="html_e18001c357124dd7968624c1b242b080" style="width: 100.0%; height: 100.0%;">City Name:Erode Active Case:1 Death:1 Confirm:71</div>`)[0];
+            popup_995157513586479d8177d7889390ce4f.setContent(html_e18001c357124dd7968624c1b242b080);
+        
+
+        marker_4858aed3d14e436f80e9cdf384ef7e11.bindPopup(popup_995157513586479d8177d7889390ce4f)
+        ;
+
+        
+    
+    
+            var marker_fbe648d84fde492d8a1e684542272367 = L.marker(
+                [11.7946847, 79.0388211],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_4f6abad6aad5480085549daa304496bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fbe648d84fde492d8a1e684542272367.setIcon(icon_4f6abad6aad5480085549daa304496bb);
+        
+    
+        var popup_90bdce130a6541489d862a6b30331cf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da62b1c22fe845f3b86ed47c6b4433e4 = $(`<div id="html_da62b1c22fe845f3b86ed47c6b4433e4" style="width: 100.0%; height: 100.0%;">City Name:Kallakurichi Active Case:61 Death:0 Confirm:154</div>`)[0];
+            popup_90bdce130a6541489d862a6b30331cf5.setContent(html_da62b1c22fe845f3b86ed47c6b4433e4);
+        
+
+        marker_fbe648d84fde492d8a1e684542272367.bindPopup(popup_90bdce130a6541489d862a6b30331cf5)
+        ;
+
+        
+    
+    
+            var marker_b930f26d81ec49f18def479e7d90ef4f = L.marker(
+                [12.8796051, 79.7042762],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_1858eed139034ecfb1fb0dc284f8d06f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b930f26d81ec49f18def479e7d90ef4f.setIcon(icon_1858eed139034ecfb1fb0dc284f8d06f);
+        
+    
+        var popup_770add96c44b4be1b852d06688f07f4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8b8474832ea4d1aac343cc4b340bffe = $(`<div id="html_d8b8474832ea4d1aac343cc4b340bffe" style="width: 100.0%; height: 100.0%;">City Name:Kancheepuram Active Case:128 Death:1 Confirm:312</div>`)[0];
+            popup_770add96c44b4be1b852d06688f07f4a.setContent(html_d8b8474832ea4d1aac343cc4b340bffe);
+        
+
+        marker_b930f26d81ec49f18def479e7d90ef4f.bindPopup(popup_770add96c44b4be1b852d06688f07f4a)
+        ;
+
+        
+    
+    
+            var marker_c8afea835de747ca982a65cf343c16bf = L.marker(
+                [8.079252, 77.5499338],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_5b9ebffaa25c4b55a2dff04ccf18e462 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c8afea835de747ca982a65cf343c16bf.setIcon(icon_5b9ebffaa25c4b55a2dff04ccf18e462);
+        
+    
+        var popup_7a07be8017284728a3d5f7a989a44247 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23f94a39e19a4f10883f90e7e6c243ac = $(`<div id="html_23f94a39e19a4f10883f90e7e6c243ac" style="width: 100.0%; height: 100.0%;">City Name:Kanyakumari Active Case:30 Death:1 Confirm:58</div>`)[0];
+            popup_7a07be8017284728a3d5f7a989a44247.setContent(html_23f94a39e19a4f10883f90e7e6c243ac);
+        
+
+        marker_c8afea835de747ca982a65cf343c16bf.bindPopup(popup_7a07be8017284728a3d5f7a989a44247)
+        ;
+
+        
+    
+    
+            var marker_122d5d9d0cd14ae6bc64e05e18894bf4 = L.marker(
+                [10.9301522, 78.0848545],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_bd15aca43b024658aae44ae7b4f4c33e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_122d5d9d0cd14ae6bc64e05e18894bf4.setIcon(icon_bd15aca43b024658aae44ae7b4f4c33e);
+        
+    
+        var popup_6a542945f1f64a1c85e66ebaf0c31a34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fe715640f3b41fb8545bb283649633d = $(`<div id="html_8fe715640f3b41fb8545bb283649633d" style="width: 100.0%; height: 100.0%;">City Name:Karur Active Case:13 Death:0 Confirm:80</div>`)[0];
+            popup_6a542945f1f64a1c85e66ebaf0c31a34.setContent(html_8fe715640f3b41fb8545bb283649633d);
+        
+
+        marker_122d5d9d0cd14ae6bc64e05e18894bf4.bindPopup(popup_6a542945f1f64a1c85e66ebaf0c31a34)
+        ;
+
+        
+    
+    
+            var marker_81d00dd55ea042ce8bb7de5cfef124aa = L.marker(
+                [12.5188835, 78.2206536],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_f8f320e0690546caac79dafc6ca84055 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_81d00dd55ea042ce8bb7de5cfef124aa.setIcon(icon_f8f320e0690546caac79dafc6ca84055);
+        
+    
+        var popup_ba37651f014646bcbc5d0cb2e1f6882d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f3724afeb584e64b00118142b81893b = $(`<div id="html_8f3724afeb584e64b00118142b81893b" style="width: 100.0%; height: 100.0%;">City Name:Krishnagiri Active Case:6 Death:0 Confirm:25</div>`)[0];
+            popup_ba37651f014646bcbc5d0cb2e1f6882d.setContent(html_8f3724afeb584e64b00118142b81893b);
+        
+
+        marker_81d00dd55ea042ce8bb7de5cfef124aa.bindPopup(popup_ba37651f014646bcbc5d0cb2e1f6882d)
+        ;
+
+        
+    
+    
+            var marker_1105c0fcf9cb4086ae4f6ba02bff66dc = L.marker(
+                [9.9080669, 78.1082197],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_236be1666f7d404a9ad89334be53dbcb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1105c0fcf9cb4086ae4f6ba02bff66dc.setIcon(icon_236be1666f7d404a9ad89334be53dbcb);
+        
+    
+        var popup_135dfd25a3ea4a709c3fbfc61a4e1723 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bf10587c2a24839a60abf9e729295da = $(`<div id="html_3bf10587c2a24839a60abf9e729295da" style="width: 100.0%; height: 100.0%;">City Name:Madurai Active Case:110 Death:2 Confirm:234</div>`)[0];
+            popup_135dfd25a3ea4a709c3fbfc61a4e1723.setContent(html_3bf10587c2a24839a60abf9e729295da);
+        
+
+        marker_1105c0fcf9cb4086ae4f6ba02bff66dc.bindPopup(popup_135dfd25a3ea4a709c3fbfc61a4e1723)
+        ;
+
+        
+    
+    
+            var marker_b7f41aa3c70840359fdea55b2feb1d99 = L.marker(
+                [10.8056276, 79.8246598],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_684384d6d0b1401e9904cd63b299dc69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b7f41aa3c70840359fdea55b2feb1d99.setIcon(icon_684384d6d0b1401e9904cd63b299dc69);
+        
+    
+        var popup_f7b35843eb2849a09901f281d778d7f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_847fc6e03162404f9dd56344f9f0aebb = $(`<div id="html_847fc6e03162404f9dd56344f9f0aebb" style="width: 100.0%; height: 100.0%;">City Name:Nagapattinam Active Case:0 Death:0 Confirm:51</div>`)[0];
+            popup_f7b35843eb2849a09901f281d778d7f0.setContent(html_847fc6e03162404f9dd56344f9f0aebb);
+        
+
+        marker_b7f41aa3c70840359fdea55b2feb1d99.bindPopup(popup_f7b35843eb2849a09901f281d778d7f0)
+        ;
+
+        
+    
+    
+            var marker_9fbba5116ef645a2b58a4585bc923c94 = L.marker(
+                [11.2842248, 78.1661528],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_80366db53f3240d0a6ed5ec9596bbc59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9fbba5116ef645a2b58a4585bc923c94.setIcon(icon_80366db53f3240d0a6ed5ec9596bbc59);
+        
+    
+        var popup_5ba7360a240e43afa76b17f85e4e08cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c77d19db76042df876aa12acfc7a5c5 = $(`<div id="html_8c77d19db76042df876aa12acfc7a5c5" style="width: 100.0%; height: 100.0%;">City Name:Namakkal Active Case:0 Death:0 Confirm:77</div>`)[0];
+            popup_5ba7360a240e43afa76b17f85e4e08cf.setContent(html_8c77d19db76042df876aa12acfc7a5c5);
+        
+
+        marker_9fbba5116ef645a2b58a4585bc923c94.bindPopup(popup_5ba7360a240e43afa76b17f85e4e08cf)
+        ;
+
+        
+    
+    
+            var marker_60d4fc939a8c4f678b0771b9b8f58437 = L.marker(
+                [11.4, 76.7],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_4f8c2b74a03c4ef69f07502570a38b56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_60d4fc939a8c4f678b0771b9b8f58437.setIcon(icon_4f8c2b74a03c4ef69f07502570a38b56);
+        
+    
+        var popup_38e0c38b1e6045e793d339f4abac68af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dcb230eb8773439894243a1e54fd91a8 = $(`<div id="html_dcb230eb8773439894243a1e54fd91a8" style="width: 100.0%; height: 100.0%;">City Name:Nilgiris Active Case:1 Death:0 Confirm:14</div>`)[0];
+            popup_38e0c38b1e6045e793d339f4abac68af.setContent(html_dcb230eb8773439894243a1e54fd91a8);
+        
+
+        marker_60d4fc939a8c4f678b0771b9b8f58437.bindPopup(popup_38e0c38b1e6045e793d339f4abac68af)
+        ;
+
+        
+    
+    
+            var marker_b2567904d8b94143a49834941fe78abb = L.marker(
+                [11.2287716, 78.8182555],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_9a37dbf249b84dfe9cb80e3bea88ed4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b2567904d8b94143a49834941fe78abb.setIcon(icon_9a37dbf249b84dfe9cb80e3bea88ed4c);
+        
+    
+        var popup_8442b7e02fd94c56b0da792d86506f16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_125663792f5c40d8bfef2399c46685bd = $(`<div id="html_125663792f5c40d8bfef2399c46685bd" style="width: 100.0%; height: 100.0%;">City Name:Perambalur Active Case:4 Death:0 Confirm:139</div>`)[0];
+            popup_8442b7e02fd94c56b0da792d86506f16.setContent(html_125663792f5c40d8bfef2399c46685bd);
+        
+
+        marker_b2567904d8b94143a49834941fe78abb.bindPopup(popup_8442b7e02fd94c56b0da792d86506f16)
+        ;
+
+        
+    
+    
+            var marker_3ac348330e80451d9f52a4530ae02ac3 = L.marker(
+                [10.5, 78.833333],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_167e323f1403494085b0bfcf24219c75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3ac348330e80451d9f52a4530ae02ac3.setIcon(icon_167e323f1403494085b0bfcf24219c75);
+        
+    
+        var popup_45b19d20382d4051a4010aac383a4183 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f41696c105e4b2e8bd2b501a1eb75e9 = $(`<div id="html_7f41696c105e4b2e8bd2b501a1eb75e9" style="width: 100.0%; height: 100.0%;">City Name:Pudukkottai Active Case:14 Death:0 Confirm:21</div>`)[0];
+            popup_45b19d20382d4051a4010aac383a4183.setContent(html_7f41696c105e4b2e8bd2b501a1eb75e9);
+        
+
+        marker_3ac348330e80451d9f52a4530ae02ac3.bindPopup(popup_45b19d20382d4051a4010aac383a4183)
+        ;
+
+        
+    
+    
+            var marker_c2d7aef930814be5bef6aecf1168ecd9 = L.marker(
+                [9.3895523, 78.8590707],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_34b69b6e091940ceb1213e65d5b408a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c2d7aef930814be5bef6aecf1168ecd9.setIcon(icon_34b69b6e091940ceb1213e65d5b408a2);
+        
+    
+        var popup_a47a7fa029f94ef49fba2c2976304eb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e7e8c4729dc47988d5e74eca67fb057 = $(`<div id="html_9e7e8c4729dc47988d5e74eca67fb057" style="width: 100.0%; height: 100.0%;">City Name:Ramanathapuram Active Case:33 Death:1 Confirm:64</div>`)[0];
+            popup_a47a7fa029f94ef49fba2c2976304eb4.setContent(html_9e7e8c4729dc47988d5e74eca67fb057);
+        
+
+        marker_c2d7aef930814be5bef6aecf1168ecd9.bindPopup(popup_a47a7fa029f94ef49fba2c2976304eb4)
+        ;
+
+        
+    
+    
+            var marker_743a613bc8a84785b99fbb951a4f43ac = L.marker(
+                [12.9272641, 79.3330076],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_61e08e3ab98546718fa17a027a3be6ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_743a613bc8a84785b99fbb951a4f43ac.setIcon(icon_61e08e3ab98546718fa17a027a3be6ab);
+        
+    
+        var popup_f18764bf04c742cebe35e083ac127dde = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff31eef2fbe64525b77eab6b72bb397b = $(`<div id="html_ff31eef2fbe64525b77eab6b72bb397b" style="width: 100.0%; height: 100.0%;">City Name:Ranipet Active Case:21 Death:0 Confirm:97</div>`)[0];
+            popup_f18764bf04c742cebe35e083ac127dde.setContent(html_ff31eef2fbe64525b77eab6b72bb397b);
+        
+
+        marker_743a613bc8a84785b99fbb951a4f43ac.bindPopup(popup_f18764bf04c742cebe35e083ac127dde)
+        ;
+
+        
+    
+    
+            var marker_b51dd25d326b4c52849977ce729e5d09 = L.marker(
+                [44.9391565, -123.033121],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_909237ba4e42493a9613770e8a4fb512 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b51dd25d326b4c52849977ce729e5d09.setIcon(icon_909237ba4e42493a9613770e8a4fb512);
+        
+    
+        var popup_578ae7d110a344199c715a1a5629cd99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd2dfc2071c944dfb93a3be220f004b2 = $(`<div id="html_bd2dfc2071c944dfb93a3be220f004b2" style="width: 100.0%; height: 100.0%;">City Name:Salem Active Case:33 Death:0 Confirm:68</div>`)[0];
+            popup_578ae7d110a344199c715a1a5629cd99.setContent(html_bd2dfc2071c944dfb93a3be220f004b2);
+        
+
+        marker_b51dd25d326b4c52849977ce729e5d09.bindPopup(popup_578ae7d110a344199c715a1a5629cd99)
+        ;
+
+        
+    
+    
+            var marker_1f79926a84e7408f8a2d2ee4d47ca14c = L.marker(
+                [9.851231, 78.5304715],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_5598bfdc212144a8a19dee2943d14326 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1f79926a84e7408f8a2d2ee4d47ca14c.setIcon(icon_5598bfdc212144a8a19dee2943d14326);
+        
+    
+        var popup_3feac96ecf254241ab26d339d9c9d8b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b732850782b648db98849edf115cc423 = $(`<div id="html_b732850782b648db98849edf115cc423" style="width: 100.0%; height: 100.0%;">City Name:Sivaganga Active Case:2 Death:0 Confirm:28</div>`)[0];
+            popup_3feac96ecf254241ab26d339d9c9d8b9.setContent(html_b732850782b648db98849edf115cc423);
+        
+
+        marker_1f79926a84e7408f8a2d2ee4d47ca14c.bindPopup(popup_3feac96ecf254241ab26d339d9c9d8b9)
+        ;
+
+        
+    
+    
+            var marker_e85352aab2334452920bc4a3647c014d = L.marker(
+                [9.0940754, 77.4758369],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_5ca02983d8dc4d2fb29a246288d2b22f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e85352aab2334452920bc4a3647c014d.setIcon(icon_5ca02983d8dc4d2fb29a246288d2b22f);
+        
+    
+        var popup_9210cbb7fae84a1880646c321cfc67b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd430d826ba14550ab1630269ff96f14 = $(`<div id="html_dd430d826ba14550ab1630269ff96f14" style="width: 100.0%; height: 100.0%;">City Name:Tenkasi Active Case:32 Death:0 Confirm:85</div>`)[0];
+            popup_9210cbb7fae84a1880646c321cfc67b2.setContent(html_dd430d826ba14550ab1630269ff96f14);
+        
+
+        marker_e85352aab2334452920bc4a3647c014d.bindPopup(popup_9210cbb7fae84a1880646c321cfc67b2)
+        ;
+
+        
+    
+    
+            var marker_4e6f98ec2d804cc78edcf27bd9155e6a = L.marker(
+                [10.7860267, 79.1381497],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_2920b39924164430a74e109858729066 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4e6f98ec2d804cc78edcf27bd9155e6a.setIcon(icon_2920b39924164430a74e109858729066);
+        
+    
+        var popup_703932989ea842fda3a1846879b40cf4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2a5e4b062f34247be896dcd40bc2ad3 = $(`<div id="html_b2a5e4b062f34247be896dcd40bc2ad3" style="width: 100.0%; height: 100.0%;">City Name:Thanjavur Active Case:17 Death:0 Confirm:84</div>`)[0];
+            popup_703932989ea842fda3a1846879b40cf4.setContent(html_b2a5e4b062f34247be896dcd40bc2ad3);
+        
+
+        marker_4e6f98ec2d804cc78edcf27bd9155e6a.bindPopup(popup_703932989ea842fda3a1846879b40cf4)
+        ;
+
+        
+    
+    
+            var marker_519cbccd85a74fce80c0f6c70d247d25 = L.marker(
+                [9.9696643, 77.4742005],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_c60dbbd37e194bcea0795c85e3c25b50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_519cbccd85a74fce80c0f6c70d247d25.setIcon(icon_c60dbbd37e194bcea0795c85e3c25b50);
+        
+    
+        var popup_e1d51de685f54800a5784d1ecc328f03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8f9f26ca89f41eb843d1ed52ef7e9b9 = $(`<div id="html_c8f9f26ca89f41eb843d1ed52ef7e9b9" style="width: 100.0%; height: 100.0%;">City Name:Theni Active Case:43 Death:2 Confirm:108</div>`)[0];
+            popup_e1d51de685f54800a5784d1ecc328f03.setContent(html_c8f9f26ca89f41eb843d1ed52ef7e9b9);
+        
+
+        marker_519cbccd85a74fce80c0f6c70d247d25.bindPopup(popup_e1d51de685f54800a5784d1ecc328f03)
+        ;
+
+        
+    
+    
+            var circle_marker_fec8f352dd6d4b1ea73d242e8671c48b = L.circleMarker(
+                [13.1301476, 79.9243539],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+        var popup_b5e070a5160b4116b4f48a11cab69075 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dff780c445044f8cb602d86279895b5a = $(`<div id="html_dff780c445044f8cb602d86279895b5a" style="width: 100.0%; height: 100.0%;">City Name:Thiruvallur Active Case:318 Death:8 Confirm:793</div>`)[0];
+            popup_b5e070a5160b4116b4f48a11cab69075.setContent(html_dff780c445044f8cb602d86279895b5a);
+        
+
+        circle_marker_fec8f352dd6d4b1ea73d242e8671c48b.bindPopup(popup_b5e070a5160b4116b4f48a11cab69075)
+        ;
+
+        
+    
+    
+            var marker_22e2127fa0884422928e1edc7582f7af = L.marker(
+                [10.7361861, 79.6331866],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_891e5216ffde40878b743ab8ba0ed1b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_22e2127fa0884422928e1edc7582f7af.setIcon(icon_891e5216ffde40878b743ab8ba0ed1b6);
+        
+    
+        var popup_ba2af273ad954261a6eb510ba89ad6e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_139b17e1aac44e0a880da50f7342e8a0 = $(`<div id="html_139b17e1aac44e0a880da50f7342e8a0" style="width: 100.0%; height: 100.0%;">City Name:Thiruvarur Active Case:6 Death:0 Confirm:38</div>`)[0];
+            popup_ba2af273ad954261a6eb510ba89ad6e1.setContent(html_139b17e1aac44e0a880da50f7342e8a0);
+        
+
+        marker_22e2127fa0884422928e1edc7582f7af.bindPopup(popup_ba2af273ad954261a6eb510ba89ad6e1)
+        ;
+
+        
+    
+    
+            var marker_d696a85ac0c74bc1905d23154aef41a5 = L.marker(
+                [8.7567452, 78.0797527],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_92c5b6b8d796492e8ea2d89b9e64483a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d696a85ac0c74bc1905d23154aef41a5.setIcon(icon_92c5b6b8d796492e8ea2d89b9e64483a);
+        
+    
+        var popup_6df0275e44d94bc7b79ecc89725f9aa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_941851b450e54f93be432cbae21f0408 = $(`<div id="html_941851b450e54f93be432cbae21f0408" style="width: 100.0%; height: 100.0%;">City Name:Thoothukkudi Active Case:127 Death:2 Confirm:186</div>`)[0];
+            popup_6df0275e44d94bc7b79ecc89725f9aa5.setContent(html_941851b450e54f93be432cbae21f0408);
+        
+
+        marker_d696a85ac0c74bc1905d23154aef41a5.bindPopup(popup_6df0275e44d94bc7b79ecc89725f9aa5)
+        ;
+
+        
+    
+    
+            var marker_5602509f6c5548bead769e2136fa7966 = L.marker(
+                [10.804973, 78.6870296],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_a71e4d0cdccd41d59eadf68834e8d70b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5602509f6c5548bead769e2136fa7966.setIcon(icon_a71e4d0cdccd41d59eadf68834e8d70b);
+        
+    
+        var popup_14a7514bdde4428684a1f3aae6279c86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_818e2b4756c44578a00c943dbb7d8e90 = $(`<div id="html_818e2b4756c44578a00c943dbb7d8e90" style="width: 100.0%; height: 100.0%;">City Name:Tiruchirappalli Active Case:9 Death:0 Confirm:76</div>`)[0];
+            popup_14a7514bdde4428684a1f3aae6279c86.setContent(html_818e2b4756c44578a00c943dbb7d8e90);
+        
+
+        marker_5602509f6c5548bead769e2136fa7966.bindPopup(popup_14a7514bdde4428684a1f3aae6279c86)
+        ;
+
+        
+    
+    
+            var marker_0db1727ec33c423d9d09c10d5ea124f3 = L.marker(
+                [8.8082342, 77.8114843],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_b4cb25b9a33e4d28a27f417cda03ea78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0db1727ec33c423d9d09c10d5ea124f3.setIcon(icon_b4cb25b9a33e4d28a27f417cda03ea78);
+        
+    
+        var popup_1a4031b1dab241929c1ee55a8d5f4213 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fea5f26ebbb4b7a993766618cb89580 = $(`<div id="html_5fea5f26ebbb4b7a993766618cb89580" style="width: 100.0%; height: 100.0%;">City Name:Tirunelveli Active Case:176 Death:1 Confirm:298</div>`)[0];
+            popup_1a4031b1dab241929c1ee55a8d5f4213.setContent(html_5fea5f26ebbb4b7a993766618cb89580);
+        
+
+        marker_0db1727ec33c423d9d09c10d5ea124f3.bindPopup(popup_1a4031b1dab241929c1ee55a8d5f4213)
+        ;
+
+        
+    
+    
+            var marker_1967a2d85d7b4a2eaceb4b5250d21167 = L.marker(
+                [12.4533064, 78.5529086],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_dc3b31e83bd0463a89fe5e858dceba6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1967a2d85d7b4a2eaceb4b5250d21167.setIcon(icon_dc3b31e83bd0463a89fe5e858dceba6e);
+        
+    
+        var popup_c96260d700de40b991ecd037486e67b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d817040af79043ed8ffb2571290c872f = $(`<div id="html_d817040af79043ed8ffb2571290c872f" style="width: 100.0%; height: 100.0%;">City Name:Tirupathur Active Case:5 Death:0 Confirm:31</div>`)[0];
+            popup_c96260d700de40b991ecd037486e67b4.setContent(html_d817040af79043ed8ffb2571290c872f);
+        
+
+        marker_1967a2d85d7b4a2eaceb4b5250d21167.bindPopup(popup_c96260d700de40b991ecd037486e67b4)
+        ;
+
+        
+    
+    
+            var marker_df20165c855d454bac2ee4d9d2c07b66 = L.marker(
+                [10.7832271, 77.5260478],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_32c58fc55f8a41e98cd810cec74fafc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_df20165c855d454bac2ee4d9d2c07b66.setIcon(icon_32c58fc55f8a41e98cd810cec74fafc3);
+        
+    
+        var popup_532267bf59094979a980ca970ca0aa71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1461ba5e50af4b32af955a5ba306951b = $(`<div id="html_1461ba5e50af4b32af955a5ba306951b" style="width: 100.0%; height: 100.0%;">City Name:Tiruppur Active Case:0 Death:0 Confirm:114</div>`)[0];
+            popup_532267bf59094979a980ca970ca0aa71.setContent(html_1461ba5e50af4b32af955a5ba306951b);
+        
+
+        marker_df20165c855d454bac2ee4d9d2c07b66.bindPopup(popup_532267bf59094979a980ca970ca0aa71)
+        ;
+
+        
+    
+    
+            var marker_5a4b644ca11a45f2824327a26cd2d004 = L.marker(
+                [12.227213, 79.0701555],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_428769e16d5544e39eb5e565bfd06b3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5a4b644ca11a45f2824327a26cd2d004.setIcon(icon_428769e16d5544e39eb5e565bfd06b3f);
+        
+    
+        var popup_3365b4b5261646e882499ae6d259f835 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1943a810b0b2424e99cb51a0305ff18d = $(`<div id="html_1943a810b0b2424e99cb51a0305ff18d" style="width: 100.0%; height: 100.0%;">City Name:Tiruvannamalai Active Case:151 Death:1 Confirm:242</div>`)[0];
+            popup_3365b4b5261646e882499ae6d259f835.setContent(html_1943a810b0b2424e99cb51a0305ff18d);
+        
+
+        marker_5a4b644ca11a45f2824327a26cd2d004.bindPopup(popup_3365b4b5261646e882499ae6d259f835)
+        ;
+
+        
+    
+    
+            var marker_87fc80e0b5204cbcb5416802b10ced0a = L.marker(
+                [12.7948109, 79.0006411],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_b6e109467c254eaebe0837c9b9afa0ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_87fc80e0b5204cbcb5416802b10ced0a.setIcon(icon_b6e109467c254eaebe0837c9b9afa0ca);
+        
+    
+        var popup_5addeeb1507b466c85b666a5438af7e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0578ef3df9d84f978603281c22ebae16 = $(`<div id="html_0578ef3df9d84f978603281c22ebae16" style="width: 100.0%; height: 100.0%;">City Name:Vellore Active Case:10 Death:1 Confirm:42</div>`)[0];
+            popup_5addeeb1507b466c85b666a5438af7e5.setContent(html_0578ef3df9d84f978603281c22ebae16);
+        
+
+        marker_87fc80e0b5204cbcb5416802b10ced0a.bindPopup(popup_5addeeb1507b466c85b666a5438af7e5)
+        ;
+
+        
+    
+    
+            var marker_75a79c0b4493401fbc284e40e7deceaa = L.marker(
+                [11.9137874, 79.507893],
+                {}
+            ).addTo(map_cc8a945b22d84b7c94e8d8584f5bcd15);
+        
+    
+            var icon_d78485fb606f4aa7b8dca214532a8e87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_75a79c0b4493401fbc284e40e7deceaa.setIcon(icon_d78485fb606f4aa7b8dca214532a8e87);
+        
+    
+        var popup_ad0996e3f815478da115354329777449 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72c49333335b49338d75f5906d4375d0 = $(`<div id="html_72c49333335b49338d75f5906d4375d0" style="width: 100.0%; height: 100.0%;">City Name:Viluppuram Active Case:22 Death:2 Confirm:327</div>`)[0];
+            popup_ad0996e3f815478da115354329777449.setContent(html_72c49333335b49338d75f5906d4375d0);
+        
+
+        marker_75a79c0b4493401fbc284e40e7deceaa.bindPopup(popup_ad0996e3f815478da115354329777449)
+        ;
+
+        
+    
+</script>

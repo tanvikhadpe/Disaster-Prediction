@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <title>Disaster Predition</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      var earth;
+      function initialize() {
+        earth = new WE.map("earth_div");
+        earth.setView([46.8011, 8.2266], 1);
+        WE.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "",
+        }).addTo(earth);
+
+        // Start a simple rotation animation
+        var before = null;
+        requestAnimationFrame(function animate(now) {
+          var c = earth.getPosition();
+          var elapsed = before ? now - before : 0;
+          before = now;
+          earth.setCenter([c[0], c[1] + 1 * (elapsed / 30)]);
+          requestAnimationFrame(animate);
+        });
+      }
+    </script>
+    <style>
+
+
+      @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #fafafa;
+      }
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+      }
+
+      a,
+      a:hover,
+      a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .navbar {
+        padding: 15px 10px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-btn {
+        box-shadow: none;
+        outline: none !important;
+        border: none;
+      }
+
+
+      .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+
+      #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386d5;
+        color: #fff;
+        transition: all 0.3s;
+      }
+
+      #sidebar.active {
+        margin-left: -250px;
+      }
+
+      #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+      }
+
+      #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+      }
+
+      #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+      }
+
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+      }
+
+      #sidebar ul li a:hover {
+        color: #7386d5;
+        background: #fff;
+      }
+
+      #sidebar ul li.active > a,
+      a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+      }
+
+      a[data-toggle="collapse"] {
+        position: relative;
+      }
+
+      .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+
+      ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+      }
+
+      ul.CTAs {
+        padding: 20px;
+      }
+
+      ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      a.download {
+        background: #fff;
+        color: #7386d5;
+      }
+
+      a.article,
+      a.article:hover {
+        background: #6d7fcc !important;
+        color: #fff !important;
+      }
+
+      .card {
+        border: 0px;
+      }
+
+      #content {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.3s;
+      }
+
+
+      @media (max-width: 768px) {
+        #sidebar {
+          margin-left: -250px;
+        }
+        #sidebar.active {
+          margin-left: 0;
+        }
+        #sidebarCollapse span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body onload="initialize()">
+    <!-- Navbar -->
+
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Disaster Prediction</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="{{ url_for('index') }}">Home</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('earthquake') }}"
+              >Earthquake Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('flood') }}">Flood Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('tsunami') }}">Tsunami Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('weather') }}">Weather Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('hurricane') }}">Hurricane Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('cyclone') }}">Cyclone Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('hailstorm') }}">Hailstorm Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('sent') }}"
+              >Sentiment Analysis <span class="badge bg-warning rounded-pill"><i class="fa fa-code" aria-hidden="true"></i></span></a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('new') }}">Directions <span class="badge bg-warning rounded-pill"><i class="fa fa-code" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('comp') }}">Comparison Analytics <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
+          </li>
+          <li>
+            <a href="{{ url_for('covid') }}">Covid-19 <span class="badge bg-warning rounded-pill"><i class="fa fa-code" aria-hidden="true"></i></span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <nav
+          class="navbar card navbar-expand-lg navbar-light bg-light justify-content-between"
+        >
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span>Toggle Sidebar</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <div id="google_translate_element"></div>
+
+                  <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                      new google.translate.TranslateElement(
+                        {
+                          pageLanguage: "en",
+                          layout:
+                            google.translate.TranslateElement.InlineLayout
+                              .SIMPLE,
+                        },
+                        "google_translate_element"
+                      );
+                    }
+                  </script>
+
+                  <script
+                    type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+                  ></script>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Features</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Features and Services the web-app provides</h6>
+                <ol class="list-group list-group-numbered border border-light">
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Earthquake Prediction</div>
+                      Earthquake Prediction, Management and Send Alerts via Whatapp, Text Messages and Emails
+                    </div>
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Flood Prediction</div>
+                      Predicts Floods based on Rainfall in cms
+                    </div>
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Tsunami Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Weather Prediction</div>
+                      Predicts the weather on specific dates
+                    </div>
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Hurricane Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Cyclone Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Hailstorm Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Sentiment Analysis</div>
+                      Sentiment Analysis of tweets, calculates and shows graphical analysis of monetary impacts of disasters based on images 
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Directions</div>
+                      Shows nearby hospitals, relief-centers,food-aids, etc during diasaters
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Comparison Analytics</div>
+                      Compares the results of various algorithms for disaster predictions
+                    </div>
+                    <span class="badge bg-primary rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Covid-19 Stats</div>
+                      Perdicts nearby covid centers, covid cases in a particular city, etc.
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+              <!--  <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                <div id="earth_div" style="height:450px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 p-4 bg-gray text-white text-center">
+      <p> Copyright 2024 | Tanvi Khadpe </p>
+    </div>
+  </body>
+</html>
