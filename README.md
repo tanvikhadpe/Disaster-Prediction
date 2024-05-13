@@ -10,7 +10,7 @@
 
 <p></p>
 
-<h2>🧐 Requirements</h2>
+<h2>💻 Requirements</h2>
 
 - Front-End: HTML5, CSS3, Bootstrap, JavaScript
 - Back-End: Python Flask
@@ -29,7 +29,7 @@ Here're some of the project's best features:
 - Twitter Sentiment Analysis
 - Comparison Analytics
 
-<h2>🧐 Getting Started </h2>
+<h2>📌 Getting Started </h2>
 
 ### Cloning the repository
 
@@ -50,9 +50,13 @@ Once the virtual environment is activated, the name of your virtual environment 
 Create the following variables/ api keys/ auth tokens and update them in the predictions.py 
 - Google App Password
 - Twilio Account (For sending whatsapp messages, mails and text messages)
-- 
+
 ### Run the Project
 ```shell
 python model.py
 python prediction.py // contains code for all the models
+```
+### Watch the demo here
+```shell
+https://drive.google.com/drive/folders/19iHZznAFgMqU9lcAsW8urVa9h80A9hy4?usp=sharing
 ```
