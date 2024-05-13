@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
- 
-    <title>Disaster Predition</title>
-
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>DISASTER PREDICTOR</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
     />
     <link
       rel="stylesheet"
@@ -25,38 +28,11 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
-    <script src="http://www.webglearth.com/v2/api.js"></script>
-    <script>
-      var earth;
-      function initialize() {
-        earth = new WE.map("earth_div");
-        earth.setView([46.8011, 8.2266], 1);
-        WE.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution: "",
-        }).addTo(earth);
-
-        // Start a simple rotation animation
-        var before = null;
-        requestAnimationFrame(function animate(now) {
-          var c = earth.getPosition();
-          var elapsed = before ? now - before : 0;
-          before = now;
-          earth.setCenter([c[0], c[1] + 1 * (elapsed / 30)]);
-          requestAnimationFrame(animate);
-        });
-      }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-
-
       @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
       body {
         font-family: "Poppins", sans-serif;
@@ -93,7 +69,6 @@
         outline: none !important;
         border: none;
       }
-
 
       .wrapper {
         display: flex;
@@ -190,13 +165,18 @@
         border: 0px;
       }
 
+      .disaster_img {
+        height: 100px;
+        width: 200px;
+        border-radius: 10px;
+      }
+
       #content {
         width: 100%;
         padding: 20px;
         min-height: 100vh;
         transition: all 0.3s;
       }
-
 
       @media (max-width: 768px) {
         #sidebar {
@@ -211,9 +191,7 @@
       }
     </style>
   </head>
-  <body onload="initialize()">
-    <!-- Navbar -->
-
+  <body>
     <div class="wrapper">
       <!-- Sidebar  -->
       <nav id="sidebar">
@@ -222,11 +200,11 @@
         </div>
 
         <ul class="list-unstyled components">
-          <li class="active">
+          <li>
             <a href="{{ url_for('index') }}">Home</a>
           </li>
 
-          <li>
+          <li class="active">
             <a href="{{ url_for('earthquake') }}"
               >Earthquake Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a
             >
@@ -235,7 +213,7 @@
             <a href="{{ url_for('flood') }}">Flood Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
           </li>
           <li>
-            <a href="{{ url_for('tsunami') }}">Tsunami Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+            <a href="{{ url_for('tsunami') }}">Tsunami Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
           </li>
           <li>
             <a href="{{ url_for('weather') }}">Weather Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
@@ -265,23 +243,23 @@
           </li>
         </ul>
       </nav>
-
+  
       <!-- Page Content  -->
       <div id="content">
-        <nav
-          class="navbar card navbar-expand-lg navbar-light bg-light justify-content-between"
-        >
+        <nav class="navbar card navbar-expand-lg navbar-light bg-light justify-content-between">
           <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary ">
               <i class="fa fa-bars"></i>
               <span>Toggle Sidebar</span>
             </button>
-
+          
+  
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
+                
                 <li class="nav-item">
                   <div id="google_translate_element"></div>
-
+  
                   <script type="text/javascript">
                     function googleTranslateElementInit() {
                       new google.translate.TranslateElement(
@@ -295,7 +273,7 @@
                       );
                     }
                   </script>
-
+  
                   <script
                     type="text/javascript"
                     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
@@ -306,109 +284,179 @@
           </div>
         </nav>
 
+        <div class="row card py-4 mx-1 px-4 shadow-sm mb-5">
+          <div id="map" style="width: 100%;height: 390px;"></div>
+        </div>
+  
         <div class="row">
-          <div class="col-xl-6">
-            <div class="card shadow-sm">
+          <div class="col-xl-4">
+            <div class="card shadow-sm px-4">
               <div class="card-body">
-                <h5 class="card-title">Features</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Features and Services the web-app provides</h6>
-                <ol class="list-group list-group-numbered border border-light">
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Earthquake Prediction</div>
-                      Earthquake Prediction, Management and Send Alerts via Whatapp, Text Messages and Emails
-                    </div>
-                    <span class="badge bg-success rounded-pill">Done</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Flood Prediction</div>
-                      Predicts Floods based on Rainfall in cms
-                    </div>
-                    <span class="badge bg-success rounded-pill">Done</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Tsunami Prediction</div>
-                      Work in progress
-                    </div>
-                    <span class="badge bg-danger rounded-pill">Planning</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Weather Prediction</div>
-                      Predicts the weather on specific dates
-                    </div>
-                    <span class="badge bg-success rounded-pill">Done</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Hurricane Prediction</div>
-                      Work in progress
-                    </div>
-                    <span class="badge bg-danger rounded-pill">Planning</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Cyclone Prediction</div>
-                      Work in progress
-                    </div>
-                    <span class="badge bg-danger rounded-pill">Planning</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Hailstorm Prediction</div>
-                      Work in progress
-                    </div>
-                    <span class="badge bg-danger rounded-pill">Planning</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Sentiment Analysis</div>
-                      Sentiment Analysis of tweets, calculates and shows graphical analysis of monetary impacts of disasters based on images 
-                    </div>
-                    <span class="badge bg-warning rounded-pill">Working</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Directions</div>
-                      Shows nearby hospitals, relief-centers,food-aids, etc during diasaters
-                    </div>
-                    <span class="badge bg-warning rounded-pill">Working</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Comparison Analytics</div>
-                      Compares the results of various algorithms for disaster predictions
-                    </div>
-                    <span class="badge bg-primary rounded-pill">Done</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Covid-19 Stats</div>
-                      Perdicts nearby covid centers, covid cases in a particular city, etc.
-                    </div>
-                    <span class="badge bg-warning rounded-pill">Working</span>
-                  </li>
-                </ol>
+                <div class="results">
+                  {% if prediction > 4%}
+                  <h4 class="card-title" style="color: red">
+                    Earth Quake:<strong style="color: black">{{prediction}}</strong>
+                  </h4>
+                  <h6 class="card-subtitle mb-2 text-muted">Earthquake predicted in this location</h6>
+            
+                  {% elif prediction < 4 %}
+                  <h4 class="card-title" style="color: blue">No Earth Quake</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">No earthquake predicted in this location</h6>
+            
+                  {% endif %}
+                </div>
+                <dl class="row mt-3">
+                  <dt class="col-sm-5">Latitude</dt>
+                  <dd class="col-sm-7">{{lat}}</dd>
+
+                  <dt class="col-sm-5">Longitude</dt>
+                  <dd class="col-sm-7">{{long}}</dd>
+
+                  <dt class="col-sm-5">Depth</dt>
+                  <dd class="col-sm-7">{{depth}}</dd>
+
+                  <dt class="col-sm-5">Predicted Date</dt>
+                  <dd class="col-sm-7">{{date}}</dd>
+                  <dt class="col-sm-5">Magnitude</dt>
+                  <dd class="col-sm-7">{{prediction}}</dd>
+
+                  <dt class="col-sm-5">Predicted Place</dt>
+                  <dd class="col-sm-7"> <i id="demo" > </i></dd>
+                </dl>
+                <div class="row">
+                <button type="button" class="btn btn-success col-8"><a href="{{ url_for('earthgraphs') }}">Graphical Model Analysis</a></button>
+                <!--<button type="button" class="btn btn-warning"><a href="{{ url_for('alert') }}">Send Alert</a></button> -->
+                <form id="myform" action="{{ url_for('alert')}}" method="POST" class="col-4">
+                  <label for="exampleFormControlTextarea1" class="form-label" style="display: none">Alert Message</label>
+                  <textarea class="form-control" id="placess" name="placess" style="display: none" rows="3"></textarea>
+                  
+                  <input type="submit" class="btn btn-warning" id="sub" value="Send Alert" name="sub" />
+                </form>
+              </div>
+                <form id="form" style="display: none">
+                  <input
+                    type="text"
+                    class="txt"
+                    value="Therisearthquakeofmagnitude{{prediction}}"
+                    style="display: none"
+                  />
+                  <input type="text" class="txt" id="lat" value="{{lat}}" />
+                  <input type="text" class="txt" id="long" value="{{long}}" />
+                  <input type="text" class="txt" value="{{date}}" />
+                  <div style="display: none">
+                    <label for="rate">Rate</label
+                    ><input
+                      type="range"
+                      min="0.5"
+                      max="2"
+                      value="1"
+                      step="0.1"
+                      id="rate"
+                    />
+                    <div class="rate-value">1</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div style="display: none">
+                    <label for="pitch">Pitch</label
+                    ><input
+                      type="range"
+                      min="0"
+                      max="2"
+                      value="1"
+                      step="0.1"
+                      id="pitch"
+                    />
+                    <div class="pitch-value">1</div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <select></select>
+          
+                  <div class="controls">
+                    <button id="play" type="submit" name="play">Play</button>
+                  </div>
+                </form>
+              
+              </form>
               </div>
             </div>
           </div>
-          <div class="col-xl-6">
-            <div class="card shadow-sm">
+          <div class="col-xl-8">
+            <div class="card px-4 shadow-sm">
               <div class="card-body">
-              <!--  <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-                <div id="earth_div" style="height:450px"></div>
+                <h5 class="card-title">Latest Data</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Table depicts the latest queries for the prediction model</h6>
+                <div class="mt-3">
+                    <table
+                      class="table table-hover" >
+                      <tr>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Depth</th>
+                        <th>Earthquake Magnitude</th>
+                        <th>Alert Status</th>
+                        <th>Predicted Date</th>
+                      </tr>
+                      {% for item in data %}
+            
+                      <tr>
+                        <td style="display: none">{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td>{{item[5]}}</td>
+                        <td>{{item[6]}}</td>
+                      </tr>
+                      {% endfor %}
+                    </table>
+                </div>
               </div>
             </div>
+          </div>
+  
+          </div>
+            
           </div>
         </div>
       </div>
     </div>
+  
+  
+    <div>
+
+     
+    </div>
+    <script>
+      $(function () {
+        $("tr").each(function () {
+          var col_val = $(this).find("td:eq(4)").text();
+          if (col_val >= 6) {
+            $(this).addClass("bad"); //the selected class colors the row green//
+          } else {
+            $(this).addClass("selected");
+          }
+        });
+      });
+    </script>
+
+    <p class="hints" style="display: none"></p>
+    <div>
+      <p class="output"><em>...diagnostic messages</em></p>
+    </div>
+    <script src="{{url_for('static', filename='scripts.js')}}"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+
+    <script src="{{url_for('static', filename='map.js')}}"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs4yUs1YswCjM7pQdMh5XzyXSKw1A22HI&callback=initMap"
+    ></script>
 
     <div class="mt-3 p-4 bg-gray text-white text-center">
       <p> Copyright 2024 | Tanvi Khadpe </p>
     </div>
+
   </body>
 </html>

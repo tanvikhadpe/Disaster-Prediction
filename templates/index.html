@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>DISASTER PREDICTOR</title>
+ 
+    <title>Disaster Predition</title>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -28,11 +25,38 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      var earth;
+      function initialize() {
+        earth = new WE.map("earth_div");
+        earth.setView([46.8011, 8.2266], 1);
+        WE.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "",
+        }).addTo(earth);
+
+        // Start a simple rotation animation
+        var before = null;
+        requestAnimationFrame(function animate(now) {
+          var c = earth.getPosition();
+          var elapsed = before ? now - before : 0;
+          before = now;
+          earth.setCenter([c[0], c[1] + 1 * (elapsed / 30)]);
+          requestAnimationFrame(animate);
+        });
+      }
+    </script>
     <style>
+
+
       @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
       body {
         font-family: "Poppins", sans-serif;
@@ -69,6 +93,7 @@
         outline: none !important;
         border: none;
       }
+
 
       .wrapper {
         display: flex;
@@ -165,18 +190,13 @@
         border: 0px;
       }
 
-      .disaster_img {
-        height: 100px;
-        width: 200px;
-        border-radius: 10px;
-      }
-
       #content {
         width: 100%;
         padding: 20px;
         min-height: 100vh;
         transition: all 0.3s;
       }
+
 
       @media (max-width: 768px) {
         #sidebar {
@@ -191,7 +211,9 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="initialize()">
+    <!-- Navbar -->
+
     <div class="wrapper">
       <!-- Sidebar  -->
       <nav id="sidebar">
@@ -200,7 +222,7 @@
         </div>
 
         <ul class="list-unstyled components">
-          <li>
+          <li class="active">
             <a href="{{ url_for('index') }}">Home</a>
           </li>
 
@@ -213,12 +235,12 @@
             <a href="{{ url_for('flood') }}">Flood Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
           </li>
           <li>
-            <a href="{{ url_for('tsunami') }}">Tsunami Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
+            <a href="{{ url_for('tsunami') }}">Tsunami Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
           </li>
           <li>
             <a href="{{ url_for('weather') }}">Weather Prediction <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
           </li>
-          <li class="active">
+          <li>
             <a href="{{ url_for('hurricane') }}">Hurricane Prediction <span class="badge bg-danger rounded-pill"><i class="fa fa-times-circle" aria-hidden="true"></i></span></a>
           </li>
           <li>
@@ -284,64 +306,107 @@
           </div>
         </nav>
 
-        <div class="row px-2">
-          <div class="card shadow-sm px-4">
-            <div class="card-body row">
-              <h5 class="card-title mt-3">Hurricane Prediction</h5>
-              <div class="row">
-                  <form action="{{ url_for('predhurricane')}}" method="POST">
-                    <p>Enter the prediction details</p>
-                    <!-- <input type="text" name="comment"/> -->
-          
-                    <div class="form-group col-xs-3">
-                      <label for="date">Date</label>
-                      <input type="text" name="date" id="date" class="form-control" />
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Features</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Features and Services the web-app provides</h6>
+                <ol class="list-group list-group-numbered border border-light">
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Earthquake Prediction</div>
+                      Earthquake Prediction, Management and Send Alerts via Whatapp, Text Messages and Emails
                     </div>
-          
-                    <div class="form-group col-xs-3">
-                      <label for="lat">Latitude</label>
-                      <input type="text" name="lat" id="lat" class="form-control" />
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Flood Prediction</div>
+                      Predicts Floods based on Rainfall in cms
                     </div>
-                    <div class="form-group col-xs-3">
-                      <label for="long">Longitude</label>
-                      <input type="text" name="lon" id="lon" class="form-control" />
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Tsunami Prediction</div>
+                      Work in progress
                     </div>
-                    <div class="form-group col-xs-3 py-3">
-                    <input
-                      type="submit"
-                      class="btn btn-primary btn-lg mt-3"
-                      value="Predict"/>
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Weather Prediction</div>
+                      Predicts the weather on specific dates
                     </div>
-                  </form>   
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Hurricane Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Cyclone Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Hailstorm Prediction</div>
+                      Work in progress
+                    </div>
+                    <span class="badge bg-danger rounded-pill">Planning</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Sentiment Analysis</div>
+                      Sentiment Analysis of tweets, calculates and shows graphical analysis of monetary impacts of disasters based on images 
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Directions</div>
+                      Shows nearby hospitals, relief-centers,food-aids, etc during diasaters
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Comparison Analytics</div>
+                      Compares the results of various algorithms for disaster predictions
+                    </div>
+                    <span class="badge bg-success rounded-pill">Done</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                      <div class="fw-bold">Covid-19 Stats</div>
+                      Perdicts nearby covid centers, covid cases in a particular city, etc.
+                    </div>
+                    <span class="badge bg-warning rounded-pill">Working</span>
+                  </li>
+                </ol>
               </div>
-      
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+              <!--  <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                <div id="earth_div" style="height:450px"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    {% if Predictions %}
-    <div>
-      <hr style="border: 2px dashed royalblue" />
-      <h1 style="color: red"><strong>Results</strong></h1>
-      <p style="color: purple; background-color: yellow"></p>
-      <h1 style="color: purple; background-color: yellow">{{Predictions}}</h1>
-      <h1>{{Predictions}}</h1>
-    </div>
-    <div>
-      <img src={{url_for('static',filename="hurricane/h1.png")}} style="height:
-      700px;width: 800px">
-    </div>
-    <div>
-      <img src={{url_for('static',filename="hurricane/h2.png")}} style="height:
-      700px;width: 800px">
-    </div>
-    <div>
-      <img src={{url_for('static',filename="hurricane/h3.png")}} style="height:
-      700px;width: 800px">
-    </div>
-    {% endif %}
     <div class="mt-3 p-4 bg-gray text-white text-center">
       <p> Copyright 2024 | Tanvi Khadpe </p>
     </div>
