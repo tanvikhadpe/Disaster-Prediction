@@ -30,6 +30,7 @@ Here're some of the project's best features:
 - Comparison Analytics
 
 <h2>🧐 Getting Started </h2>
+
 ### Cloning the repository
 
 ```shell
