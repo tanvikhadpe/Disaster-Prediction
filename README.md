@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Natural Disaster Prediction Model</h1>
+<h1 align="center" id="title">🌊 Natural Disaster Prediction Model 🌊</h1>
 
 <p></p>
 <p id="description">This is a Natural Disaster Prediction Model using Machine Learning and Deep Learning Algorithms.</p>
